@@ -47,6 +47,7 @@ public class BombController : MonoBehaviour
             //}
         }
         Destroy(gameObject);
+
     }
 
     private void OnCollisionEnter(Collision collision)
