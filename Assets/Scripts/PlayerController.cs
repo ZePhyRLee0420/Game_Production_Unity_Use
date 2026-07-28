@@ -100,7 +100,6 @@ public class PlayerController : MonoBehaviour
             Rigidbody rb = bomb.GetComponent<Rigidbody>();
 
             rb.AddForce(throwPoint.forward * throwForce, ForceMode.Impulse);
-
         }
 
     }
