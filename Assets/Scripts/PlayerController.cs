@@ -5,13 +5,29 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     InputAction moveAction;
-    InputAction attackAction;
     InputAction dashAction;
     public float moveSpeed = 2f;
     public float turnSpeed = 20f;
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
     //Animator m_Animator;
+
+    public int maxHP = 100;
+    public int currentHP;
+
+    //dash
+    public float dashSpeed = 15f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 1f;
+    private bool isDashing = false;
+    private bool canDash = true;
+    //InputAction dashAction;
+
+    // Bomb throwing
+    InputAction throwAction;
+    public GameObject bombPrefab;
+    public Transform throwPoint;
+    public float throwForce = 15f;
 
     float time = 0f;
 
@@ -23,9 +39,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
+        throwAction = InputSystem.actions.FindAction("Throw");
         //m_Animator = GetComponent<Animator>();
         //character = GetComponent<CharacterController>();
         agent = GetComponent<NavMeshAgent>();
+        currentHP = maxHP;
     }
 
     // Update is called once per frame
@@ -70,6 +88,21 @@ public class PlayerController : MonoBehaviour
             //character.Move(motion);
             agent.Move(motion);
         //}
+
+        ThrowBomb();
+    }
+    void ThrowBomb()
+    {
+        if (throwAction.WasPressedThisFrame())
+        {
+            GameObject bomb = Instantiate(bombPrefab, throwPoint.position, Quaternion.identity);
+
+            Rigidbody rb = bomb.GetComponent<Rigidbody>();
+
+            rb.AddForce(throwPoint.forward * throwForce, ForceMode.Impulse);
+
+        }
+
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
