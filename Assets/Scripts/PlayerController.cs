@@ -49,6 +49,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(currentHP < 0)
+        {
+            Die();
+        }
+
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
 
         m_Movement.Set(moveValue.x, 0f, moveValue.y);
@@ -102,6 +107,18 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(throwPoint.forward * throwForce, ForceMode.Impulse);
         }
 
+    }
+
+    //死亡時の処理
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    //ダメージ処理
+    public void takeDamage(int value)
+    {
+        currentHP -= value;
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
