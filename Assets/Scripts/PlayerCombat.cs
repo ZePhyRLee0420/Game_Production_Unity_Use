@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerCombatController : MonoBehaviour
+public class PlayerCombat : MonoBehaviour
 {
     // Bomb throwing
     InputAction throwAction;
