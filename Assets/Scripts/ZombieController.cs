@@ -24,7 +24,7 @@ public class ZombieController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            PlayerController playerHealth = collision.collider.GetComponent<PlayerController>();
+            PlayerHealthController playerHealth = collision.collider.GetComponent<PlayerHealthController>();
 
             if(playerHealth != null)
             {
@@ -38,7 +38,7 @@ public class ZombieController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            PlayerController playerHealth = collision.collider.GetComponent<PlayerController>();
+            PlayerHealthController playerHealth = collision.collider.GetComponent<PlayerHealthController>();
 
             if (playerHealth != null)
             {

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerHealthController : MonoBehaviour
 {
     InputAction moveAction;
     InputAction dashAction;
@@ -23,12 +23,6 @@ public class PlayerController : MonoBehaviour
     private bool canDash = true;
     //InputAction dashAction;
 
-    // Bomb throwing
-    InputAction throwAction;
-    public GameObject bombPrefab;
-    public Transform throwPoint;
-    public float throwForce = 15f;
-
     float time = 0f;
 
     //CharacterController character;
@@ -39,7 +33,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
-        throwAction = InputSystem.actions.FindAction("Throw");
         //m_Animator = GetComponent<Animator>();
         //character = GetComponent<CharacterController>();
         agent = GetComponent<NavMeshAgent>();
@@ -49,7 +42,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentHP < 0)
+        if (currentHP < 0)
         {
             Die();
         }
@@ -82,32 +75,19 @@ public class PlayerController : MonoBehaviour
 
         //if (!isAttacking)
         //{
-            Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
-            m_Rotation = Quaternion.LookRotation(desiredForward);
+        Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
+        m_Rotation = Quaternion.LookRotation(desiredForward);
 
-            transform.rotation = m_Rotation;
-            Vector3 forwardMovement = Vector3.forward * m_Movement.magnitude * moveSpeed * Time.deltaTime;
-            //transform.Translate(forwardMovement);
+        transform.rotation = m_Rotation;
+        Vector3 forwardMovement = Vector3.forward * m_Movement.magnitude * moveSpeed * Time.deltaTime;
+        //transform.Translate(forwardMovement);
 
-            Vector3 motion = transform.TransformDirection(forwardMovement);
-            //character.Move(motion);
-            agent.Move(motion);
+        Vector3 motion = transform.TransformDirection(forwardMovement);
+        //character.Move(motion);
+        agent.Move(motion);
         //}
-
-        ThrowBomb();
     }
-    void ThrowBomb()
-    {
-        if (throwAction.WasPressedThisFrame())
-        {
-            GameObject bomb = Instantiate(bombPrefab, throwPoint.position, Quaternion.identity);
 
-            Rigidbody rb = bomb.GetComponent<Rigidbody>();
-
-            rb.AddForce(throwPoint.forward * throwForce, ForceMode.Impulse);
-        }
-
-    }
 
     //死亡時の処理
     void Die()

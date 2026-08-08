@@ -798,8 +798,9 @@ GameObject:
   - component: {fileID: 1283584446}
   - component: {fileID: 1283584445}
   - component: {fileID: 1283584450}
-  - component: {fileID: 1283584449}
   - component: {fileID: 1283584451}
+  - component: {fileID: 1283584453}
+  - component: {fileID: 1283584452}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -904,28 +905,6 @@ Transform:
   - {fileID: 1120097182}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1283584449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283584444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c420189c490e5a44bc8cada9e200c19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 2
-  turnSpeed: 20
-  maxHP: 100
-  currentHP: 0
-  dashSpeed: 15
-  dashDuration: 0.2
-  dashCooldown: 1
-  bombPrefab: {fileID: 3547786520679617983, guid: d5d9b6820e2f09846913056885ed696b, type: 3}
-  throwPoint: {fileID: 1120097182}
-  throwForce: 15
 --- !u!54 &1283584450
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -975,6 +954,40 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1283584452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283584444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f541acbab3ed024bbeb96193f416dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCombatController
+  bombPrefab: {fileID: 3547786520679617983, guid: d5d9b6820e2f09846913056885ed696b, type: 3}
+  throwPoint: {fileID: 1120097182}
+  throwForce: 15
+--- !u!114 &1283584453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283584444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8644970cd488074790d17b5f798d48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthController
+  moveSpeed: 2
+  turnSpeed: 20
+  maxHP: 100
+  currentHP: 0
+  dashSpeed: 15
+  dashDuration: 0.2
+  dashCooldown: 1
 --- !u!1 &1820985772
 GameObject:
   m_ObjectHideFlags: 0
