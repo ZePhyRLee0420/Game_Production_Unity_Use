@@ -804,6 +804,7 @@ GameObject:
   - component: {fileID: 1283584454}
   - component: {fileID: 1283584455}
   - component: {fileID: 1283584456}
+  - component: {fileID: 1283584457}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -999,7 +1000,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   cameraTransform: {fileID: 1838354357}
-  moveSpeed: 2
+  dashSpeed: 8
+  moveSpeed: 3.5
   turnSpeed: 20
 --- !u!114 &1283584455
 MonoBehaviour:
@@ -1027,6 +1029,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCameraController
   cameraPoint: {fileID: 1838354357}
   sensitivity: 0.15
+--- !u!114 &1283584457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283584444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2c9c1d9f5c82d41903ee8d432261c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDashController
+  dashDuration: 0.2
+  dashCooldown: 1
 --- !u!1 &1820985772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6318841895613888205, guid: ca3d30ac31afc8b49bf1ff3ac13ed3f5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

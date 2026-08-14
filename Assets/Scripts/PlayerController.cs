@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
     public Transform cameraTransform;
 
     //InputAction dashAction;
+    public float dashSpeed = 8f;
+    float currentSpeed;
+    PlayerDashController playerDash;
     public float moveSpeed = 2f;
     public float turnSpeed = 20f;
 
@@ -22,9 +25,15 @@ public class PlayerController : MonoBehaviour
     {
         //m_Animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+
         inputHandler = GetComponent<PlayerInputHandler>();
+        playerDash = GetComponent<PlayerDashController>();
 
         inputHandler.OnMove += SetMovement;
+        playerDash.OnDashStart += StartDash;
+        playerDash.OnDashEnd += EndDash;
+
+        currentSpeed = moveSpeed;
     }
 
     // Update is called once per frame
@@ -82,7 +91,16 @@ public class PlayerController : MonoBehaviour
             transform.rotation = m_Rotation;
         }
 
-        agent.Move(moveDirection.normalized * moveSpeed * Time.deltaTime);
+        agent.Move(moveDirection.normalized * currentSpeed * Time.deltaTime);
+    }
+    void StartDash()
+    {
+        currentSpeed = dashSpeed;
+    }
+
+    void EndDash()
+    {
+        currentSpeed = moveSpeed;
     }
     void OnDestroy()
     {

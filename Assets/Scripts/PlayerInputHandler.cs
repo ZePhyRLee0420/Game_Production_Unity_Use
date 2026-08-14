@@ -5,17 +5,20 @@ public class PlayerInputHandler : MonoBehaviour
 {
     InputAction moveAction;
     InputAction throwAction;
+    InputAction dashAction;
 
     public delegate void MoveInputHandler(Vector2 moveValue);
     public event MoveInputHandler OnMove;
 
     public delegate void ButtonInputHandler();
     public event ButtonInputHandler OnThrow;
+    public event ButtonInputHandler OnDash;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         throwAction = InputSystem.actions.FindAction("Throw");
+        dashAction = InputSystem.actions.FindAction("Dash");
     }
 
     // Update is called once per frame
@@ -28,6 +31,11 @@ public class PlayerInputHandler : MonoBehaviour
         if (throwAction.WasPressedThisFrame())
         {
             OnThrow?.Invoke();
+        }
+
+        if (dashAction.WasPressedThisFrame())
+        {
+            OnDash?.Invoke();
         }
     }
 }
