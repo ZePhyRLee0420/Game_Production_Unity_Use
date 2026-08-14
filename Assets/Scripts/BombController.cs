@@ -39,12 +39,12 @@ public class BombController : MonoBehaviour
                 );
             }
 
-            //EnemyController enemy = hit.GetComponent<EnemyController>();
+            ZombieController enemy = hit.GetComponent<ZombieController>();
 
-            //if (enemy != null)
-            //{
-            //    enemy.TakeDamage(damage);
-            //}
+            if (enemy != null)
+            {
+                //enemy.TakeDamage(damage);
+            }
         }
         Destroy(gameObject);
 

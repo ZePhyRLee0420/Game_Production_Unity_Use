@@ -27,10 +27,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentHP < 0)
-        {
-            Die();
-        }
+        
     }
 
     //死亡時の処理
@@ -43,6 +40,11 @@ public class PlayerHealth : MonoBehaviour
     public void takeDamage(int value)
     {
         currentHP -= value;
+
+        if (currentHP <= 0)
+        {
+            Die();
+        }
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)

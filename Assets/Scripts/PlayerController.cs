@@ -1,41 +1,34 @@
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    InputAction moveAction;
     //InputAction dashAction;
     public float moveSpeed = 2f;
     public float turnSpeed = 20f;
+
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
+
     //Animator m_Animator;
-
-
-    //CharacterController character;
     NavMeshAgent agent;
+
+    PlayerInputHandler inputHandler;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moveAction = InputSystem.actions.FindAction("Move");
         //m_Animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        inputHandler = GetComponent<PlayerInputHandler>();
+
+        inputHandler.OnMove += SetMovement;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 moveValue = moveAction.ReadValue<Vector2>();
-
-        m_Movement.Set(moveValue.x, 0f, moveValue.y);
-
-        bool hasHorizontalInput = !Mathf.Approximately(moveValue.x, 0f);
-        //Debug.Log("hasHorizontal" + hasHorizontalInput);
-        bool hasVerticalInput = !Mathf.Approximately(moveValue.y, 0f);
-        //Debug.Log("hasVertical" + hasVerticalInput);
-        bool isWalking = hasHorizontalInput || hasVerticalInput;
+        Movement();
         //Debug.Log("isWalking" + isWalking);
         //m_Animator.SetBool("isWalking", isWalking);
 
@@ -55,16 +48,34 @@ public class PlayerController : MonoBehaviour
 
         //if (!isAttacking)
         //{
-        Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
+    }
+    void SetMovement(Vector2 moveValue)
+    {
+        m_Movement.Set(moveValue.x, 0f, moveValue.y);
+
+        bool isWalking = m_Movement != Vector3.zero;
+    }
+    void Movement()
+    {
+        if (m_Movement == Vector3.zero)
+            return;
+
+        Vector3 desiredForward =　Vector3.RotateTowards(transform.forward,　m_Movement,　turnSpeed * Time.deltaTime,　0f);
+
         m_Rotation = Quaternion.LookRotation(desiredForward);
-
         transform.rotation = m_Rotation;
-        Vector3 forwardMovement = Vector3.forward * m_Movement.magnitude * moveSpeed * Time.deltaTime;
-        //transform.Translate(forwardMovement);
 
-        Vector3 motion = transform.TransformDirection(forwardMovement);
-        //character.Move(motion);
+        Vector3 forwardMovement =　Vector3.forward *　m_Movement.magnitude *　moveSpeed *　Time.deltaTime;
+
+        Vector3 motion =　transform.TransformDirection(forwardMovement);
+
         agent.Move(motion);
     }
-
+    void OnDestroy()
+    {
+        if (inputHandler != null)
+        {
+            inputHandler.OnMove -= SetMovement;
+        }
+    }
 }
