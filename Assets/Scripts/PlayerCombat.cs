@@ -1,34 +1,39 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerCombat : MonoBehaviour
 {
     // Bomb throwing
-    InputAction throwAction;
     public GameObject bombPrefab;
     public Transform throwPoint;
     public float throwForce = 15f;
+
+    PlayerInputHandler inputHandler;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        throwAction = InputSystem.actions.FindAction("Throw");
+        inputHandler = GetComponent<PlayerInputHandler>();
+
+        inputHandler.OnThrow += ThrowBomb;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ThrowBomb();
+
     }
     void ThrowBomb()
     {
-        if (throwAction.WasPressedThisFrame())
+        GameObject bomb = Instantiate(bombPrefab, throwPoint.position, Quaternion.identity);
+
+        Rigidbody rb = bomb.GetComponent<Rigidbody>();
+
+        rb.AddForce(throwPoint.forward * throwForce, ForceMode.Impulse);
+    }
+    void OnDestroy()
+    {
+        if (inputHandler != null)
         {
-            GameObject bomb = Instantiate(bombPrefab, throwPoint.position, Quaternion.identity);
-
-            Rigidbody rb = bomb.GetComponent<Rigidbody>();
-
-            rb.AddForce(throwPoint.forward * throwForce, ForceMode.Impulse);
+            inputHandler.OnThrow -= ThrowBomb;
         }
-
     }
 }

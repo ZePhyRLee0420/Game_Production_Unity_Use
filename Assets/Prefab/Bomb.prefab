@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7917419007053535309}
   - component: {fileID: 9114832975484091190}
   - component: {fileID: 1559595159049543937}
-  - component: {fileID: 3873217017602004126}
   - component: {fileID: 8279574206921794397}
+  - component: {fileID: 3873217017602004126}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -114,22 +114,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3873217017602004126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3547786520679617983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b60469d45e258d24dbddab6c7bb3d573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BombController
-  explodeTime: 3
-  explosionRadius: 5
-  explosionForce: 10
-  damage: 50
 --- !u!54 &8279574206921794397
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,3 +141,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3873217017602004126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547786520679617983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60469d45e258d24dbddab6c7bb3d573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BombController
+  explodeTime: 3
+  explosionRadius: 1
+  explosionForce: 10
+  damage: 10

@@ -7,13 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHP = 100;
     public int currentHP;
 
-    //dash
-    //public float dashSpeed = 15f;
-    //public float dashDuration = 0.2f;
-    //public float dashCooldown = 1f;
-    //private bool isDashing = false;
-    //private bool canDash = true;
-    //InputAction dashAction;
+    private bool isInvincible = false;
 
     float time = 0f;
     float pushPower = 2f;
@@ -22,15 +16,17 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHP = maxHP;
+
+        PlayerDashController playerDash = GetComponent<PlayerDashController>();
+
+        playerDash.OnDashStart += StartInvincible;
+        playerDash.OnDashEnd += EndInvincible;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentHP < 0)
-        {
-            Die();
-        }
+        
     }
 
     //死亡時の処理
@@ -42,9 +38,27 @@ public class PlayerHealth : MonoBehaviour
     //ダメージ処理
     public void takeDamage(int value)
     {
+        if (isInvincible)
+        {
+            return;
+        }
+
         currentHP -= value;
+
+        if (currentHP <= 0)
+        {
+            Die();
+        }
+    }
+    void StartInvincible()
+    {
+        isInvincible = true;
     }
 
+    void EndInvincible()
+    {
+        isInvincible = false;
+    }
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.collider.attachedRigidbody;
