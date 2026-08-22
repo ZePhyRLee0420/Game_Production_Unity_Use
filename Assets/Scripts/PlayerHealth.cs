@@ -11,7 +11,6 @@ public class PlayerHealth : MonoBehaviour
 
     float time = 0f;
     float pushPower = 2f;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

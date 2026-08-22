@@ -154,6 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BombController
   explodeTime: 3
-  explosionRadius: 1
+  explosionRadius: 3
   explosionForce: 10
   damage: 10
