@@ -39,13 +39,14 @@ public class BombController : MonoBehaviour
                 );
             }
 
-            ZombieHeaith enemy = hit.GetComponent<ZombieHeaith>();
+           ZombieHeaith enemy = hit.GetComponent<ZombieHeaith>();
 
-            if (enemy != null)
-            {
+           if (enemy != null)
+           {
                 enemy.TakeDamage(damage);
-                Debug.Log("Enemy took damage: " + damage);
             }
+            
+
         }
         Destroy(gameObject);
 
