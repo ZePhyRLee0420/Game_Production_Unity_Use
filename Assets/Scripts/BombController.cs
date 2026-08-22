@@ -44,6 +44,7 @@ public class BombController : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
+                Debug.Log("Enemy took damage: " + damage);
             }
         }
         Destroy(gameObject);
