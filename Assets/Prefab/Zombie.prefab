@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2187887085977959880}
   - component: {fileID: 8996497106789413893}
   - component: {fileID: 8708636546819417890}
+  - component: {fileID: 4349901308070131}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -127,7 +128,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
+  m_Speed: 1.4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -180,3 +181,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4349901308070131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318841895613888205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1849eac97467d144bbd90ecbacd7c885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieHeaith
+  maxHp: 10
