@@ -39,13 +39,26 @@ public class BombController : MonoBehaviour
                 );
             }
 
-            ZombieHeaith enemy = hit.GetComponent<ZombieHeaith>();
+<<<<<<< Updated upstream
+           ZombieHeaith enemy = hit.GetComponent<ZombieHeaith>();
 
-            if (enemy != null)
-            {
+           if (enemy != null)
+           {
                 enemy.TakeDamage(damage);
-                Debug.Log("Enemy took damage: " + damage);
             }
+            
+=======
+            if(hit.CompareTag("Enemy"))
+            {
+                ZombieHeaith enemy = hit.GetComponent<ZombieHeaith>();
+
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(damage);
+                }
+            }
+>>>>>>> Stashed changes
+
         }
         Destroy(gameObject);
 
