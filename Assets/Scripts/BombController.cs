@@ -7,7 +7,7 @@ public class BombController : MonoBehaviour
     public float explosionRadius = 5f;
     public float explosionForce = 10f;
 
-    public int damage = 50;
+    public int damage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

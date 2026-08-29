@@ -6,7 +6,7 @@ public class PlayerEXP : MonoBehaviour
     public int currentLevel = 1;
     float EXPtoNextLevel = 10;
     PlayerHealth health;
-    BombController bomb;
+    PlayerCombat damage;
     
     public delegate void LevelUpHandler();
     public event LevelUpHandler OnLevelUp;
@@ -14,23 +14,25 @@ public class PlayerEXP : MonoBehaviour
     void Start()
     {
         health = GetComponent<PlayerHealth>();
-        bomb = GetComponent<BombController>();
+        damage = GetComponent<PlayerCombat>();
         Initiate();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Current EXP = " + currentEXP + " / " + EXPtoNextLevel);
+        
     }
     public void Initiate()
     {
         currentEXP = 0;
         currentLevel = 1;
+        EXPtoNextLevel = 10;
     }
     public void GainEXP(int exp)
     {
         currentEXP += exp;
+        Debug.Log("Current EXP = " + currentEXP + " / " + EXPtoNextLevel);
         while (currentEXP >= EXPtoNextLevel)
         {
             LevelUp();
@@ -45,7 +47,7 @@ public class PlayerEXP : MonoBehaviour
         health.maxHP += currentLevel * 10;
         health.currentHP += currentLevel * 10;
 
-        bomb.damage += currentLevel * 2;
+        damage.bombDamage += currentLevel * 2;
 
         EXPtoNextLevel *= 2;
 
