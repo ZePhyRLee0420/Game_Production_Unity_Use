@@ -2,16 +2,28 @@ using UnityEngine;
 
 public class ZombieHeaith : MonoBehaviour
 {
-    [SerializeField] int maxHp = 10;
+    int maxHp;
     int currentHp;
     GameObject player;
 
-    int exp = 1;
+    GameObject originalStatusObject;
+    ZombieStatusOriginally originallyStatus;
+
+    int exp;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        originalStatusObject = GameObject.Find("ZombieStatusOriginally");
+        originallyStatus = originalStatusObject.GetComponent<ZombieStatusOriginally>();
+
+        maxHp = originallyStatus.Hp;
         currentHp = maxHp;
+
+        exp = originallyStatus.exp;
+
         player = GameObject.Find("Player");
+        Debug.Log("Health" + currentHp);
+
     }
 
     // Update is called once per frame

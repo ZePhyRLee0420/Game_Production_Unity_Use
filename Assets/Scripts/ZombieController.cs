@@ -5,11 +5,21 @@ public class ZombieController : MonoBehaviour
 {
     GameObject player;
     NavMeshAgent agent;
-    [SerializeField]int EnterDamage = 10;
-    [SerializeField]int StayDamage = 1;
+
+    GameObject originalStatusObject;
+    ZombieStatusOriginally originallyStatus;
+    int EnterDamage;
+    int StayDamage;
+
+    ZombieStatus status;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        status = this.GetComponent<ZombieStatus>();
+        originalStatusObject = GameObject.Find("ZombieStatusOriginally");
+        originallyStatus = originalStatusObject.GetComponent<ZombieStatusOriginally>();
+        EnterDamage = originallyStatus.power;
+        StayDamage = originallyStatus.power;
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindWithTag("Player");
     }

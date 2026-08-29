@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 494174921950769791}
   - component: {fileID: 6961601870076253724}
   - component: {fileID: 2187887085977959880}
-  - component: {fileID: 8996497106789413893}
   - component: {fileID: 8708636546819417890}
+  - component: {fileID: 8996497106789413893}
   - component: {fileID: 4349901308070131}
+  - component: {fileID: 7698280236670361745}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -140,20 +141,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8996497106789413893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318841895613888205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c868e04abb3f434e8d0420e95aead88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ZombieController
-  EnterDamage: 10
-  StayDamage: 1
 --- !u!54 &8708636546819417890
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179,8 +166,20 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &8996497106789413893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318841895613888205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c868e04abb3f434e8d0420e95aead88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieController
 --- !u!114 &4349901308070131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,4 +192,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1849eac97467d144bbd90ecbacd7c885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieHeaith
-  maxHp: 10
+--- !u!114 &7698280236670361745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318841895613888205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dcbf8ee43832cb4ab96f25fb440b7c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieStatus
+  power: 1
+  Hp: 10
+  exp: 1
+  speed: 1.4
