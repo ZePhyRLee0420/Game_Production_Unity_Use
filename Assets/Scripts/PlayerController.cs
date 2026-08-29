@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,7 +15,8 @@ public class PlayerController : MonoBehaviour
     Quaternion m_Rotation = Quaternion.identity;
 
     //Animator m_Animator;
-    NavMeshAgent agent;
+
+    CharacterController agent;
 
     PlayerInputHandler inputHandler;
 
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         //m_Animator = GetComponent<Animator>();
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<CharacterController>();
 
         inputHandler = GetComponent<PlayerInputHandler>();
         playerDash = GetComponent<PlayerDashController>();
@@ -107,6 +107,11 @@ public class PlayerController : MonoBehaviour
         if (inputHandler != null)
         {
             inputHandler.OnMove -= SetMovement;
+        }
+        if (playerDash != null)
+        {
+            playerDash.OnDashStart -= StartDash;
+            playerDash.OnDashEnd -= EndDash;
         }
     }
 }
