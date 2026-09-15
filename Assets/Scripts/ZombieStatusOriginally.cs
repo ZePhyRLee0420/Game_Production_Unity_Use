@@ -52,6 +52,6 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         power = a * a;
 
-        Hp *= hpUp;
+        Hp += 5;
     }
 }
