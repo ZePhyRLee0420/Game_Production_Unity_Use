@@ -1,16 +1,14 @@
-using System.Numerics;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class ZombieSpownerController : MonoBehaviour
+public class BossSpowner : MonoBehaviour
 {
-    [SerializeField] GameObject zombie;
+    [SerializeField] GameObject Boss;
 
     [SerializeField] GameObject timerObject;
 
     Timer timer;
 
-    int interval = 2;
+    int interval = 10;
 
     int a = 0;
 
@@ -27,9 +25,9 @@ public class ZombieSpownerController : MonoBehaviour
     {
         a = (int)timer.time / interval;
 
-        if (a == b)
+        if(a == b)
         {
-            Instantiate(zombie);
+            Instantiate(Boss);
             b++;
         }
     }
