@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 
     private bool isInvincible = false;
 
-    float pushPower = 2f;
+    //float pushPower = 2f;
 
     PlayerDashController playerDash;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

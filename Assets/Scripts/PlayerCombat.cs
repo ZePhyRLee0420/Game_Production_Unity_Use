@@ -20,7 +20,7 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log("Damage = " + bombDamage);
     }
     void ThrowBomb()
     {

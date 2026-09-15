@@ -7,6 +7,8 @@ public class PlayerEXP : MonoBehaviour
     public float EXPtoNextLevel = 10;
     PlayerHealth health;
     PlayerCombat damage;
+
+    StatusUpgradeController statusUpgradeController;
     
     public delegate void LevelUpHandler();
     public event LevelUpHandler OnLevelUp;
@@ -15,6 +17,7 @@ public class PlayerEXP : MonoBehaviour
     {
         health = GetComponent<PlayerHealth>();
         damage = GetComponent<PlayerCombat>();
+        statusUpgradeController = GetComponent<StatusUpgradeController>();
         Initiate();
     }
 
@@ -44,10 +47,10 @@ public class PlayerEXP : MonoBehaviour
 
         currentLevel++;
 
-        health.maxHP += currentLevel * 10;
-        health.currentHP += currentLevel * 10;
+        health.maxHP += 20;
+        health.currentHP += 20;
 
-        damage.bombDamage += currentLevel * 2;
+        damage.bombDamage = 10 + ((currentLevel + statusUpgradeController.statusAttackLevel) * (currentLevel + statusUpgradeController.statusAttackLevel));
 
         EXPtoNextLevel *= 2;
 

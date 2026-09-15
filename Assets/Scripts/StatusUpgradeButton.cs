@@ -49,7 +49,7 @@ public class StatusUpgradeButton : MonoBehaviour
                 break;
 
             case StatusUpgradeType.Damage:
-                buttonText.text = "Damage +5";
+                buttonText.text = "Damage+";
                 break;
         }
     }
