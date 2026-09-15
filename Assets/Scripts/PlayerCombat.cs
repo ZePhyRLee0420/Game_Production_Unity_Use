@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform throwPoint;
     public float throwForce = 15f;
     public int bombDamage = 10;
+    public float explosionRadius = 5f;
     PlayerInputHandler inputHandler;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +29,8 @@ public class PlayerCombat : MonoBehaviour
         BombController bombController = bomb.GetComponent<BombController>();
 
         bombController.damage = bombDamage;
+
+        bombController.explodeRadius = explosionRadius;
 
         Rigidbody rb = bomb.GetComponent<Rigidbody>();
 

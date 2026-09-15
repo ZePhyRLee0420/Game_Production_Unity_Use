@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerCameraController : MonoBehaviour
 {
+    public bool inputEnabled = true;
     public Transform cameraPoint;
 
     public float sensitivity = 0.15f;
@@ -21,6 +22,9 @@ public class PlayerCameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!inputEnabled)
+            return;
+
         Vector2 lookValue = lookAction.ReadValue<Vector2>();
 
         yaw += lookValue.x * sensitivity;
