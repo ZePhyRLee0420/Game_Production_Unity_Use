@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
+    public bool inputEnabled = true;
     InputAction moveAction;
     InputAction throwAction;
     InputAction dashAction;
@@ -27,6 +28,9 @@ public class PlayerInputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!inputEnabled)
+            return;
+
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
 
         OnMove?.Invoke(moveValue);

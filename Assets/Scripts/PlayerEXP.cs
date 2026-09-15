@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PlayerEXP : MonoBehaviour
 {
-    float currentEXP = 0;
+    public float currentEXP = 0;
     public int currentLevel = 1;
-    float EXPtoNextLevel = 10;
+    public float EXPtoNextLevel = 10;
     PlayerHealth health;
     PlayerCombat damage;
     

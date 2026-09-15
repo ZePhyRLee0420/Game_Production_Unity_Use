@@ -13,8 +13,11 @@ public class StatusUpgradeController : MonoBehaviour
     public PlayerEXP playerEXP;
     public PlayerController playerController;
     public PlayerHealth playerHealth;
-    public BombController bombController;
-    //public GameObject upgradePanel;
+    public PlayerCombat playerCombat;
+    public PlayerInputHandler inputHandler;
+    public PlayerCameraController cameraController;
+    public GameObject upgradePanel;
+    public StatusUpgradeButton[] upgradeButtons;
     StatusUpgradeType[] allUpgrades =
     {
         StatusUpgradeType.MaxHP,
@@ -27,9 +30,12 @@ public class StatusUpgradeController : MonoBehaviour
         playerEXP = GetComponent<PlayerEXP>();
         playerController = GetComponent<PlayerController>();
         playerHealth = GetComponent<PlayerHealth>();
-        bombController = GetComponent<BombController>();
-        //playerEXP.OnLevelUp += StartUpgrade;
-        //upgradePanel.SetActive(false);
+        playerCombat = GetComponent<PlayerCombat>();
+        inputHandler = GetComponent<PlayerInputHandler>();
+        cameraController = GetComponent<PlayerCameraController>();
+
+        playerEXP.OnLevelUp += StartUpgrade;
+        upgradePanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,11 +47,17 @@ public class StatusUpgradeController : MonoBehaviour
     {
         Time.timeScale = 0f;
 
-        //upgradePanel.SetActive(true);
+        inputHandler.inputEnabled = false;
+        cameraController.inputEnabled = false;
+
+        upgradePanel.SetActive(true);
     }
     void EndUpgrade()
     {
-        //upgradePanel.SetActive(false);
+        upgradePanel.SetActive(false);
+
+        inputHandler.inputEnabled = true;
+        cameraController.inputEnabled = true;
 
         Time.timeScale = 1f;
     }
@@ -57,12 +69,16 @@ public class StatusUpgradeController : MonoBehaviour
                 playerHealth.maxHP += 20;
                 break;
 
+            case StatusUpgradeType.Damage:
+                playerCombat.bombDamage += 5;
+                break;
+
             case StatusUpgradeType.MoveSpeed:
                 playerController.moveSpeed += 0.5f;
                 break;
 
             case StatusUpgradeType.BombRadius:
-                bombController.explosionRadius += 0.5f;
+                playerCombat.explosionRadius += 0.5f;
                 break;
         }
 

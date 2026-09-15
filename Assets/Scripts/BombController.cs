@@ -4,7 +4,7 @@ public class BombController : MonoBehaviour
 {
     public float explodeTime = 3f;
     //public GameObject explosionEffect;
-    public float explosionRadius = 5f;
+    public float explodeRadius;
     public float explosionForce = 10f;
 
     public int damage;
@@ -24,7 +24,7 @@ public class BombController : MonoBehaviour
     {
         //Instantiate(explosionEffect,transform.position,Quaternion.identity);
 
-        Collider[] hits = Physics.OverlapSphere(transform.position, explosionRadius);
+        Collider[] hits = Physics.OverlapSphere(transform.position, explodeRadius);
 
         foreach (Collider hit in hits)
         {
@@ -35,7 +35,7 @@ public class BombController : MonoBehaviour
                 rb.AddExplosionForce(
                     explosionForce,
                     transform.position,
-                    explosionRadius
+                    explodeRadius
                 );
             }
 
