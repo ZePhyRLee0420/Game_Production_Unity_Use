@@ -24,6 +24,8 @@ public class StatusUpgradeController : MonoBehaviour
         StatusUpgradeType.MoveSpeed,
         StatusUpgradeType.BombRadius
     };
+
+    public int statusAttackLevel = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -70,15 +72,16 @@ public class StatusUpgradeController : MonoBehaviour
                 break;
 
             case StatusUpgradeType.Damage:
-                playerCombat.bombDamage += 5;
+                statusAttackLevel++;
+                playerCombat.bombDamage = 10 + ((playerEXP.currentLevel + statusAttackLevel) * (playerEXP.currentLevel + statusAttackLevel));
                 break;
 
             case StatusUpgradeType.MoveSpeed:
-                playerController.moveSpeed += 0.5f;
+                playerController.moveSpeed += 0.35f;
                 break;
 
             case StatusUpgradeType.BombRadius:
-                playerCombat.explosionRadius += 0.5f;
+                playerCombat.explosionRadius += 1f;
                 break;
         }
 
