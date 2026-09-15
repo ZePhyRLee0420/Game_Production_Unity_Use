@@ -13,7 +13,6 @@ public class BossFlag : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject gameObject = 
 
     }
 }
