@@ -2429,6 +2429,7 @@ MonoBehaviour:
   - {fileID: 2013876128}
   - {fileID: 1575783}
   - {fileID: 944393141}
+  statusAttackLevel: 0
 --- !u!1 &1335602363
 GameObject:
   m_ObjectHideFlags: 0
@@ -3623,7 +3624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StatusUpgradeButton
   upgradeController: {fileID: 1283584461}
-  upgradeType: 1
+  upgradeType: 0
   buttonText: {fileID: 309625264}
 --- !u!1 &2052826379
 GameObject:
