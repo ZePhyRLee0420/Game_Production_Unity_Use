@@ -12,18 +12,27 @@ public class ZombieStatusOriginally : MonoBehaviour
     GameObject timerObject;
 
     Timer timer;
-    int interval = 10;
+    int interval = 30;
 
     int count = 0;
 
     int b = 1;
 
+    GameObject bossManager;
+
+    BossFlag bossFlag;
+
     int hpUp = 5;
+
+    int powerUp = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         timerObject = GameObject.Find("Timer");
         timer = timerObject.GetComponent<Timer>();
+
+        bossManager = GameObject.Find("BossManager");
+        bossFlag = bossManager.GetComponent<BossFlag>();
     }
 
     // Update is called once per frame
@@ -39,14 +48,16 @@ public class ZombieStatusOriginally : MonoBehaviour
             b++;
         }
 
+        exp = 1 + bossFlag.loop;
+
     }
 
 
     //15秒ごとにスポーン時のステータスを上げる
     void SpownStatusUp()
     {
-        power += 1;
+        power += powerUp;
 
-        Hp += 5;
+        Hp += hpUp;
     }
 }

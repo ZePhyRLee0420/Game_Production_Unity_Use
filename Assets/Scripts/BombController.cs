@@ -45,6 +45,13 @@ public class BombController : MonoBehaviour
             {
                 enemy.TakeDamage(damage);
             }
+
+            BossHealth boss = hit.GetComponent<BossHealth>();
+
+            if(boss != null)
+            {
+                boss.TakeDamage(damage);
+            }
         }
         Destroy(gameObject);
 

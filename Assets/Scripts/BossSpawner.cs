@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BossSpowner : MonoBehaviour
+public class BossSpawner : MonoBehaviour
 {
     [SerializeField] GameObject Boss;
 
@@ -8,7 +8,7 @@ public class BossSpowner : MonoBehaviour
 
     Timer timer;
 
-    int interval = 10;
+    [SerializeField]int interval = 10;
 
     int a = 0;
 
