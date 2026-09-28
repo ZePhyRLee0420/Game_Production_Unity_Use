@@ -5,6 +5,7 @@ public class PlayerEXP : MonoBehaviour
     public float currentEXP = 0;
     public int currentLevel = 1;
     public float EXPtoNextLevel = 10;
+    public float EXPMultiplier = 1f;
     PlayerHealth health;
     PlayerCombat damage;
 
@@ -34,7 +35,7 @@ public class PlayerEXP : MonoBehaviour
     }
     public void GainEXP(int exp)
     {
-        currentEXP += exp;
+        currentEXP += exp * EXPMultiplier;
         Debug.Log("Current EXP = " + currentEXP + " / " + EXPtoNextLevel);
         while (currentEXP >= EXPtoNextLevel)
         {

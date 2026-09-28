@@ -37,19 +37,27 @@ public class StatusUpgradeButton : MonoBehaviour
         switch (upgradeType)
         {
             case StatusUpgradeType.MaxHP:
-                buttonText.text = "Max HP +20";
+                buttonText.text = "Max HP UP";
                 break;
 
             case StatusUpgradeType.MoveSpeed:
-                buttonText.text = "Move Speed +0.5";
+                buttonText.text = "Move Speed UP";
                 break;
 
             case StatusUpgradeType.BombRadius:
-                buttonText.text = "Bomb Radius +0.5";
+                buttonText.text = "Bomb Radius UP";
                 break;
 
             case StatusUpgradeType.Damage:
-                buttonText.text = "Damage+";
+                buttonText.text = "Damage UP";
+                break;
+
+            case StatusUpgradeType.EXPBoost:
+                buttonText.text = "EXP Gain UP";
+                break;
+
+            case StatusUpgradeType.Heal:
+                buttonText.text = "Heal 50 HP";
                 break;
         }
     }

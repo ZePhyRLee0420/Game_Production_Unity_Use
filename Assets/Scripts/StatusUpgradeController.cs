@@ -6,6 +6,9 @@ public enum StatusUpgradeType
     MaxHP,
     MoveSpeed,
     BombRadius,
+    //SkillCooldown,
+    EXPBoost,
+    Heal,
 
 }
 public class StatusUpgradeController : MonoBehaviour
@@ -22,7 +25,11 @@ public class StatusUpgradeController : MonoBehaviour
     {
         StatusUpgradeType.MaxHP,
         StatusUpgradeType.MoveSpeed,
-        StatusUpgradeType.BombRadius
+        StatusUpgradeType.BombRadius,
+        StatusUpgradeType.Damage,
+        //StatusUpgradeType.SkillCooldown,
+        StatusUpgradeType.EXPBoost,
+        StatusUpgradeType.Heal,
     };
 
     public int statusAttackLevel = 0;
@@ -51,6 +58,8 @@ public class StatusUpgradeController : MonoBehaviour
 
         inputHandler.inputEnabled = false;
         cameraController.inputEnabled = false;
+
+        RandomUpgrade();
 
         upgradePanel.SetActive(true);
     }
@@ -83,9 +92,42 @@ public class StatusUpgradeController : MonoBehaviour
             case StatusUpgradeType.BombRadius:
                 playerCombat.explosionRadius += 1f;
                 break;
+
+            //case StatusUpgradeType.SkillCooldown:
+            //    playerCombat.skillCooldown -= 0.5f;
+            //    break;
+
+            case StatusUpgradeType.EXPBoost:
+                playerEXP.EXPMultiplier *= 1.1f;
+                break;
+
+            case StatusUpgradeType.Heal:
+                playerHealth.currentHP += 50;
+                if(playerHealth.currentHP > playerHealth.maxHP)
+                {
+                    playerHealth.currentHP = playerHealth.maxHP;
+                }
+                break;
         }
 
         EndUpgrade();
+    }
+
+    void RandomUpgrade()
+    {
+        for (int i = 0; i < allUpgrades.Length; i++)
+        {
+            int randomIndex = Random.Range(i, allUpgrades.Length);
+
+            StatusUpgradeType temp = allUpgrades[i];
+            allUpgrades[i] = allUpgrades[randomIndex];
+            allUpgrades[randomIndex] = temp;
+        }
+
+        for (int i = 0; i < upgradeButtons.Length; i++)
+        {
+            upgradeButtons[i].SetUpgrade(allUpgrades[i]);
+        }
     }
     void OnDestroy()
     {
