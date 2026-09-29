@@ -78,6 +78,7 @@ public class StatusUpgradeController : MonoBehaviour
         {
             case StatusUpgradeType.MaxHP:
                 playerHealth.maxHP += 20;
+                playerHealth.currentHP += 20;
                 break;
 
             case StatusUpgradeType.Damage:
