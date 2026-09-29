@@ -9,6 +9,10 @@ public class ZombieHeaith : MonoBehaviour
     GameObject originalStatusObject;
     ZombieStatusOriginally originallyStatus;
 
+    GameObject bossManager;
+
+    BossFlag bossFlagScript;
+
     int exp;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,8 +26,10 @@ public class ZombieHeaith : MonoBehaviour
         exp = originallyStatus.exp;
 
         player = GameObject.Find("Player");
-        Debug.Log("Health" + currentHp);
+        //Debug.Log("Health" + currentHp);
 
+        bossManager = GameObject.Find("BossManager");
+        bossFlagScript = bossManager.GetComponent<BossFlag>();
     }
 
     // Update is called once per frame
@@ -32,6 +38,11 @@ public class ZombieHeaith : MonoBehaviour
         if (currentHp <= 0)
         {
             Die();
+        }
+
+        else if(bossFlagScript.bossFlag == true)
+        {
+            Destroy(gameObject);
         }
     }
 

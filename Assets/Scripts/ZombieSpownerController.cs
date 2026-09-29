@@ -1,3 +1,4 @@
+using System;
 using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,10 +17,17 @@ public class ZombieSpownerController : MonoBehaviour
 
     int b = 1;
 
+    GameObject bossManager;
+
+    BossFlag bossFlagScript;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         timer = timerObject.GetComponent<Timer>();
+
+        bossManager = GameObject.Find("BossManager");
+        bossFlagScript = bossManager.GetComponent<BossFlag>();
     }
 
     // Update is called once per frame
@@ -29,7 +37,10 @@ public class ZombieSpownerController : MonoBehaviour
 
         if (a == b)
         {
-            Instantiate(zombie);
+            if(bossFlagScript.bossFlag == false)
+            {
+                Instantiate(zombie);
+            }
             b++;
         }
     }
