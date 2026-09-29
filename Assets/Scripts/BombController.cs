@@ -59,7 +59,7 @@ public class BombController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("Boss"))
         {
             Explode();
         }

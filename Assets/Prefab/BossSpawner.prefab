@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossSpawner
   Boss: {fileID: 6878933676719505430, guid: f44607bade1598743a208821341d125a, type: 3}
-  timerObject: {fileID: 0}
+  timerObject: {fileID: 7431170595916816826, guid: 1bfd9164c67453f44845edb7882e1ef9, type: 3}
   interval: 30
