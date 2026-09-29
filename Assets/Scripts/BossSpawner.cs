@@ -17,6 +17,8 @@ public class BossSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        timerObject = GameObject.Find("Timer");
         timer = timerObject.GetComponent<Timer>();
     }
 
@@ -27,7 +29,7 @@ public class BossSpawner : MonoBehaviour
 
         if(a == b)
         {
-            Instantiate(Boss);
+            Instantiate(Boss, transform.position, transform.rotation);
             b++;
         }
     }

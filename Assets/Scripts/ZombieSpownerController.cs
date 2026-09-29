@@ -2,6 +2,7 @@ using System;
 using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ZombieSpownerController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class ZombieSpownerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        timerObject = GameObject.Find("Timer");
         timer = timerObject.GetComponent<Timer>();
 
         bossManager = GameObject.Find("BossManager");
@@ -39,7 +41,7 @@ public class ZombieSpownerController : MonoBehaviour
         {
             if(bossFlagScript.bossFlag == false)
             {
-                Instantiate(zombie);
+                Instantiate(zombie, transform.position, transform.rotation);
             }
             b++;
         }
