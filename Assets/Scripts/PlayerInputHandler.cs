@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    public bool inputEnabled = true;
+    InputActionMap playerActionMap;
+    //public bool inputEnabled = true;
     InputAction moveAction;
     InputAction throwAction;
     InputAction dashAction;
@@ -19,17 +20,19 @@ public class PlayerInputHandler : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moveAction = InputSystem.actions.FindAction("Move");
-        throwAction = InputSystem.actions.FindAction("Throw");
-        dashAction = InputSystem.actions.FindAction("Dash");
-        jumpAction = InputSystem.actions.FindAction("Jump");
+        playerActionMap = InputSystem.actions.FindActionMap("Player");
+
+        moveAction = playerActionMap.FindAction("Move");
+        throwAction = playerActionMap.FindAction("Throw");
+        dashAction = playerActionMap.FindAction("Dash");
+        jumpAction = playerActionMap.FindAction("Jump");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!inputEnabled)
-            return;
+        //if (!inputEnabled)
+        //    return;
 
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
 
@@ -48,5 +51,15 @@ public class PlayerInputHandler : MonoBehaviour
         {
             OnJump?.Invoke();
         }
+    }
+    public void EnablePlayerInput()
+    {
+        playerActionMap.Enable();
+    }
+    public void DisablePlayerInput()
+    {
+        playerActionMap.Disable();
+
+        OnMove?.Invoke(Vector2.zero);
     }
 }
