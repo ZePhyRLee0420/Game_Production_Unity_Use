@@ -8,7 +8,7 @@ public class PlayerCombat : MonoBehaviour
     public float throwForce = 15f;
     public int bombDamage = 10;
     public float explosionRadius = 5f;
-    public float throwCooldown = 1f;
+    public float throwCooldown = 0.5f;
     float cooldownTimer = 0f;
     PlayerInputHandler inputHandler;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
