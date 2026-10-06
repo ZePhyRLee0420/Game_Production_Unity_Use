@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266ff3318557f034e83aaf1621543275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieSpownerController
-  zombie: {fileID: 6318841895613888205, guid: ca3d30ac31afc8b49bf1ff3ac13ed3f5, type: 3}
+  zombie: {fileID: 6471467027708229898, guid: 479080d66ebd20e4eb99fad2aa6605cd, type: 3}
   timerObject: {fileID: 7431170595916816826, guid: 1bfd9164c67453f44845edb7882e1ef9, type: 3}

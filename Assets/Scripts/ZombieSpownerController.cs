@@ -24,6 +24,8 @@ public class ZombieSpownerController : MonoBehaviour
 
     int zombieCount = 0;
 
+    int zombieCountMax = 500;
+
     GameObject ZombieCountObject;
 
     ZombieCount zombieCountScript;
@@ -53,7 +55,7 @@ public class ZombieSpownerController : MonoBehaviour
         {
             if(bossFlagScript.bossFlag == false)
             {
-                if (zombieCount < 300)
+                if (zombieCount < zombieCountMax)
                 {
                     Instantiate(zombie, transform.position, transform.rotation);
                 }
