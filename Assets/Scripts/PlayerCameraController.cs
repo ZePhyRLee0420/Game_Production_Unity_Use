@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerCameraController : MonoBehaviour
 {
-    public bool inputEnabled = true;
+    InputActionMap playerActionMap;
+    //public bool inputEnabled = true;
     public Transform cameraPoint;
 
     public float sensitivity = 0.15f;
@@ -16,14 +17,16 @@ public class PlayerCameraController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        lookAction = InputSystem.actions.FindAction("Look");
+        playerActionMap = InputSystem.actions.FindActionMap("Player");
+
+        lookAction = playerActionMap.FindAction("Look");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!inputEnabled)
-            return;
+        //if (!inputEnabled)
+        //    return;
 
         Vector2 lookValue = lookAction.ReadValue<Vector2>();
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public enum StatusUpgradeType
 {
@@ -56,19 +57,24 @@ public class StatusUpgradeController : MonoBehaviour
     {
         Time.timeScale = 0f;
 
-        inputHandler.inputEnabled = false;
-        cameraController.inputEnabled = false;
+        inputHandler.DisablePlayerInput();
+        //inputHandler.inputEnabled = false;
+        //cameraController.inputEnabled = false;
 
         RandomUpgrade();
 
         upgradePanel.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(upgradeButtons[0].gameObject);
     }
     void EndUpgrade()
     {
         upgradePanel.SetActive(false);
 
-        inputHandler.inputEnabled = true;
-        cameraController.inputEnabled = true;
+        inputHandler.EnablePlayerInput();
+        //inputHandler.inputEnabled = true;
+        //cameraController.inputEnabled = true;
 
         Time.timeScale = 1f;
     }
