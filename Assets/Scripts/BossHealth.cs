@@ -3,7 +3,7 @@ using UnityEngine;
 public class BossHealth : MonoBehaviour
 {
     int maxHp;
-    int currentHp;
+    [SerializeField]int currentHp;
 
     int exp;
 
