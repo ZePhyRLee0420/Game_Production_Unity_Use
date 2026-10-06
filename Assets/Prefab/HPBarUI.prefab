@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a642945ad51ee33459baea5e3c02fc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHPBar
-  playerHealth: {fileID: 175335887949460764, guid: e22bef25396767e4880f29e739118cf1, type: 3}
+  playerHealth: {fileID: 735424458021963964, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
   hpSlider: {fileID: 2979081435418327352}
 --- !u!1 &3180401919639037372
 GameObject:

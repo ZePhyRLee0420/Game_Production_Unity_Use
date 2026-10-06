@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498a4cfaf8449924ebf3b48c5eea86fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StatusUpgradeButton
-  upgradeController: {fileID: 6955653464595186839, guid: e22bef25396767e4880f29e739118cf1, type: 3}
+  upgradeController: {fileID: 5791436899813873347, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
   upgradeType: 1
   buttonText: {fileID: 4710403710528414497}
 --- !u!1 &1083330142044652803
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498a4cfaf8449924ebf3b48c5eea86fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StatusUpgradeButton
-  upgradeController: {fileID: 6955653464595186839, guid: e22bef25396767e4880f29e739118cf1, type: 3}
+  upgradeController: {fileID: 5791436899813873347, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
   upgradeType: 4
   buttonText: {fileID: 6337737084692043443}
 --- !u!1 &2364220514662307831
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498a4cfaf8449924ebf3b48c5eea86fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StatusUpgradeButton
-  upgradeController: {fileID: 6955653464595186839, guid: e22bef25396767e4880f29e739118cf1, type: 3}
+  upgradeController: {fileID: 5791436899813873347, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
   upgradeType: 2
   buttonText: {fileID: 2177074720632086353}
 --- !u!1 &8382872816467678227
