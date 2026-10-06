@@ -3,7 +3,7 @@ using UnityEngine;
 public class ZombieCount : MonoBehaviour
 {
     GameObject[] objects;
-    [SerializeField]int count;
+    public int count;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
