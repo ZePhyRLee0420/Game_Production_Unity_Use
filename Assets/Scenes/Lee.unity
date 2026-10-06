@@ -375,7 +375,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -121.11061, y: 0, z: 652.642}
+  m_LocalPosition: {x: -120.11061, y: 0, z: 650.642}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1038,6 +1038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5218523302397647569, guid: e22bef25396767e4880f29e739118cf1, type: 3}
+      propertyPath: dashDuration
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5647423160953433676, guid: e22bef25396767e4880f29e739118cf1, type: 3}
       propertyPath: cameraPoint
       value: 
@@ -1081,6 +1085,10 @@ PrefabInstance:
     - target: {fileID: 6687664919818072164, guid: e22bef25396767e4880f29e739118cf1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938566179377756925, guid: e22bef25396767e4880f29e739118cf1, type: 3}
+      propertyPath: throwCooldown
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6955653464595186839, guid: e22bef25396767e4880f29e739118cf1, type: 3}
       propertyPath: upgradePanel
@@ -1850,6 +1858,10 @@ PrefabInstance:
       value: Camera Point
       objectReference: {fileID: 0}
     - target: {fileID: 2102997309090832276, guid: 5bfa7721096993d4490e3d3fe6f9f68e, type: 3}
+      propertyPath: height
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102997309090832276, guid: 5bfa7721096993d4490e3d3fe6f9f68e, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 281726123}
@@ -1933,7 +1945,7 @@ Transform:
   m_GameObject: {fileID: 1820985772}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -121.11061, y: 0, z: 652.642}
+  m_LocalPosition: {x: -120.11061, y: 0, z: 650.642}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1952,10 +1964,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineThirdPersonFollow
   Damping: {x: 0.1, y: 0.1, z: 0.1}
-  ShoulderOffset: {x: 0.5, y: -0.4, z: 0}
+  ShoulderOffset: {x: 1.5, y: -0.4, z: 0}
   VerticalArmLength: 0.4
   CameraSide: 1
-  CameraDistance: 4
+  CameraDistance: 6
   AvoidObstacles:
     Enabled: 0
     CollisionFilter:
