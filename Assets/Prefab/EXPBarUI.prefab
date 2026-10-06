@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80083db3fa62b3440b0e9c3e4869e419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEXPBar
-  playerEXP: {fileID: 6378652835659186343, guid: e22bef25396767e4880f29e739118cf1, type: 3}
+  playerEXP: {fileID: 5497436017559669787, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
   expSlider: {fileID: 6908785415421522911}
 --- !u!1 &6514786307305553080
 GameObject:
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fceca30acb1db348bc72cf524ff25d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLevelUI
-  playerEXP: {fileID: 6378652835659186343, guid: e22bef25396767e4880f29e739118cf1, type: 3}
+  playerEXP: {fileID: 5497436017559669787, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
   levelText: {fileID: 5672197484250709345}
 --- !u!1 &7458441375460116956
 GameObject:

@@ -5,10 +5,15 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Textur
+    second: {fileID: 2100000, guid: 0ee3637da6e1b7e469e7b1d90d3c5e9e, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Model_UV_02_3_openPBR_shader1_AlbedoTransparency
-    second: {fileID: 2800000, guid: a8d5e0d6ce2ac6d408e69e176ef83830, type: 3}
+    second: {fileID: 2800000, guid: d9ecb5e658fe3aa4095e02e75efe9fd5, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
