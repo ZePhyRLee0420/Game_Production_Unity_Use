@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b6d6fc7f92ad1748a3e5c76e80ba8ef
+guid: 1b2825a4f356eac46a717aa06a17ea9f
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Kani_Base_color
-    second: {fileID: 2800000, guid: 3f2fab0876c46e24d9854f447c982cf9, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Uirusu_Base_color
-    second: {fileID: 2800000, guid: a12b3ef0813819541b9d0818277236ab, type: 3}
+      name: Model_UV_02_3_openPBR_shader1_AlbedoTransparency
+    second: {fileID: 2800000, guid: a8d5e0d6ce2ac6d408e69e176ef83830, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

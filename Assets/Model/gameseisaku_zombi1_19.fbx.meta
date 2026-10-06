@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 1b6d6fc7f92ad1748a3e5c76e80ba8ef
+guid: ba5efaeab9ab1664c9355589fc166b70
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Kani_Base_color
-    second: {fileID: 2800000, guid: 3f2fab0876c46e24d9854f447c982cf9, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Uirusu_Base_color
-    second: {fileID: 2800000, guid: a12b3ef0813819541b9d0818277236ab, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
