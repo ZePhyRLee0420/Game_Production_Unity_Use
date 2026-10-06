@@ -8,6 +8,8 @@ public class PlayerCombat : MonoBehaviour
     public float throwForce = 15f;
     public int bombDamage = 10;
     public float explosionRadius = 5f;
+    public float throwCooldown = 1f;
+    float cooldownTimer = 0f;
     PlayerInputHandler inputHandler;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,10 +22,21 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
         Debug.Log("Damage = " + bombDamage);
     }
     void ThrowBomb()
     {
+        if (cooldownTimer > 0)
+        {
+            return;
+        }
+
+        cooldownTimer = throwCooldown;
+
         GameObject bomb = Instantiate(bombPrefab, throwPoint.position, Quaternion.identity);
 
         BombController bombController = bomb.GetComponent<BombController>();
