@@ -12,7 +12,7 @@ public class ZombieSpownerController : MonoBehaviour
 
     Timer timer;
 
-    int interval = 2;
+    int interval = 1;
 
     int a = 0;
 
