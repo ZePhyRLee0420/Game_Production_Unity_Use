@@ -3,11 +3,17 @@ using UnityEngine;
 public class BossStatusOriginally : MonoBehaviour
 {
     public int power = 10;
-    public int Hp = 100;
+    public int Hp = 1000;
     public int exp = 10;
     public float speed = 2.1f;
 
     int LoopCount = 1;
+
+    int powerUp = 10;
+
+    int HpUp = 1000;
+
+    int expUp = 10;
 
     BossFlag bossFlag;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,8 +34,8 @@ public class BossStatusOriginally : MonoBehaviour
 
     void StatusUp()
     {
-        power = 10 * (bossFlag.loop + bossFlag.loop);
-        Hp += 100;
-        exp += 10;
+        power = powerUp * (bossFlag.loop + bossFlag.loop);
+        Hp += HpUp;
+        exp += expUp;
     }
 }
