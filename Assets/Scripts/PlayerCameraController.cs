@@ -7,7 +7,7 @@ public class PlayerCameraController : MonoBehaviour
     //public bool inputEnabled = true;
     public Transform cameraPoint;
 
-    public float sensitivity = 0.15f;
+    public float sensitivity = 0.3f;
 
     InputAction lookAction;
 

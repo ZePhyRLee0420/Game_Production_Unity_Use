@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1b2825a4f356eac46a717aa06a17ea9f, type: 3}
       propertyPath: m_Name
-      value: MainCharacter_Model(2)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1b2825a4f356eac46a717aa06a17ea9f, type: 3}
       propertyPath: m_TagString
@@ -243,8 +243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   cameraTransform: {fileID: 1249117272692187450, guid: 5bfa7721096993d4490e3d3fe6f9f68e, type: 3}
-  dashSpeed: 8
-  moveSpeed: 3.5
+  dashSpeed: 10
+  moveSpeed: 5
   turnSpeed: 20
 --- !u!114 &2311648343319712749
 MonoBehaviour:
