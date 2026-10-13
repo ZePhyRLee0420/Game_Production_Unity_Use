@@ -3,14 +3,14 @@ using UnityEngine;
 public class BossStatusOriginally : MonoBehaviour
 {
     public int power = 50;
-    public int Hp = 1000;
+    public int Hp = 250;
     public float speed = 2.1f;
 
     int LoopCount = 1;
 
     int powerUp = 10;
 
-    int HpUp = 1000;
+    int HpUp = 250;
 
     BossFlag bossFlag;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
