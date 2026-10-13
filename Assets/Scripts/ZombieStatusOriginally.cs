@@ -7,7 +7,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     public int power = 5;
     public int Hp = 10;
     public int exp = 1;
-    public float speed = 1.4f;
+    public float speed = 2.1f;
 
     GameObject timerObject;
 

@@ -53,7 +53,7 @@ public class PlayerEXP : MonoBehaviour
 
         damage.bombDamage = 10 + ((currentLevel - 1 ) * 5 + (statusUpgradeController.statusAttackLevel) * (statusUpgradeController.statusAttackLevel));
 
-        EXPtoNextLevel *= 2;
+        EXPtoNextLevel += 10;
 
         OnLevelUp?.Invoke();
 
