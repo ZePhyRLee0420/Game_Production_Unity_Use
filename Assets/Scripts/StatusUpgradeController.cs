@@ -89,7 +89,7 @@ public class StatusUpgradeController : MonoBehaviour
 
             case StatusUpgradeType.Damage:
                 statusAttackLevel++;
-                playerCombat.bombDamage = 10 + ((playerEXP.currentLevel + statusAttackLevel) * (playerEXP.currentLevel + statusAttackLevel));
+                playerCombat.bombDamage = 10 + ((playerEXP.currentLevel - 1) * 5 + (statusAttackLevel) * (statusAttackLevel));
                 break;
 
             case StatusUpgradeType.MoveSpeed:
