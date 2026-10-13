@@ -52,6 +52,14 @@ public class BombController : MonoBehaviour
             {
                 boss.TakeDamage(damage);
             }
+
+            BossMove bossMove = hit.GetComponent<BossMove>();
+
+            if(bossMove != null)
+            {
+                bossMove.TakeDown();
+            }
+
         }
         Destroy(gameObject);
 

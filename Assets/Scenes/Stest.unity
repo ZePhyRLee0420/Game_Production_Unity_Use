@@ -589,7 +589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 228211461157890308, guid: b7399cb3278879c4492df3adc8b2c190, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.1
+      value: 14.2
       objectReference: {fileID: 0}
     - target: {fileID: 228211461157890308, guid: b7399cb3278879c4492df3adc8b2c190, type: 3}
       propertyPath: m_LocalRotation.w
@@ -712,6 +712,10 @@ PrefabInstance:
     - target: {fileID: 3506936611597048334, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
       propertyPath: m_Name
       value: ZombieSpowner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506936611597048334, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4444755604107792277, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1060,7 +1064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6687664919818072164, guid: e22bef25396767e4880f29e739118cf1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 3.84
       objectReference: {fileID: 0}
     - target: {fileID: 6687664919818072164, guid: e22bef25396767e4880f29e739118cf1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1282,6 +1286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieSpowner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3506936611597048334, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4444755604107792277, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.569273
@@ -1444,6 +1452,10 @@ PrefabInstance:
     - target: {fileID: 3506936611597048334, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
       propertyPath: m_Name
       value: ZombieSpowner (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506936611597048334, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4444755604107792277, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1673,6 +1685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieSpowner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3506936611597048334, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4444755604107792277, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.153158
@@ -1824,7 +1840,7 @@ Transform:
   m_GameObject: {fileID: 1512102456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.72, y: 1.64, z: -6.21181}
+  m_LocalPosition: {x: 0.72, y: 2.22, z: -6.21181}
   m_LocalScale: {x: 4.78, y: 2.84, z: 4.45}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1982,6 +1998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieSpowner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3506936611597048334, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4444755604107792277, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.7767186
@@ -2038,6 +2058,10 @@ PrefabInstance:
     - target: {fileID: 3506936611597048334, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
       propertyPath: m_Name
       value: ZombieSpowner (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506936611597048334, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4444755604107792277, guid: bfe5631aaf36c4343ab3ce1251e1df0d, type: 3}
       propertyPath: m_LocalPosition.x

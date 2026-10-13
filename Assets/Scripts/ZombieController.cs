@@ -8,8 +8,16 @@ public class ZombieController : MonoBehaviour
 
     GameObject originalStatusObject;
     ZombieStatusOriginally originallyStatus;
-    int EnterDamage;
-    int StayDamage;
+
+    GameObject attackArea;
+
+    bool attackFlag = false;
+
+    float attackDistance = 2;
+
+    float attackTime = 0;
+
+    float attackTimeEnd = 2;
 
     ZombieStatus status;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,43 +26,58 @@ public class ZombieController : MonoBehaviour
         status = this.GetComponent<ZombieStatus>();
         originalStatusObject = GameObject.Find("ZombieStatusOriginally");
         originallyStatus = originalStatusObject.GetComponent<ZombieStatusOriginally>();
-        EnterDamage = originallyStatus.power;
-        StayDamage = originallyStatus.power;
+
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindWithTag("Player");
+
+        attackArea = transform.Find("AttackArea").gameObject;
+
+        attackArea.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        agent.destination = player.transform.position;
-    }
+        float distance;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Player"))
+        distance = Vector3.Distance(transform.position, player.transform.position);
+
+        if(attackFlag == false )
         {
-            PlayerHealth playerHealth = collision.collider.GetComponent<PlayerHealth>();
-
-            if(playerHealth != null)
+            if(distance <= attackDistance )
             {
-                playerHealth.takeDamage(EnterDamage);
-                Debug.Log("EnterDamage = "+ EnterDamage);
+                attackFlag = true;
             }
         }
-    }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.collider.CompareTag("Player"))
+        else
         {
-            PlayerHealth playerHealth = collision.collider.GetComponent<PlayerHealth>();
+            attackTime += Time.deltaTime;
 
-            if (playerHealth != null)
+            if(attackTime >= attackTimeEnd )
             {
-                playerHealth.takeDamage(StayDamage);
-                Debug.Log("StayDamage = " + StayDamage);
+                attackFlag = false;
+                attackTime = 0;
             }
         }
+
+        if( attackFlag )
+        {
+            if (attackArea.activeSelf == false)
+            {
+                attackArea.SetActive(true);
+            }
+        }
+
+        else
+        {
+            if (attackArea.activeSelf == true)
+            {
+                attackArea.SetActive(false);
+            }
+
+            agent.destination = player.transform.position;
+        }
+
     }
 }
