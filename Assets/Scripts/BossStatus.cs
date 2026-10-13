@@ -4,7 +4,6 @@ public class BossStatus : MonoBehaviour
 {
     public int power;
     public int Hp;
-    public int exp;
     public float speed;
 
     GameObject bossManager;
@@ -18,7 +17,6 @@ public class BossStatus : MonoBehaviour
 
         power = originally.power;
         Hp = originally.Hp;
-        exp = originally.exp;
         speed = originally.speed;
     }
 

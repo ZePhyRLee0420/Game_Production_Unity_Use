@@ -5,7 +5,6 @@ public class BossHealth : MonoBehaviour
     int maxHp;
     [SerializeField]int currentHp;
 
-    int exp;
 
     GameObject bossManager;
 
@@ -21,7 +20,6 @@ public class BossHealth : MonoBehaviour
 
         maxHp = originally.Hp;
         currentHp = maxHp;
-        exp = originally.exp;
 
         player = GameObject.Find("Player");
     }
@@ -42,13 +40,6 @@ public class BossHealth : MonoBehaviour
 
     void Die()
     {
-        PlayerEXP playerEXP = player.GetComponent<PlayerEXP>();
-
-        if (playerEXP != null)
-        {
-            playerEXP.GainEXP(exp);
-        }
-
         Destroy(gameObject);
     }
 }

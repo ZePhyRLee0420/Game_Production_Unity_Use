@@ -8,7 +8,7 @@ public class BossSpawner : MonoBehaviour
 
     Timer timer;
 
-    [SerializeField]int interval = 10;
+    [SerializeField]int interval = 60;
 
     int a = 0;
 
