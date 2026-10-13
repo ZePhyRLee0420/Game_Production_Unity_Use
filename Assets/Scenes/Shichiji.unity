@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d022a88a552ff445a716099607bc044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieStatusOriginally
-  power: 1
+  power: 5
   Hp: 10
   exp: 1
   speed: 1.4
@@ -990,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 6756803390206592251, guid: 153252ea231c87a478f899cba1a14844, type: 3}
     - target: {fileID: 2355468681329089798, guid: b7399cb3278879c4492df3adc8b2c190, type: 3}
       propertyPath: interval
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2355468681329089798, guid: b7399cb3278879c4492df3adc8b2c190, type: 3}
       propertyPath: timerObject
@@ -1002,7 +1002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7342236660734864413, guid: b7399cb3278879c4492df3adc8b2c190, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
