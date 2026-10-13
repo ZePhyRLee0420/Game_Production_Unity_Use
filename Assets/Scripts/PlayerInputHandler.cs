@@ -26,6 +26,8 @@ public class PlayerInputHandler : MonoBehaviour
         throwAction = playerActionMap.FindAction("Throw");
         dashAction = playerActionMap.FindAction("Dash");
         jumpAction = playerActionMap.FindAction("Jump");
+
+        EnablePlayerInput();
     }
 
     // Update is called once per frame
