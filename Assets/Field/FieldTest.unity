@@ -3733,6 +3733,7 @@ MonoBehaviour:
   currentEXP: 0
   currentLevel: 1
   EXPtoNextLevel: 10
+  EXPMultiplier: 1
 --- !u!114 &2127975219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3759,7 +3760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e76cc11a876584f976b2c90da8e8cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCameraController
-  inputEnabled: 1
   cameraPoint: {fileID: 1050279868}
   sensitivity: 0.15
 --- !u!114 &2127975221
@@ -3774,7 +3774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0193c73f4d98884cac7cdc5c62c38fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
-  inputEnabled: 1
 --- !u!114 &2127975222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3808,6 +3807,7 @@ MonoBehaviour:
   throwForce: 15
   bombDamage: 10
   explosionRadius: 5
+  throwCooldown: 1
 --- !u!114 &2127975224
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class BossHealth : MonoBehaviour
 
     GameObject player;
     BossStatusOriginally originally;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

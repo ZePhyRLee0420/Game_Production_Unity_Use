@@ -12,6 +12,22 @@ public class BossMove : MonoBehaviour
 
     int damage;
 
+    GameObject attackArea;
+
+    bool attackFlag = false;
+
+    float attackDistance = 8;
+
+    float attackTime = 0;
+
+    float attackTimeEnd = 2;
+
+    bool downFlag = false;
+
+    float downTime = 0;
+
+    float downTimeEnd = 5;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,37 +39,87 @@ public class BossMove : MonoBehaviour
 
         damage = originally.power;
 
+        attackArea = transform.Find("AttackArea").gameObject;
+
+        //attackArea.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        agent.destination = player.transform.position;
-    }
+        float distance;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Player"))
+        distance = Vector3.Distance(transform.position, player.transform.position);
+
+        if (downFlag)
         {
-            PlayerHealth playerHealth = collision.collider.GetComponent<PlayerHealth>();
+            downTime += Time.deltaTime;
 
-            if (playerHealth != null)
+            Debug.Log("Down");
+
+            attackFlag = false;
+            attackTime = 0;
+
+            if(downTime >= downTimeEnd)
             {
-                playerHealth.takeDamage(damage);
+                downFlag = false;
+                downTime = 0;
             }
         }
+
+        else if (attackFlag == false && downFlag == false)
+        {
+            if (distance <= attackDistance)
+            {
+                attackFlag = true;
+            }
+        }
+
+        else if (attackFlag == true && downFlag == false)
+        {
+            attackTime += Time.deltaTime;
+
+            if(attackTime >= attackTimeEnd)
+            {
+                attackFlag = false;
+                attackTime = 0;
+            }
+        }
+
+        if(downFlag)
+        {
+            if (attackArea.activeSelf == true)
+            {
+                attackArea.SetActive(false);
+            }
+        }
+
+        else if (attackFlag)
+        {
+            if(attackArea.activeSelf == false)
+            {
+                attackArea.SetActive(true);
+            }
+        }
+
+        else
+        {
+            if (attackArea.activeSelf == true)
+            {
+                attackArea.SetActive(false);
+            }
+
+            agent.destination = player.transform.position;
+        }
+
     }
 
-    private void OnCollisionStay(Collision collision)
+    public void TakeDown()
     {
-        if (collision.collider.CompareTag("Player"))
+        if(attackFlag == true)
         {
-            PlayerHealth playerHealth = collision.collider.GetComponent<PlayerHealth>();
-
-            if (playerHealth != null)
-            {
-                playerHealth.takeDamage(damage);
-            }
+            downFlag = true;
         }
     }
 }

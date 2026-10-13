@@ -49,6 +49,7 @@ public class ZombieHeaith : MonoBehaviour
     public void TakeDamage(int value)
     {
         currentHp -= value;
+
     }
 
     void Die()
