@@ -27,7 +27,7 @@ public class BossHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Boss HP: " + currentHp);
+        //Debug.Log("Boss HP: " + currentHp);
 
         if (currentHp < 0)
         {

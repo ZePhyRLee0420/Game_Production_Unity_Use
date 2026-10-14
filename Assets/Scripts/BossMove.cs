@@ -16,7 +16,7 @@ public class BossMove : MonoBehaviour
 
     bool attackFlag = false;
 
-    float attackDistance = 8;
+    float attackDistance = 7;
 
     float attackTime = 0;
 
@@ -27,6 +27,8 @@ public class BossMove : MonoBehaviour
     float downTime = 0;
 
     float downTimeEnd = 5;
+
+    float attackStartUpTime = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -97,10 +99,12 @@ public class BossMove : MonoBehaviour
 
         else if (attackFlag)
         {
-            if(attackArea.activeSelf == false)
+            if(attackArea.activeSelf == false && attackTime >= attackStartUpTime)
             {
                 attackArea.SetActive(true);
             }
+
+            Debug.Log("IsAttacking");
         }
 
         else
