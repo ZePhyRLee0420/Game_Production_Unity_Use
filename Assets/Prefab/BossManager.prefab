@@ -59,7 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23fbfd1899dbce5489fde528a7628cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossStatusOriginally
-  power: 10
-  Hp: 100
-  exp: 10
-  speed: 2.1
+  power: 25
+  Hp: 500
+  speed: 6
