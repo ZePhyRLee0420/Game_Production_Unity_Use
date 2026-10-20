@@ -7,7 +7,7 @@ public class ZombieStatus : MonoBehaviour
 {
     public int power;
     public int Hp;
-    public int exp;
+    public float exp;
     public float speed;
 
     NavMeshAgent agent;
