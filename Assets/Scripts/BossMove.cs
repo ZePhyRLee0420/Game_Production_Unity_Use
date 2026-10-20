@@ -12,23 +12,25 @@ public class BossMove : MonoBehaviour
 
     int damage;
 
+    float speed;
+
     GameObject attackArea;
 
     bool attackFlag = false;
 
-    float attackDistance = 7;
+    float attackDistance = 8f;
 
     float attackTime = 0;
 
-    float attackTimeEnd = 2;
+    float attackTimeEnd = 3f;
 
     bool downFlag = false;
 
     float downTime = 0;
 
-    float downTimeEnd = 5;
+    float downTimeEnd = 5f;
 
-    float attackStartUpTime = 0.5f;
+    float attackStartUpTime = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,10 +42,12 @@ public class BossMove : MonoBehaviour
         originally = bossManager.GetComponent<BossStatusOriginally>();
 
         damage = originally.power;
+        speed = originally.speed;
+
+        agent.speed = speed;
 
         attackArea = transform.Find("AttackArea").gameObject;
 
-        //attackArea.SetActive(false);
 
     }
 
@@ -89,7 +93,7 @@ public class BossMove : MonoBehaviour
             }
         }
 
-        if(downFlag)
+        if(downFlag == true)
         {
             if (attackArea.activeSelf == true)
             {
@@ -97,7 +101,7 @@ public class BossMove : MonoBehaviour
             }
         }
 
-        else if (attackFlag)
+        else if (attackFlag == true)
         {
             if(attackArea.activeSelf == false && attackTime >= attackStartUpTime)
             {

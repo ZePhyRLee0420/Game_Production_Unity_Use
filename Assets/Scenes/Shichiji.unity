@@ -513,7 +513,7 @@ MonoBehaviour:
   power: 5
   Hp: 10
   exp: 1
-  speed: 1.4
+  speed: 5
 --- !u!4 &364440535
 Transform:
   m_ObjectHideFlags: 0
@@ -710,7 +710,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7928475178582443480, guid: e8c49198b83af0a4c8c4b043b1a2ebcf, type: 3}
       propertyPath: Hp
-      value: 1000
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928475178582443480, guid: e8c49198b83af0a4c8c4b043b1a2ebcf, type: 3}
+      propertyPath: power
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928475178582443480, guid: e8c49198b83af0a4c8c4b043b1a2ebcf, type: 3}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1493,7 +1501,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6237252726625607233, guid: 153252ea231c87a478f899cba1a14844, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.61
+      value: -3.86
       objectReference: {fileID: 0}
     - target: {fileID: 6237252726625607233, guid: 153252ea231c87a478f899cba1a14844, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1535,6 +1543,18 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6750938865349628834, guid: 153252ea231c87a478f899cba1a14844, type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6750938865349628834, guid: 153252ea231c87a478f899cba1a14844, type: 3}
+      propertyPath: _targets
+      value: 
+      objectReference: {fileID: 330585543}
+    - target: {fileID: 6750938865349628834, guid: 153252ea231c87a478f899cba1a14844, type: 3}
+      propertyPath: _DamageUI
+      value: 
+      objectReference: {fileID: 3212713730598891076, guid: 891f88257fe483b4ab171cd2a43677b2, type: 3}
     - target: {fileID: 6756803390206592251, guid: 153252ea231c87a478f899cba1a14844, type: 3}
       propertyPath: m_Name
       value: Kani
@@ -1545,7 +1565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8775969646864698677, guid: 153252ea231c87a478f899cba1a14844, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
