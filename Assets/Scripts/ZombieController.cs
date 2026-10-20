@@ -11,7 +11,6 @@ public class ZombieController : MonoBehaviour
 
     GameObject attackArea;
 
-    float speed;
     bool attackFlag = false;
 
     float attackDistance = 2;
@@ -27,12 +26,11 @@ public class ZombieController : MonoBehaviour
         status = this.GetComponent<ZombieStatus>();
         originalStatusObject = GameObject.Find("ZombieStatusOriginally");
         originallyStatus = originalStatusObject.GetComponent<ZombieStatusOriginally>();
-        originallyStatus.speed = speed;
 
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindWithTag("Player");
 
-        agent.speed = speed;
+        agent.speed = originallyStatus.speed;
         
         attackArea = transform.Find("AttackArea").gameObject;
 
