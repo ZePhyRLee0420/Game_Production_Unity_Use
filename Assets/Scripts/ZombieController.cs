@@ -13,7 +13,7 @@ public class ZombieController : MonoBehaviour
 
     bool attackFlag = false;
 
-    float attackDistance = 2;
+    float attackDistance = 3;
 
     float attackTime = 0;
 

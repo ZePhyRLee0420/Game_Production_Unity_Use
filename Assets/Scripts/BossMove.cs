@@ -18,7 +18,7 @@ public class BossMove : MonoBehaviour
 
     bool attackFlag = false;
 
-    float attackDistance = 8f;
+    float attackDistance = 10f;
 
     float attackTime = 0;
 
@@ -28,7 +28,7 @@ public class BossMove : MonoBehaviour
 
     float downTime = 0;
 
-    float downTimeEnd = 5f;
+    float downTimeEnd = 2f;
 
     float attackStartUpTime = 1f;
 
