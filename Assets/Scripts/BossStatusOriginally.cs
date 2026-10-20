@@ -4,7 +4,7 @@ public class BossStatusOriginally : MonoBehaviour
 {
     public int power = 50;
     public int Hp = 500;
-    public float speed = 2.8f;
+    public float speed = 6f;
 
     int LoopCount = 1;
 
