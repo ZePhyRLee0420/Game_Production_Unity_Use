@@ -33,7 +33,7 @@ public class PlayerCameraController : MonoBehaviour
         yaw += lookValue.x * sensitivity;
         pitch -= lookValue.y * sensitivity;
 
-        pitch = Mathf.Clamp(pitch, -10f, 70f);
+        pitch = Mathf.Clamp(pitch, -10f, 60f);
 
         cameraPoint.rotation = Quaternion.Euler(pitch, yaw, 0f);
     }
