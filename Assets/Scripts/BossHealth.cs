@@ -3,13 +3,16 @@ using UnityEngine;
 public class BossHealth : MonoBehaviour
 {
     int maxHp;
-    [SerializeField]int currentHp;
+    [SerializeField] int currentHp;
 
 
     GameObject bossManager;
 
     GameObject player;
     BossStatusOriginally originally;
+
+    [SerializeField]
+    GameObject DamageUI;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,10 +41,17 @@ public class BossHealth : MonoBehaviour
     public void TakeDamage(int value)
     {
         currentHp -= value;
+
+        PopDamageUI();
     }
 
     void Die()
     {
         Destroy(gameObject);
+    }
+
+    void PopDamageUI()
+    {
+
     }
 }
