@@ -13,7 +13,7 @@ public class ZombieHeaith : MonoBehaviour
 
     BossFlag bossFlagScript;
 
-    int exp;
+    float exp;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

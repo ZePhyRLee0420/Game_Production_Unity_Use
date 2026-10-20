@@ -6,7 +6,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 {
     public int power = 5;
     public int Hp = 10;
-    public int exp = 1;
+    public float exp = 1f;
     public float speed = 5f;
 
     GameObject timerObject;
@@ -48,7 +48,7 @@ public class ZombieStatusOriginally : MonoBehaviour
             b++;
         }
 
-        exp = 1 + bossFlag.loop;
+        exp = 1 + (bossFlag.loop * 0.5f);
 
     }
 
