@@ -10,6 +10,9 @@ public class PlayerInputHandler : MonoBehaviour
     InputAction dashAction;
     InputAction jumpAction;
 
+    //Skill actions
+    InputAction SkillAction;
+
     public delegate void MoveInputHandler(Vector2 moveValue);
     public event MoveInputHandler OnMove;
 
@@ -17,6 +20,9 @@ public class PlayerInputHandler : MonoBehaviour
     public event ButtonInputHandler OnThrow;
     public event ButtonInputHandler OnDash;
     public event ButtonInputHandler OnJump;
+    public event ButtonInputHandler OnSkill1;
+    public event ButtonInputHandler OnNextSkill;
+    public event ButtonInputHandler OnPreviousSkill;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +32,8 @@ public class PlayerInputHandler : MonoBehaviour
         throwAction = playerActionMap.FindAction("Throw");
         dashAction = playerActionMap.FindAction("Dash");
         jumpAction = playerActionMap.FindAction("Jump");
+
+
 
         EnablePlayerInput();
     }
