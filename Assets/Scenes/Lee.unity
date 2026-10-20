@@ -1313,6 +1313,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1865210301}
     - target: {fileID: 7322530521908063971, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: dashSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322530521908063971, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 69395460}
