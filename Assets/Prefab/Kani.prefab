@@ -378,7 +378,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.99999905, z: 0, w: 0.001396349}
   m_LocalPosition: {x: 5.79, y: -4.45, z: 18.74}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8033545786987092831}
@@ -398,12 +398,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 6756803390206592251}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.78
+  m_Radius: 1.37
   m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -439,6 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
   currentHp: 0
+  DamageUI: {fileID: 0}
 --- !u!114 &1908702058320089299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,10 +471,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.76
-  m_Height: 1.19
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.56, z: 0}
+  m_Radius: 0.96
+  m_Height: 2.74
+  m_Direction: 0
+  m_Center: {x: 0.28, y: 1.59, z: 0.3}
 --- !u!54 &8644593932552781060
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -497,7 +498,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -604,7 +605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &660514539627993890
 Transform:
   m_ObjectHideFlags: 0
