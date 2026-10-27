@@ -60,6 +60,7 @@ public class ZombieSpownerController : MonoBehaviour
                     Instantiate(zombie, transform.position, transform.rotation);
                 }
             }
+
             b++;
         }
     }

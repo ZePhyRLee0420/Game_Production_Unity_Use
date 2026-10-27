@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1849eac97467d144bbd90ecbacd7c885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieHeaith
+  damageUI: {fileID: 2595096470092829979, guid: bda09688743b4a14f9266f0f39d05f91, type: 3}
 --- !u!114 &7827811896579277936
 MonoBehaviour:
   m_ObjectHideFlags: 0
