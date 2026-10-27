@@ -83,13 +83,13 @@ public class StatusUpgradeController : MonoBehaviour
         switch (upgrade)
         {
             case StatusUpgradeType.MaxHP:
-                playerHealth.maxHP += 20;
-                playerHealth.currentHP += 20;
+                playerHealth.maxHP += 10;
+                playerHealth.currentHP += 10;
                 break;
 
             case StatusUpgradeType.Damage:
                 statusAttackLevel++;
-                playerCombat.bombDamage = 10 + ((playerEXP.currentLevel - 1) * 5 + (statusAttackLevel) * (statusAttackLevel));
+                playerCombat.bombDamage = 10 + ((playerEXP.currentLevel - 1) * 2 + (statusAttackLevel) * 2);
                 break;
 
             case StatusUpgradeType.MoveSpeed:
@@ -97,7 +97,7 @@ public class StatusUpgradeController : MonoBehaviour
                 break;
 
             case StatusUpgradeType.BombRadius:
-                playerCombat.explosionRadius += 1f;
+                playerCombat.explosionRadius += 0.5f;
                 break;
 
             //case StatusUpgradeType.SkillCooldown:

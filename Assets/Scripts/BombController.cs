@@ -3,7 +3,7 @@ using UnityEngine;
 public class BombController : MonoBehaviour
 {
     public float explodeTime = 3f;
-    //public GameObject explosionEffect;
+    public GameObject explosionEffect;
     public float explodeRadius;
     public float explosionForce = 10f;
 
@@ -22,7 +22,7 @@ public class BombController : MonoBehaviour
 
     void Explode()
     {
-        //Instantiate(explosionEffect,transform.position,Quaternion.identity);
+        Instantiate(explosionEffect,transform.position,Quaternion.identity);
 
         Collider[] hits = Physics.OverlapSphere(transform.position, explodeRadius);
 

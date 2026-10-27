@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
   currentHp: 0
-  DamageUI: {fileID: 0}
+  damageUI: {fileID: 2595096470092829979, guid: bda09688743b4a14f9266f0f39d05f91, type: 3}
 --- !u!114 &1908702058320089299
 MonoBehaviour:
   m_ObjectHideFlags: 0

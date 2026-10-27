@@ -11,8 +11,7 @@ public class BossHealth : MonoBehaviour
     GameObject player;
     BossStatusOriginally originally;
 
-    [SerializeField]
-    GameObject DamageUI;
+    [SerializeField] GameObject damageUI;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -42,7 +41,24 @@ public class BossHealth : MonoBehaviour
     {
         currentHp -= value;
 
-        PopDamageUI();
+        //ダメージUIの処理
+        Vector3 DamageUIpos = transform.position;
+        DamageUIpos.y += 8.5f; 
+
+        GameObject obj = Instantiate(damageUI, DamageUIpos, Quaternion.identity);
+        //obj.transform.SetParent(this.transform);
+
+        Transform childTransform = obj.transform.Find("Text");
+        GameObject child = childTransform.gameObject;
+
+        if (child != null)
+        {
+            DamageUIController controller = child.GetComponent<DamageUIController>();
+            controller.damage = value;
+        }
+
+        Destroy(obj, 1f);
+
     }
 
     void Die()
@@ -50,8 +66,4 @@ public class BossHealth : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void PopDamageUI()
-    {
-
-    }
 }

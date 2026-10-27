@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BombController
   explodeTime: 3
+  explosionEffect: {fileID: 3505359625236180747, guid: 9fd821744c758df49adf76bf8526ef27, type: 3}
   explodeRadius: 3
   explosionForce: 10
   damage: 10

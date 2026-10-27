@@ -13,6 +13,8 @@ public class ZombieHeaith : MonoBehaviour
 
     BossFlag bossFlagScript;
 
+    [SerializeField] GameObject damageUI;
+
     float exp;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,6 +51,24 @@ public class ZombieHeaith : MonoBehaviour
     public void TakeDamage(int value)
     {
         currentHp -= value;
+
+        //ダメージUIの処理
+        Vector3 DamageUIpos = transform.position;
+        DamageUIpos += transform.forward * 2f;
+
+        GameObject obj = Instantiate(damageUI, DamageUIpos, Quaternion.identity );
+        //obj.transform.SetParent(this.transform);
+
+        Transform childTransform = obj.transform.Find("Text");
+        GameObject child = childTransform.gameObject;
+
+        if(child != null)
+        {
+            DamageUIController controller = child.GetComponent<DamageUIController>();
+            controller.damage = value;
+        }
+
+        Destroy(obj,1f);
 
     }
 
