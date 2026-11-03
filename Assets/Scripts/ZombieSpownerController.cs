@@ -62,12 +62,12 @@ public class ZombieSpownerController : MonoBehaviour
                 }
             }
             */
-
+            
             if (zombieCount < zombieCountMax)
             {
                 Instantiate(zombie, transform.position, transform.rotation);
             }
-
+            
             b++;
         }
     }

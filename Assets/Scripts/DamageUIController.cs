@@ -30,7 +30,7 @@ public class DamageUIController : MonoBehaviour
 
         transform.position += Vector3.up * moveSpeed * Time.deltaTime;
 
-        damageText.color = Color.Lerp(damageText.color, new Color(1f, 0f, 0f, 0f), fadeOutSpeed * Time.deltaTime);
+        damageText.color = Color.Lerp(damageText.color, new Color(1f, 1f, 1f, 0f), fadeOutSpeed * Time.deltaTime);
 
         damageText.text = damage.ToString();
     }

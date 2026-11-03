@@ -138,7 +138,7 @@ public class BossMove : MonoBehaviour
     {
         if(attackFlag == true)
         {
-            downFlag = true;
+            //downFlag = true;
         }
     }
 
