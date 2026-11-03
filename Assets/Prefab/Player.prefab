@@ -139,6 +139,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b2825a4f356eac46a717aa06a17ea9f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5791436899813873347}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b2825a4f356eac46a717aa06a17ea9f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3195236131483397225}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b2825a4f356eac46a717aa06a17ea9f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8140191254173932602}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b2825a4f356eac46a717aa06a17ea9f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4266149097740836419}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b2825a4f356eac46a717aa06a17ea9f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3034852459949418917}
   m_SourcePrefab: {fileID: 100100000, guid: 1b2825a4f356eac46a717aa06a17ea9f, type: 3}
 --- !u!4 &4627082863128699699 stripped
 Transform:
@@ -230,6 +242,9 @@ MonoBehaviour:
   bombDamage: 10
   explosionRadius: 5
   throwCooldown: 1
+  twinBombPrefab: {fileID: 247496787812746708, guid: 1200d568bc955dc478dd9f3488797a80, type: 3}
+  overdriveBombCount: 10
+  overdriveInterval: 0.1
 --- !u!114 &7322530521908063971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,3 +355,64 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   statusAttackLevel: 0
+--- !u!114 &-3195236131483397225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439613832503048585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d2ea8a10b866646ad79588978edf20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TwinBombSkill
+  skillName: "\u30C4\u30A4\u30F3\u30DC\u30E0"
+  skillCooldown: 15
+  duration: 5
+--- !u!114 &-8140191254173932602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439613832503048585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ab1a01edcc7044b9ab08928c189b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillManager
+  skills:
+  - {fileID: -3195236131483397225}
+  - {fileID: -4266149097740836419}
+  - {fileID: 3034852459949418917}
+--- !u!114 &-4266149097740836419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439613832503048585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731bd6396fbc73745b4b259ac7c5337e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MitsumataSkill
+  skillName: "\u4E09\u53C8\u306E\u927E"
+  skillCooldown: 15
+  duration: 8
+--- !u!114 &3034852459949418917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439613832503048585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a975127d89b02af44bd250cb92494caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OverdriveSkill
+  skillName: "\u30AA\u30FC\u30D0\u30FC\u30C9\u30E9\u30A4\u30D6"
+  skillCooldown: 15
+  baseDuration: 5

@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class SkillScript : MonoBehaviour
 {
     [SerializeField] protected string skillName;
+    public string SkillName => skillName;
     [SerializeField] protected float skillCooldown = 0f;
 
     protected int skillLevel = 1;
@@ -35,4 +36,14 @@ public abstract class SkillScript : MonoBehaviour
     }
 
     protected abstract void ActivateSkill();
+
+    public void LevelUpSkill()
+    {
+        skillLevel++;
+    }
+
+    public int GetSkillLevel()
+    {
+        return skillLevel;
+    }
 }
