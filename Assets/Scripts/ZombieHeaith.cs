@@ -41,11 +41,12 @@ public class ZombieHeaith : MonoBehaviour
         {
             Die();
         }
-
+        /*
         else if(bossFlagScript.bossFlag == true)
         {
             Destroy(gameObject);
         }
+        */
     }
 
     public void TakeDamage(int value)
