@@ -97,7 +97,7 @@ public class StatusUpgradeController : MonoBehaviour
                 break;
 
             case StatusUpgradeType.BombRadius:
-                playerCombat.explosionRadius += 0.5f;
+                playerCombat.explosionRadius += 0.1f;
                 break;
 
             //case StatusUpgradeType.SkillCooldown:
@@ -105,7 +105,7 @@ public class StatusUpgradeController : MonoBehaviour
             //    break;
 
             case StatusUpgradeType.EXPBoost:
-                playerEXP.EXPMultiplier *= 1.1f;
+                playerEXP.EXPMultiplier += 0.1f;
                 break;
 
             case StatusUpgradeType.Heal:
