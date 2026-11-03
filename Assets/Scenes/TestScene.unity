@@ -4184,16 +4184,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6783146843542433120, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.729
       objectReference: {fileID: 0}
     - target: {fileID: 7322530521908063971, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
       propertyPath: dashSpeed
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7322530521908063971, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 69395460}
+    - target: {fileID: 8560485610742330579, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: dashDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12810,7 +12814,7 @@ PrefabInstance:
       objectReference: {fileID: 1014533411}
     - target: {fileID: 2823128578696307364, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
       propertyPath: m_Navigation.m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2823128578696307364, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -12958,7 +12962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3193794078773373164, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
       propertyPath: m_Navigation.m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3193794078773373164, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -13026,7 +13030,7 @@ PrefabInstance:
       objectReference: {fileID: 1014533411}
     - target: {fileID: 7277517069394991738, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
       propertyPath: m_Navigation.m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7277517069394991738, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -14241,6 +14245,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1398358306}
     m_Modifications:
     - target: {fileID: 1362106302352361115, guid: 9049d409d37bc8d429d8a5f17cbef39d, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362106302352361115, guid: 9049d409d37bc8d429d8a5f17cbef39d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -14267,6 +14275,10 @@ PrefabInstance:
     - target: {fileID: 1362106302352361115, guid: 9049d409d37bc8d429d8a5f17cbef39d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585288539298332110, guid: 9049d409d37bc8d429d8a5f17cbef39d, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1585288539298332110, guid: 9049d409d37bc8d429d8a5f17cbef39d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -14375,6 +14387,10 @@ PrefabInstance:
     - target: {fileID: 4904829668491887963, guid: 9049d409d37bc8d429d8a5f17cbef39d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5100322104550829240, guid: 9049d409d37bc8d429d8a5f17cbef39d, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5100322104550829240, guid: 9049d409d37bc8d429d8a5f17cbef39d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
