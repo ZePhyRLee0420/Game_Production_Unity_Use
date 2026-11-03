@@ -1,5 +1,7 @@
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.AI;
+using Vector3 = UnityEngine.Vector3;
 
 public class BossMove : MonoBehaviour
 {
@@ -12,13 +14,13 @@ public class BossMove : MonoBehaviour
 
     int damage;
 
-    float speed;
+    float walkSpeed;
 
     GameObject attackArea;
 
     bool attackFlag = false;
 
-    float attackDistance = 10f;
+    float attackDistance = 9f;
 
     float attackTime = 0;
 
@@ -32,6 +34,9 @@ public class BossMove : MonoBehaviour
 
     float attackStartUpTime = 1f;
 
+    float attackAngle = 30f;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,9 +47,9 @@ public class BossMove : MonoBehaviour
         originally = bossManager.GetComponent<BossStatusOriginally>();
 
         damage = originally.power;
-        speed = originally.speed;
+        walkSpeed = originally.speed;
 
-        agent.speed = speed;
+        agent.speed = walkSpeed;
 
         attackArea = transform.Find("AttackArea").gameObject;
 
@@ -58,6 +63,7 @@ public class BossMove : MonoBehaviour
 
         distance = Vector3.Distance(transform.position, player.transform.position);
 
+        //ボスの行動を決める
         if (downFlag)
         {
             downTime += Time.deltaTime;
@@ -74,12 +80,9 @@ public class BossMove : MonoBehaviour
             }
         }
 
-        else if (attackFlag == false && downFlag == false)
+        else if (attackFlag == false && downFlag == false && distance <= attackDistance && PlayerForward() == true)
         {
-            if (distance <= attackDistance)
-            {
-                attackFlag = true;
-            }
+            attackFlag = true;
         }
 
         else if (attackFlag == true && downFlag == false)
@@ -93,12 +96,17 @@ public class BossMove : MonoBehaviour
             }
         }
 
+
+        //ボスが行動を行う
         if(downFlag == true)
         {
             if (attackArea.activeSelf == true)
             {
                 attackArea.SetActive(false);
             }
+
+            agent.ResetPath();
+            agent.isStopped = true;
         }
 
         else if (attackFlag == true)
@@ -108,6 +116,8 @@ public class BossMove : MonoBehaviour
                 attackArea.SetActive(true);
             }
 
+            agent.ResetPath();
+            agent.isStopped = true;
             Debug.Log("IsAttacking");
         }
 
@@ -118,6 +128,7 @@ public class BossMove : MonoBehaviour
                 attackArea.SetActive(false);
             }
 
+            agent.isStopped = false;
             agent.destination = player.transform.position;
         }
 
@@ -129,5 +140,21 @@ public class BossMove : MonoBehaviour
         {
             downFlag = true;
         }
+    }
+
+    bool PlayerForward()
+    {
+        Vector3 playerPosition = player.transform.position;
+        playerPosition.y = transform.position.y;
+
+        Vector3 direction = playerPosition - transform.position;
+        float angle = Vector3.Angle(direction, transform.forward);
+
+        if(angle < attackAngle)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
