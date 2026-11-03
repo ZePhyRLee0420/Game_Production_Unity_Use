@@ -36,7 +36,7 @@ public class PlayerEXP : MonoBehaviour
     public void GainEXP(float exp)
     {
         currentEXP += exp * EXPMultiplier;
-        Debug.Log("Current EXP = " + currentEXP + " / " + EXPtoNextLevel);
+        //Debug.Log("Current EXP = " + currentEXP + " / " + EXPtoNextLevel);
         while (currentEXP >= EXPtoNextLevel)
         {
             LevelUp();

@@ -21,10 +21,6 @@ public class PlayerEXPBar : MonoBehaviour
         expSlider.maxValue = playerEXP.EXPtoNextLevel;
         expSlider.value = playerEXP.currentEXP;
 
-        Debug.Log(
-            "EXP Bar: " +
-            expSlider.value +
-            " / " +
-            expSlider.maxValue);
+        //Debug.Log("EXP Bar: " + expSlider.value + " / " + expSlider.maxValue);
     }
 }
