@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MitsumataSkill : SkillScript
 {
-    [SerializeField] float duration = 8f;
+    [SerializeField] float duration = 5f;
     float durationTimer = 0f;
     public bool IsActive { get; private set; } = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,7 +15,7 @@ public class MitsumataSkill : SkillScript
     {
         get
         {
-            return 0.75f + skillLevel * 0.05f;
+            return 0.8f + skillLevel * 0.1f;
         }
     }
 

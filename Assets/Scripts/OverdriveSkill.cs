@@ -8,17 +8,24 @@ public class OverdriveSkill : SkillScript
 
     public bool IsActive { get; private set; } = false;
 
-    public float Duration
+    //public float Duration
+    //{
+    //    get
+    //    {
+    //        return baseDuration + skillLevel * 1f;
+    //    }
+    //}
+    public float DamageMultiplier
     {
         get
         {
-            return baseDuration + skillLevel * 1f;
+            return 0.3f + skillLevel * 0.05f;
         }
     }
     protected override void ActivateSkill()
     {
         IsActive = true;
-        durationTimer = Duration;
+        durationTimer = baseDuration;
     }
 
     // Update is called once per frame
