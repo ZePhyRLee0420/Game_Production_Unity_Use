@@ -29,8 +29,8 @@ public class ZombieStatus : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
-        Debug.Log("power = " + power);
-        Debug.Log("Hp = " + Hp);
+        //Debug.Log("power = " + power);
+        //Debug.Log("Hp = " + Hp);
     }
 
     // Update is called once per frame

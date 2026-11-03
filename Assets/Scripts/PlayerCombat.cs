@@ -76,10 +76,11 @@ public class PlayerCombat : MonoBehaviour
 
         // Start the normal throwing cooldown
         cooldownTimer = throwCooldown;
+        float multiplier = overdriveSkill.DamageMultiplier;
 
         for (int i = 0; i < overdriveBombCount; i++)
         {
-            ThrowBombPattern();
+            ThrowBombPattern(multiplier);
 
             if (i < overdriveBombCount - 1)
             {
@@ -89,7 +90,7 @@ public class PlayerCombat : MonoBehaviour
 
         isBurstFiring = false;
     }
-    void ThrowBombPattern()
+    void ThrowBombPattern(float overdriveMultiplier = 1f)
     {   
         GameObject prefabToThrow = bombPrefab;
 
@@ -105,7 +106,7 @@ public class PlayerCombat : MonoBehaviour
         if (mitsumataSkill != null &&
             mitsumataSkill.IsActive)
         {
-            float multiplier = mitsumataSkill.DamageMultiplier;
+            float multiplier = mitsumataSkill.DamageMultiplier * overdriveMultiplier;
 
             ThrowSingleBomb(prefabToThrow, -20f, -0.6f, multiplier);
             ThrowSingleBomb(prefabToThrow, 0f, 0f, multiplier);
@@ -113,7 +114,7 @@ public class PlayerCombat : MonoBehaviour
         }
         else
         {
-            ThrowSingleBomb(prefabToThrow, 0f, 0f, 1f);
+            ThrowSingleBomb(prefabToThrow, 0f, 0f, overdriveMultiplier);
         }
 
         //GameObject bomb = Instantiate(prefabToThrow, throwPoint.position, Quaternion.identity);

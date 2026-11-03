@@ -369,7 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TwinBombSkill
   skillName: "\u30C4\u30A4\u30F3\u30DC\u30E0"
   skillCooldown: 15
-  duration: 5
+  duration: 10
 --- !u!114 &-8140191254173932602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MitsumataSkill
   skillName: "\u4E09\u53C8\u306E\u927E"
   skillCooldown: 15
-  duration: 8
+  duration: 5
 --- !u!114 &3034852459949418917
 MonoBehaviour:
   m_ObjectHideFlags: 0

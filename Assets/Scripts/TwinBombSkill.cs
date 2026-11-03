@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TwinBombSkill : SkillScript
 {
-    [SerializeField] float duration = 5f;
+    [SerializeField] float duration = 10f;
     float durationTimer = 0f;
     public bool IsActive { get; private set; } = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -14,7 +14,7 @@ public class TwinBombSkill : SkillScript
     {
         get
         {
-            return 0.4f + skillLevel * 0.1f;
+            return 0.5f + skillLevel * 0.1f;
         }
     }
 
