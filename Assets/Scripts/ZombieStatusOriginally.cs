@@ -12,7 +12,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     GameObject timerObject;
 
     Timer timer;
-    int interval = 15;
+    int interval = 30;
 
     int count = 0;
 
