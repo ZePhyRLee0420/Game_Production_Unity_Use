@@ -13,6 +13,8 @@ public class BossHealth : MonoBehaviour
 
     [SerializeField] GameObject damageUI;
 
+    //skill selection panel
+    [SerializeField] GameObject skillSelectionPanel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,6 +26,21 @@ public class BossHealth : MonoBehaviour
         currentHp = maxHp;
 
         player = GameObject.Find("Player");
+
+        if (skillSelectionPanel == null)
+        {
+            GameObject canvas = GameObject.Find("Canvas");
+
+            if (canvas != null)
+            {
+                Transform panel = canvas.transform.Find("SkillPanel");
+
+                if (panel != null)
+                {
+                    skillSelectionPanel = panel.gameObject;
+                }
+            }
+        }
     }
 
     // Update is called once per frame
@@ -31,7 +48,7 @@ public class BossHealth : MonoBehaviour
     {
         //Debug.Log("Boss HP: " + currentHp);
 
-        if (currentHp < 0)
+        if (currentHp <= 0)
         {
             Die();
         }
@@ -63,7 +80,21 @@ public class BossHealth : MonoBehaviour
 
     void Die()
     {
+<<<<<<< Updated upstream
         SaveData.instance.bossKillCount++;
+=======
+        if (skillSelectionPanel != null)
+        {
+            skillSelectionPanel.SetActive(true);
+
+            //Debug.Log("Panel: " + skillSelectionPanel.name);
+            //Debug.Log("Parent: " + skillSelectionPanel.transform.parent?.name);
+            //Debug.Log("activeSelf: " + skillSelectionPanel.activeSelf);
+            //Debug.Log("activeInHierarchy: " + skillSelectionPanel.activeInHierarchy);
+            //Debug.Log("Panel Object", skillSelectionPanel);
+        }
+
+>>>>>>> Stashed changes
         Destroy(gameObject);
     }
 

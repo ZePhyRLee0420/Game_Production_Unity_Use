@@ -26,7 +26,7 @@ public class PlayerInputHandler : MonoBehaviour
     public event ButtonInputHandler OnNextSkill;
     public event ButtonInputHandler OnPreviousSkill;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         playerActionMap = InputSystem.actions.FindActionMap("Player");
 
