@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class SkillManager : MonoBehaviour
 {
     //all skills 
     [SerializeField] private List<SkillScript> allSkills = new();
+
+    [SerializeField] private TMP_Text skillNameText;
 
     //skill aquired by player
     private List<SkillScript> skills = new();
@@ -102,9 +105,12 @@ public class SkillManager : MonoBehaviour
     }
     void ShowCurrentSkill()
     {
-        if (skills.Count == 0)
+        if(skillNameText == null)
             return;
 
-        Debug.Log("Current Skill: " + skills[currentSkillIndex].SkillName);
+        if (skills.Count == 0)
+            skillNameText.text = "No Skills";
+        else
+            skillNameText.text = "Current Skill: " + skills[currentSkillIndex].SkillName;
     }
 }
