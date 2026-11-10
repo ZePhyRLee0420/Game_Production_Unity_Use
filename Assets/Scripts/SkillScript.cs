@@ -4,6 +4,8 @@ public abstract class SkillScript : MonoBehaviour
 {
     [SerializeField] protected string skillName;
     public string SkillName => skillName;
+    [SerializeField] Sprite skillIcon;
+    public Sprite SkillIcon => skillIcon;
     [SerializeField] protected float skillCooldown = 0f;
 
     protected int skillLevel = 1;

@@ -3,8 +3,11 @@ using System.Collections.Generic;
 
 public class SkillManager : MonoBehaviour
 {
-    [SerializeField] private List<SkillScript> skills = new();
+    //all skills 
+    [SerializeField] private List<SkillScript> allSkills = new();
 
+    //skill aquired by player
+    private List<SkillScript> skills = new();
     private int currentSkillIndex = 0;
 
     PlayerInputHandler inputHandler;
@@ -60,11 +63,42 @@ public class SkillManager : MonoBehaviour
     }
     public void AddSkill(SkillScript newSkill)
     {
-        if (newSkill == null || skills.Contains(newSkill))
+        if (newSkill == null)
         {
             return;
         }
+
+        if (skills.Contains(newSkill))
+        {
+            newSkill.LevelUpSkill();
+            Debug.Log(newSkill.SkillName + " Level Up! Lv." + newSkill.GetSkillLevel());
+            return;
+        }
+
         skills.Add(newSkill);
+
+        Debug.Log("Skill Unlocked: " + newSkill.SkillName);
+
+        ShowCurrentSkill();
+    }
+    public bool HasSkill(SkillScript skill)
+    {
+        return skills.Contains(skill);
+    }
+    public List<SkillScript> GetRandomSkills(int count)
+    {
+        List<SkillScript> pool = new(allSkills);
+        List<SkillScript> result = new();
+
+        while (result.Count < count && pool.Count > 0)
+        {
+            int index = Random.Range(0, pool.Count);
+
+            result.Add(pool[index]);
+            pool.RemoveAt(index);
+        }
+
+        return result;
     }
     void ShowCurrentSkill()
     {
