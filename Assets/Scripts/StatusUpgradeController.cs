@@ -22,6 +22,7 @@ public class StatusUpgradeController : MonoBehaviour
     public PlayerCameraController cameraController;
     public GameObject upgradePanel;
     public StatusUpgradeButton[] upgradeButtons;
+    public GameObject skillPanel;
     StatusUpgradeType[] allUpgrades =
     {
         StatusUpgradeType.MaxHP,
@@ -72,24 +73,33 @@ public class StatusUpgradeController : MonoBehaviour
     {
         upgradePanel.SetActive(false);
 
-        inputHandler.EnablePlayerInput();
-        //inputHandler.inputEnabled = true;
-        //cameraController.inputEnabled = true;
+        if(skillPanel.activeSelf)
+        {
+            return;
+        }
+        else if(!skillPanel.activeSelf)
+        {
+            inputHandler.EnablePlayerInput();
+            //inputHandler.inputEnabled = true;
+            //cameraController.inputEnabled = true;
 
-        Time.timeScale = 1f;
+            Time.timeScale = 1f;
+        }
+
+        
     }
     public void ApplyUpgrade(StatusUpgradeType upgrade)
     {
         switch (upgrade)
         {
             case StatusUpgradeType.MaxHP:
-                playerHealth.maxHP += 10;
-                playerHealth.currentHP += 10;
+                playerHealth.maxHP += 20;
+                playerHealth.currentHP += 20;
                 break;
 
             case StatusUpgradeType.Damage:
                 statusAttackLevel++;
-                playerCombat.bombDamage = 10 + ((playerEXP.currentLevel - 1) * 3 + (statusAttackLevel) * 2);
+                playerCombat.bombDamage = 10 + ((playerEXP.currentLevel - 1) * 2 + (statusAttackLevel) * 2);
                 break;
 
             case StatusUpgradeType.MoveSpeed:
@@ -109,7 +119,7 @@ public class StatusUpgradeController : MonoBehaviour
                 break;
 
             case StatusUpgradeType.Heal:
-                playerHealth.currentHP += 50;
+                playerHealth.currentHP += playerHealth.currentHP * 0.3f;
                 if(playerHealth.currentHP > playerHealth.maxHP)
                 {
                     playerHealth.currentHP = playerHealth.maxHP;

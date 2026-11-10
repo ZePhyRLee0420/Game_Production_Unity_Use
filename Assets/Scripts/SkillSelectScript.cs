@@ -11,6 +11,7 @@ public class SkillSelectScript : MonoBehaviour
 
     [SerializeField] PlayerInputHandler inputHandler;
     List<SkillScript> offeredSkills = new();
+    public GameObject upgradePanel;
 
     bool isSelecting = false;
 
@@ -99,11 +100,16 @@ public class SkillSelectScript : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
         }
 
-        Time.timeScale = 1f;
-
-        if (inputHandler != null)
+        if(upgradePanel.activeSelf)
+        {
+            return;
+        }
+        else if(!upgradePanel.activeSelf)
         {
             inputHandler.EnablePlayerInput();
+            //inputHandler.inputEnabled = true;
+            //cameraController.inputEnabled = true;
+            Time.timeScale = 1f;
         }
 
         gameObject.SetActive(false);
