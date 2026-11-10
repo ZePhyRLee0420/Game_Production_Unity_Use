@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -30,7 +31,8 @@ public class PlayerHealth : MonoBehaviour
     //死亡時の処理
     void Die()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        SceneManager.LoadScene("ResultScene");
     }
 
     //ダメージ処理

@@ -84,6 +84,8 @@ public class ZombieHeaith : MonoBehaviour
             playerEXP.GainEXP(exp);
         }
 
+        SaveData.instance.zombieKillCount++;
+
         Destroy(gameObject);
     }
 }

@@ -63,6 +63,7 @@ public class BossHealth : MonoBehaviour
 
     void Die()
     {
+        SaveData.instance.bossKillCount++;
         Destroy(gameObject);
     }
 

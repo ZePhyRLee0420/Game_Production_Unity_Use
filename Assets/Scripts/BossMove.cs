@@ -20,11 +20,11 @@ public class BossMove : MonoBehaviour
 
     bool attackFlag = false;
 
-    float attackDistance = 9f;
+    float attackDistance = 7f;
 
     float attackTime = 0;
 
-    float attackTimeEnd = 3f;
+    float attackTimeEnd = 2.5f;
 
     bool downFlag = false;
 
@@ -32,10 +32,13 @@ public class BossMove : MonoBehaviour
 
     float downTimeEnd = 2f;
 
-    float attackStartUpTime = 1f;
+    float attackStartUpTime = 1.5f;
+
+    float attackAreaSetactiveTime = 2f;
 
     float attackAngle = 30f;
 
+    Animator m_animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -53,6 +56,7 @@ public class BossMove : MonoBehaviour
 
         attackArea = transform.Find("AttackArea").gameObject;
 
+        m_animator = GetComponent<Animator>();
 
     }
 
@@ -96,6 +100,7 @@ public class BossMove : MonoBehaviour
             }
         }
 
+        m_animator.SetBool("IsAttacking", attackFlag);
 
         //ボスが行動を行う
         if(downFlag == true)
@@ -111,11 +116,15 @@ public class BossMove : MonoBehaviour
 
         else if (attackFlag == true)
         {
-            if(attackArea.activeSelf == false && attackTime >= attackStartUpTime)
+            if(attackArea.activeSelf == false && attackTime >= attackStartUpTime && attackTime <= attackAreaSetactiveTime)
             {
                 attackArea.SetActive(true);
             }
 
+            else if(attackArea.activeSelf == true && attackTime > attackAreaSetactiveTime )
+            {
+                attackArea.SetActive(false);
+            }
             agent.ResetPath();
             agent.isStopped = true;
             Debug.Log("IsAttacking");
