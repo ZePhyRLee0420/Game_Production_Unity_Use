@@ -80,9 +80,7 @@ public class BossHealth : MonoBehaviour
 
     void Die()
     {
-<<<<<<< Updated upstream
-        SaveData.instance.bossKillCount++;
-=======
+
         if (skillSelectionPanel != null)
         {
             skillSelectionPanel.SetActive(true);
@@ -94,7 +92,6 @@ public class BossHealth : MonoBehaviour
             //Debug.Log("Panel Object", skillSelectionPanel);
         }
 
->>>>>>> Stashed changes
         Destroy(gameObject);
     }
 
