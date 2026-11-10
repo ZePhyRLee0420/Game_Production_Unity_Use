@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d2ea8a10b866646ad79588978edf20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TwinBombSkill
-  skillName: "\u30C4\u30A4\u30F3\u30DC\u30E0"
+  skillName: Twin Bomb
   skillIcon: {fileID: 0}
   skillCooldown: 15
   duration: 10
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731bd6396fbc73745b4b259ac7c5337e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MitsumataSkill
-  skillName: "\u4E09\u53C8\u306E\u927E"
+  skillName: Trident
   skillIcon: {fileID: 0}
   skillCooldown: 15
   duration: 5
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a975127d89b02af44bd250cb92494caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OverdriveSkill
-  skillName: "\u30AA\u30FC\u30D0\u30FC\u30C9\u30E9\u30A4\u30D6"
+  skillName: Overdrive
   skillIcon: {fileID: 0}
   skillCooldown: 15
   baseDuration: 5
