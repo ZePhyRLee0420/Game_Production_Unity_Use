@@ -4230,6 +4230,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5791436899813873347, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: skillPanel
+      value: 
+      objectReference: {fileID: 1028982314}
+    - target: {fileID: 5791436899813873347, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
       propertyPath: upgradePanel
       value: 
       objectReference: {fileID: 2103636579}
@@ -5697,6 +5701,10 @@ PrefabInstance:
       propertyPath: skillManager
       value: 
       objectReference: {fileID: 1014533420}
+    - target: {fileID: 9160644576326081477, guid: b1abcdc3b2de6a34fa013d7cc24ad6b7, type: 3}
+      propertyPath: upgradePanel
+      value: 
+      objectReference: {fileID: 2103636579}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14609,7 +14617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2239110726250633649, guid: 7adf6798124c5dc48ac8e8d9ae75dbfc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2342868579126848831, guid: 7adf6798124c5dc48ac8e8d9ae75dbfc, type: 3}
       propertyPath: timerObject

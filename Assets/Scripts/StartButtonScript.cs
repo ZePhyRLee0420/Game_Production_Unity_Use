@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class StartButtonScript : MonoBehaviour
@@ -8,6 +9,8 @@ public class StartButtonScript : MonoBehaviour
     void Start()
     {
         startButton.onClick.AddListener(StartGame);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(startButton.gameObject);
     }
 
     // Update is called once per frame
