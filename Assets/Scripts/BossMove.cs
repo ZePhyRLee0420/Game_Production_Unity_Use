@@ -127,7 +127,7 @@ public class BossMove : MonoBehaviour
             }
             agent.ResetPath();
             agent.isStopped = true;
-            Debug.Log("IsAttacking");
+            //Debug.Log("IsAttacking");
         }
 
         else

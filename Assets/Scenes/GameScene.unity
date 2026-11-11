@@ -14609,7 +14609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2239110726250633649, guid: 7adf6798124c5dc48ac8e8d9ae75dbfc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2342868579126848831, guid: 7adf6798124c5dc48ac8e8d9ae75dbfc, type: 3}
       propertyPath: timerObject

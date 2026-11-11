@@ -17,9 +17,14 @@ public class ZombieController : MonoBehaviour
 
     float attackTime = 0;
 
-    float attackTimeEnd = 2;
+    float attackStartUpTime = 0.7f;
+
+    float attackAreaOnTimeEnd = 1f;
+    float attackTimeEnd = 1.5f;
 
     ZombieStatus status;
+
+    Animator m_animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +40,8 @@ public class ZombieController : MonoBehaviour
         attackArea = transform.Find("AttackArea").gameObject;
 
         attackArea.SetActive(false);
+
+        m_animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -63,12 +70,20 @@ public class ZombieController : MonoBehaviour
             }
         }
 
-        if( attackFlag )
+        m_animator.SetBool("IsAttacking", attackFlag);
+
+        if ( attackFlag )
         {
-            if (attackArea.activeSelf == false)
+            if (attackArea.activeSelf == false && attackTime >= attackStartUpTime  && attackTime <= attackAreaOnTimeEnd)
             {
                 attackArea.SetActive(true);
             }
+
+            if (attackArea.activeSelf == true && attackTime > attackAreaOnTimeEnd)
+            {
+                attackArea.SetActive(false);
+            }
+            agent.isStopped = true;
         }
 
         else
@@ -78,6 +93,7 @@ public class ZombieController : MonoBehaviour
                 attackArea.SetActive(false);
             }
 
+            agent.isStopped = false;
             agent.destination = player.transform.position;
         }
 
