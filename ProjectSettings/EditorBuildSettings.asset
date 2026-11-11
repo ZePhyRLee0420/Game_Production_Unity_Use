@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: a56ab3f698350f24e9521ae455961b5e
-  - enabled: 1
     path: Assets/Scenes/TitleScene.unity
     guid: 62b8cf49036dfe448bda80711f97e051
   - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: ada76ce67b739e241896107901a52c7e
+  - enabled: 0
     path: Assets/Scenes/Lee.unity
-    guid: 882ed51d6f29427498deb8a539d8b298
+    guid: c6692325e84b5ba4486a7105ce6f1424
   - enabled: 0
     path: Assets/Scenes/Stest.unity
     guid: a0e727e3e8900834fb38942dacaede72
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Shichiji.unity
     guid: 339be5a249ab66245bbdb6e89f09e339
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: 7dd806a08799d7942bb5b2ca9c8cbdc2
   - enabled: 1
