@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: c1eeca048f514f8469221b0ff710e88e, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: d710de3fefa5c5e43a096b3cb494f2c3, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -5103,7 +5103,7 @@ MonoBehaviour:
   m_text: 'Time:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e7d0de02044c5324e9b93f984a22b1a3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14606,6 +14606,10 @@ PrefabInstance:
     - target: {fileID: 2239110726250633649, guid: 7adf6798124c5dc48ac8e8d9ae75dbfc, type: 3}
       propertyPath: m_Name
       value: ZombieSpownManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2239110726250633649, guid: 7adf6798124c5dc48ac8e8d9ae75dbfc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2342868579126848831, guid: 7adf6798124c5dc48ac8e8d9ae75dbfc, type: 3}
       propertyPath: timerObject

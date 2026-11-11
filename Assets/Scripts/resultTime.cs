@@ -20,6 +20,6 @@ public class resultTime : MonoBehaviour
             num = (int)SaveData.instance.time;
         }
 
-        TimeText.text = "" + num;
+        TimeText.text = "Survival Time\n" + num;
     }
 }

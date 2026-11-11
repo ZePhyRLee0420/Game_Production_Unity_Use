@@ -20,6 +20,6 @@ public class resultZombie : MonoBehaviour
             num = SaveData.instance.zombieKillCount;
         }
 
-        resultText.text = "" + num;
+        resultText.text = "ZombieKillCount" + num;
     }
 }
