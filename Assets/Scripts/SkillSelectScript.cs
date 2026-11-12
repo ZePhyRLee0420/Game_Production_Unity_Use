@@ -15,6 +15,11 @@ public class SkillSelectScript : MonoBehaviour
 
     bool isSelecting = false;
 
+    //セットするスキル札の画像
+    [SerializeField] Sprite TwinBombImage;
+    [SerializeField] Sprite OverDriveImage;
+    [SerializeField] Sprite TridentImage;
+
     void OnEnable()
     {
         Debug.Log("SkillSelect OnEnable!");
@@ -65,13 +70,38 @@ public class SkillSelectScript : MonoBehaviour
 
             SkillScript skill = offeredSkills[i];
 
+
+            //ここから変更あり
+            //ボタンに選ぶスキル札の画像を反映させる処理
+            Image image = button.GetComponent<Image>();
+
+            if(skill.SkillName == "Twin Bomb")
+            {
+                image.sprite = TwinBombImage;
+            }
+
+            else if(skill.SkillName == "Overdrive")
+            {
+                image.sprite = OverDriveImage;
+            }
+
+            else if (skill.SkillName == "Trident")
+            {
+                image.sprite = TridentImage;
+            }
+            //ここまで変更した
+
             int nextLevel = skillManager.HasSkill(skill) ? skill.GetSkillLevel() + 1 : 1;
 
             TMP_Text text = button.GetComponentInChildren<TMP_Text>();
 
             if (text != null)
             {
-                text.text = skill.SkillName + "\nLv." + nextLevel;
+                //変更前
+                //text.text = skill.SkillName + "\nLv." + nextLevel;
+
+                //変更後
+                text.text = "Lv." + nextLevel;
             }
 
             button.onClick.AddListener(() => SelectSkill(index));

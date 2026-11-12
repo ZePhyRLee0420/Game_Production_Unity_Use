@@ -25,6 +25,8 @@ public class ZombieController : MonoBehaviour
     ZombieStatus status;
 
     Animator m_animator;
+
+    float attackAngle = 30f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,7 +55,7 @@ public class ZombieController : MonoBehaviour
 
         if(attackFlag == false )
         {
-            if(distance <= attackDistance )
+            if(distance <= attackDistance && PlayerForward() == true)
             {
                 attackFlag = true;
             }
@@ -63,7 +65,7 @@ public class ZombieController : MonoBehaviour
         {
             attackTime += Time.deltaTime;
 
-            if(attackTime >= attackTimeEnd )
+            if(attackTime >= attackTimeEnd)
             {
                 attackFlag = false;
                 attackTime = 0;
@@ -97,5 +99,21 @@ public class ZombieController : MonoBehaviour
             agent.destination = player.transform.position;
         }
 
+    }
+
+    bool PlayerForward()
+    {
+        Vector3 playerPosition = player.transform.position;
+        playerPosition.y = transform.position.y;
+
+        Vector3 direction = playerPosition - transform.position;
+        float angle = Vector3.Angle(direction, transform.forward);
+
+        if (angle < attackAngle)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
