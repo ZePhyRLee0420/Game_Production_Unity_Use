@@ -140,3 +140,4 @@ MonoBehaviour:
   explodeRadius: 3
   explosionForce: 10
   damage: 10
+  bombSound: {fileID: 3403317975769757679, guid: 52790d9ffa551ab4ba5015fe5be41e7f, type: 3}

@@ -140,7 +140,9 @@ MonoBehaviour:
   explodeRadius: 0
   explosionForce: 10
   damage: 0
+  bombSound: {fileID: 3403317975769757679, guid: 52790d9ffa551ab4ba5015fe5be41e7f, type: 3}
   smallBombPrefab: {fileID: 247496787812746708, guid: 4309b8f7aca6d364d86a58961655f83b, type: 3}
   splitForce: 5
   damageMultiplier: 0.5
   radiusMultiplier: 0.5
+  bombSound: {fileID: 0}

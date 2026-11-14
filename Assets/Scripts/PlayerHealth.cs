@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     //float pushPower = 2f;
 
     PlayerDashController playerDash;
+    AudioSource audioSource;
+    [SerializeField] AudioClip damageSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +22,8 @@ public class PlayerHealth : MonoBehaviour
 
         playerDash.OnDashStart += StartInvincible;
         playerDash.OnDashEnd += EndInvincible;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         currentHP -= value;
+        audioSource.PlayOneShot(damageSound);
 
         if (currentHP <= 0)
         {

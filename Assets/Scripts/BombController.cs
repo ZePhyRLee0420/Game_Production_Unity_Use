@@ -10,10 +10,13 @@ public class BombController : MonoBehaviour
     public int damage;
 
     protected bool hasExploded = false;
+
+    public GameObject bombSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
-        Invoke(nameof(Explode), explodeTime);
+          Invoke(nameof(Explode), explodeTime);
     }
 
     // Update is called once per frame
@@ -30,11 +33,24 @@ public class BombController : MonoBehaviour
 
         if (explosionEffect != null)
         {
-            Instantiate(
+            GameObject effectObj =Instantiate(
                 explosionEffect,
                 transform.position,
                 Quaternion.identity
             );
+
+            Destroy( effectObj,3f);
+        }
+
+        if(bombSound != null)
+        {
+            GameObject soundObj = Instantiate(
+                bombSound,
+                transform.position,
+                Quaternion.identity
+            );
+
+            Destroy(soundObj, 5f);
         }
 
         Collider[] hits = Physics.OverlapSphere(
