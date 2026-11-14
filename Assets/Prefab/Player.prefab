@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHP: 100
   currentHP: 0
+  damageSound: {fileID: 8300000, guid: 7e605876157f0ff418ba9d399ebb9ed9, type: 3}
 --- !u!114 &6647219126127641207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +355,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  skillPanel: {fileID: 0}
   statusAttackLevel: 0
 --- !u!114 &-3195236131483397225
 MonoBehaviour:
@@ -387,6 +389,7 @@ MonoBehaviour:
   - {fileID: -3195236131483397225}
   - {fileID: -4266149097740836419}
   - {fileID: 3034852459949418917}
+  skillNameText: {fileID: 0}
 --- !u!114 &-4266149097740836419
 MonoBehaviour:
   m_ObjectHideFlags: 0

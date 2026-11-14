@@ -20,7 +20,7 @@ public class ZombieController : MonoBehaviour
     float attackStartUpTime = 0.7f;
 
     float attackAreaOnTimeEnd = 1f;
-    float attackTimeEnd = 1.5f;
+    float attackTimeEnd = 1.3f;
 
     ZombieStatus status;
 
@@ -58,6 +58,7 @@ public class ZombieController : MonoBehaviour
             if(distance <= attackDistance && PlayerForward() == true)
             {
                 attackFlag = true;
+                m_animator.Play("Attack", 0, 0f);
             }
         }
 

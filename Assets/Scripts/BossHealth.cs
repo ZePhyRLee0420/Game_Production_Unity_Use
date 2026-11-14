@@ -16,6 +16,10 @@ public class BossHealth : MonoBehaviour
     //skill selection panel
     [SerializeField] GameObject skillSelectionPanel;
 
+    GameObject SkillPanelActivate;
+
+    SkillPanelActivate SkillPanelActivateScript;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,6 +45,9 @@ public class BossHealth : MonoBehaviour
                 }
             }
         }
+
+        SkillPanelActivate = GameObject.Find("SkillPanelActivate");
+        SkillPanelActivateScript = SkillPanelActivate.GetComponent<SkillPanelActivate>();
     }
 
     // Update is called once per frame
@@ -83,8 +90,8 @@ public class BossHealth : MonoBehaviour
 
         if (skillSelectionPanel != null)
         {
-            skillSelectionPanel.SetActive(true);
-
+            //skillSelectionPanel.SetActive(true);
+            SkillPanelActivateScript.skillPanelActiveFlag = true;
             //Debug.Log("Panel: " + skillSelectionPanel.name);
             //Debug.Log("Parent: " + skillSelectionPanel.transform.parent?.name);
             //Debug.Log("activeSelf: " + skillSelectionPanel.activeSelf);
