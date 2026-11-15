@@ -24,7 +24,7 @@ public class BossMove : MonoBehaviour
 
     float attackTime = 0;
 
-    float attackTimeEnd = 2.5f;
+    float attackTimeEnd = 2.3f;
 
     bool downFlag = false;
 
@@ -32,13 +32,15 @@ public class BossMove : MonoBehaviour
 
     float downTimeEnd = 2f;
 
-    float attackStartUpTime = 1.5f;
+    float attackStartUpTime = 1.7f;
 
-    float attackAreaSetactiveTime = 2f;
+    float attackAreaSetactiveTimeEnd = 1.9f;
 
-    float attackAngle = 30f;
+    float attackAngle = 20f;
 
     Animator m_animator;
+
+    bool rotateFlag = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -87,6 +89,7 @@ public class BossMove : MonoBehaviour
         else if (attackFlag == false && downFlag == false && distance <= attackDistance && PlayerForward() == true)
         {
             attackFlag = true;
+            rotateFlag = true;
         }
 
         else if (attackFlag == true && downFlag == false)
@@ -116,14 +119,43 @@ public class BossMove : MonoBehaviour
 
         else if (attackFlag == true)
         {
-            if(attackArea.activeSelf == false && attackTime >= attackStartUpTime && attackTime <= attackAreaSetactiveTime)
+            if(attackTime >= 0.1f && attackTime <= attackStartUpTime)
             {
-                attackArea.SetActive(true);
+                Vector3 direction = player.transform.position - transform.position;
+                float rotationSpeed = 90f;
+
+                // Y軸（高さ）を0にして水平方向のベクトルのみにする
+                direction.y = 0;
+
+                if (direction != Vector3.zero)
+                {
+                    // その方向を向く回転を計算して適用
+                    UnityEngine.Quaternion targetRotation = UnityEngine.Quaternion.LookRotation(direction);
+                    transform.rotation = UnityEngine.Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                }
             }
 
-            else if(attackArea.activeSelf == true && attackTime > attackAreaSetactiveTime )
+            /*
+            if (attackTime >= 1.3f && attackTime <= attackStartUpTime - 0.3f && rotateFlag == true)
             {
-                attackArea.SetActive(false);
+                this.transform.Rotate(0f, -360f * Time.deltaTime, 0f);
+                //rotateFlag = false;
+            }
+            */
+            if (attackTime >= attackStartUpTime && attackTime <= attackAreaSetactiveTimeEnd)
+            {
+                if(attackArea.activeSelf == false)
+                {
+                    attackArea.SetActive(true);
+                }
+            }
+
+            else if(attackTime > attackAreaSetactiveTimeEnd )
+            {
+                if (attackArea.activeSelf == true)
+                {
+                    attackArea.SetActive(false);
+                }
             }
             agent.ResetPath();
             agent.isStopped = true;

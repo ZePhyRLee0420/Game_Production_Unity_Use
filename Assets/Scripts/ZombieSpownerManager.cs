@@ -84,7 +84,7 @@ public class ZombieSpownerManager : MonoBehaviour
 
         if(c == d)
         {
-            if(d < spownerobjects.Length)
+            if(maxSpowner < spownerobjects.Length)
             {
                 maxSpowner++;
             }

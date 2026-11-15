@@ -14,10 +14,13 @@ public class SkillManager : MonoBehaviour
     private int currentSkillIndex = 0;
 
     PlayerInputHandler inputHandler;
+    AudioSource audioSource;
+    [SerializeField] AudioClip skillNextSound;
 
     void Awake()
     {
         inputHandler = GetComponent<PlayerInputHandler>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -54,6 +57,9 @@ public class SkillManager : MonoBehaviour
     {
         if(skills.Count == 0)
             return;
+
+        if(skillNextSound != null)
+            audioSource.PlayOneShot(skillNextSound);
         currentSkillIndex = (currentSkillIndex + 1) % skills.Count;
         ShowCurrentSkill();
     }
@@ -61,6 +67,9 @@ public class SkillManager : MonoBehaviour
     {
         if (skills.Count == 0)
             return;
+
+        if (skillNextSound != null)
+            audioSource.PlayOneShot(skillNextSound);
         currentSkillIndex = (currentSkillIndex - 1 + skills.Count) % skills.Count;
         ShowCurrentSkill();
     }
