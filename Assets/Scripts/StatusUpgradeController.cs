@@ -119,7 +119,7 @@ public class StatusUpgradeController : MonoBehaviour
                 break;
 
             case StatusUpgradeType.Heal:
-                playerHealth.currentHP += playerHealth.currentHP * 0.3f;
+                playerHealth.currentHP += playerHealth.maxHP * 0.3f;
                 if(playerHealth.currentHP > playerHealth.maxHP)
                 {
                     playerHealth.currentHP = playerHealth.maxHP;

@@ -148,7 +148,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 10;
 
-        Hp = 60;
+        Hp = 55;
 
         speed = 4f;
 
@@ -158,7 +158,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //120～150秒のステータス
     void SpownStatusUp4()
     {
-        power = 12;
+        power = 15;
 
         Hp = 75;
 
@@ -170,7 +170,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //150～180秒のステータス
     void SpownStatusUp5()
     {
-        power = 18;
+        power = 20;
 
         Hp = 90;
 
@@ -182,7 +182,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //180～210秒のステータス
     void SpownStatusUp6()
     {
-        power = 24;
+        power = 25;
 
         Hp = 105;
 
@@ -194,7 +194,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //210～240秒のステータス
     void SpownStatusUp7()
     {
-        power = 26;
+        power = 30;
 
         Hp = 120;
 
@@ -206,11 +206,11 @@ public class ZombieStatusOriginally : MonoBehaviour
     //240～270秒のステータス
     void SpownStatusUp8()
     {
-        power = 30;
+        power = 40;
 
-        Hp = 135;
+        Hp = 150;
 
-        speed = 5.5f;
+        speed = 6f;
 
         exp = 6f;
     }
@@ -218,11 +218,11 @@ public class ZombieStatusOriginally : MonoBehaviour
     //270～300秒のステータス
     void SpownStatusUp9()
     {
-        power = 33;
+        power = 50;
 
-        Hp = 160;
+        Hp = 180;
 
-        speed = 5.5f;
+        speed = 6f;
 
         exp = 6f;
     }
@@ -230,8 +230,8 @@ public class ZombieStatusOriginally : MonoBehaviour
     //300秒～ 15秒置きにHpと攻撃力強化
     void SpownStatusUpEndress()
     {
-        power += 5 + endressStatusUpCount;
-        Hp += 15 + endressStatusUpCount * 5;
+        power += 10 + endressStatusUpCount * 5;
+        Hp += 20 + endressStatusUpCount * 10;
         speed += 0.25f;
 
         endressStatusUpCount++;
