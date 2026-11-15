@@ -25,6 +25,7 @@ public class PlayerInputHandler : MonoBehaviour
     public event ButtonInputHandler OnUseSkill;
     public event ButtonInputHandler OnNextSkill;
     public event ButtonInputHandler OnPreviousSkill;
+    public Vector2 moveValue;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -48,7 +49,7 @@ public class PlayerInputHandler : MonoBehaviour
         //if (!inputEnabled)
         //    return;
 
-        Vector2 moveValue = moveAction.ReadValue<Vector2>();
+        moveValue = moveAction.ReadValue<Vector2>();
 
         OnMove?.Invoke(moveValue);
 
