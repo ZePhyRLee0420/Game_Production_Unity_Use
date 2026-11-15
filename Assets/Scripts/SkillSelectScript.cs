@@ -75,7 +75,7 @@ public class SkillSelectScript : MonoBehaviour
             //ボタンに選ぶスキル札の画像を反映させる処理
             Image image = button.GetComponent<Image>();
 
-            if(skill.SkillName == "Twin Bomb")
+            if (skill.SkillName == "Twin Bomb")
             {
                 image.sprite = TwinBombImage;
             }
