@@ -14,6 +14,6 @@ public class PlayerLevelUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        levelText.text = "Level: " + playerEXP.currentLevel;
+        levelText.text = "" + playerEXP.currentLevel;
     }
 }
