@@ -24,7 +24,7 @@ public class BossMove : MonoBehaviour
 
     float attackTime = 0;
 
-    float attackTimeEnd = 2.3f;
+    float attackTimeEnd = 1.725f;
 
     bool downFlag = false;
 
@@ -32,15 +32,13 @@ public class BossMove : MonoBehaviour
 
     float downTimeEnd = 2f;
 
-    float attackStartUpTime = 1.7f;
+    float attackStartUpTime = 1.275f;
 
-    float attackAreaSetactiveTimeEnd = 1.9f;
+    float attackAreaSetactiveTimeEnd = 1.375f;
 
     float attackAngle = 20f;
 
     Animator m_animator;
-
-    bool rotateFlag = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -89,7 +87,6 @@ public class BossMove : MonoBehaviour
         else if (attackFlag == false && downFlag == false && distance <= attackDistance && PlayerForward() == true)
         {
             attackFlag = true;
-            rotateFlag = true;
         }
 
         else if (attackFlag == true && downFlag == false)

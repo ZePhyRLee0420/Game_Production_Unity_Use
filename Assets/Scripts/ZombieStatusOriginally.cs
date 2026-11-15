@@ -4,7 +4,7 @@ using UnityEngine.AI;
 //ゾンビのスポーン時に参照するステータスのスクリプト
 public class ZombieStatusOriginally : MonoBehaviour
 {
-    public int power = 2;
+    public int power = 5;
     public int Hp = 10;
     public float exp = 1f;
     public float speed = 4f;
@@ -122,11 +122,11 @@ public class ZombieStatusOriginally : MonoBehaviour
     //30～60秒のステータス
     void SpownStatusUp1()
     {
-        power = 5;
+        power = 7;
 
         Hp = 25;
 
-        speed = 5f;
+        speed = 4f;
 
         exp = 1f;
     }
@@ -134,11 +134,11 @@ public class ZombieStatusOriginally : MonoBehaviour
     //60～90秒のステータス
     void SpownStatusUp2()
     {
-        power = 7;
+        power = 8;
 
         Hp = 40;
 
-        speed = 5f;
+        speed = 4f;
 
         exp = 2f;
     }
@@ -150,7 +150,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 60;
 
-        speed = 5f;
+        speed = 4f;
 
         exp = 2f;
     }
@@ -162,7 +162,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 75;
 
-        speed = 5.5f;
+        speed = 5f;
 
         exp = 4f;
     }
@@ -170,11 +170,11 @@ public class ZombieStatusOriginally : MonoBehaviour
     //150～180秒のステータス
     void SpownStatusUp5()
     {
-        power = 15;
+        power = 18;
 
         Hp = 90;
 
-        speed = 5.5f;
+        speed = 5f;
 
         exp = 4f;
     }
@@ -182,7 +182,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //180～210秒のステータス
     void SpownStatusUp6()
     {
-        power = 17;
+        power = 24;
 
         Hp = 105;
 
@@ -194,7 +194,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //210～240秒のステータス
     void SpownStatusUp7()
     {
-        power = 20;
+        power = 26;
 
         Hp = 120;
 
@@ -206,7 +206,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //240～270秒のステータス
     void SpownStatusUp8()
     {
-        power = 23;
+        power = 30;
 
         Hp = 135;
 
@@ -218,7 +218,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //270～300秒のステータス
     void SpownStatusUp9()
     {
-        power = 27;
+        power = 33;
 
         Hp = 160;
 
