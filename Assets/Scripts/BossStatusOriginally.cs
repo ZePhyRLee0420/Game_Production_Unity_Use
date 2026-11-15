@@ -3,14 +3,14 @@ using UnityEngine;
 public class BossStatusOriginally : MonoBehaviour
 {
     public int power = 50;
-    public int Hp = 500;
-    public float speed = 6f;
+    public int Hp = 750;
+    public float speed = 7f;
 
     int LoopCount = 1;
 
     int powerUp = 50;
 
-    int HpUp = 500;
+    int HpUp = 750;
 
     BossFlag bossFlag;
 
@@ -45,7 +45,16 @@ public class BossStatusOriginally : MonoBehaviour
     void StatusUp()
     {
         power = powerUp * (count + count);
-        Hp += HpUp;
+        if(count <= 5)
+        {
+            Hp = 750 + HpUp * count;
+        }
+
+        else
+        {
+            Hp = 750 + HpUp * count + 500 * (count * 2 - 10);
+            speed += 0.5f;
+        }
 
         count++;
     }

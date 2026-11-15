@@ -260,7 +260,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.96965903, z: -0, w: 0.24446145}
   m_LocalPosition: {x: 56.270123, y: 11.9, z: -5.042351}
-  m_LocalScale: {x: 34.6, y: 15, z: 1}
+  m_LocalScale: {x: 34.6, y: 15, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1897827225}
@@ -2072,7 +2072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1251513594667611833, guid: 4dfc3842f585531429e343dad974417c, type: 3}
       propertyPath: speed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4293896421111452195, guid: 4dfc3842f585531429e343dad974417c, type: 3}
       propertyPath: m_Name
@@ -2838,7 +2838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7928475178582443480, guid: e8c49198b83af0a4c8c4b043b1a2ebcf, type: 3}
       propertyPath: Hp
-      value: 500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 7928475178582443480, guid: e8c49198b83af0a4c8c4b043b1a2ebcf, type: 3}
       propertyPath: power
@@ -2846,7 +2846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7928475178582443480, guid: e8c49198b83af0a4c8c4b043b1a2ebcf, type: 3}
       propertyPath: speed
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3263,7 +3263,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.89021283, z: -0, w: 0.45554492}
   m_LocalPosition: {x: 72.95012, y: 11.9, z: 6.8976517}
-  m_LocalScale: {x: 22.500002, y: 15, z: 1}
+  m_LocalScale: {x: 22.500002, y: 15, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1897827225}
@@ -4953,6 +4953,34 @@ PrefabInstance:
       propertyPath: skillNameText
       value: 
       objectReference: {fileID: 2073802250}
+    - target: {fileID: -8140191254173932602, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: skillNextSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 05a6a7522720120489a0879439b7ec61, type: 3}
+    - target: {fileID: -4266149097740836419, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: skillUseSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 188f2833f35c6b04985b7fee2b9dcb8a, type: 3}
+    - target: {fileID: -4266149097740836419, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: skillUseErrorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b1b235efa711004088625455f9e4e24, type: 3}
+    - target: {fileID: -3195236131483397225, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: skillUseSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 188f2833f35c6b04985b7fee2b9dcb8a, type: 3}
+    - target: {fileID: -3195236131483397225, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: skillUseErrorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b1b235efa711004088625455f9e4e24, type: 3}
+    - target: {fileID: 3034852459949418917, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: skillUseSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 188f2833f35c6b04985b7fee2b9dcb8a, type: 3}
+    - target: {fileID: 3034852459949418917, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
+      propertyPath: skillUseErrorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b1b235efa711004088625455f9e4e24, type: 3}
     - target: {fileID: 4540693628129692414, guid: dd6a5d8688c9f7a4db68251104da771e, type: 3}
       propertyPath: cameraPoint
       value: 
@@ -11592,7 +11620,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 79.57012, y: 12.6, z: 39.95765}
-  m_LocalScale: {x: 54.740005, y: 15, z: 1}
+  m_LocalScale: {x: 54.740005, y: 15, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1897827225}
@@ -14340,10 +14368,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpgradePanel
       objectReference: {fileID: 0}
-    - target: {fileID: 90216678109928030, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 603108234378686177, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
       propertyPath: upgradeController
       value: 
@@ -14436,6 +14460,10 @@ PrefabInstance:
       propertyPath: upgradeController
       value: 
       objectReference: {fileID: 1014533411}
+    - target: {fileID: 7277517069394991738, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

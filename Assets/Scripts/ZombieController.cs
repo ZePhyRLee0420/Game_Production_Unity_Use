@@ -17,10 +17,10 @@ public class ZombieController : MonoBehaviour
 
     float attackTime = 0;
 
-    float attackStartUpTime = 0.7f;
+    float attackStartUpTime = 0.35f;
 
-    float attackAreaOnTimeEnd = 1f;
-    float attackTimeEnd = 1.3f;
+    float attackAreaOnTimeEnd = 5f;
+    float attackTimeEnd = 0.65f;
 
     ZombieStatus status;
 
