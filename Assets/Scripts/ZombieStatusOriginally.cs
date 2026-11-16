@@ -124,7 +124,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 7;
 
-        Hp = 25;
+        Hp = 20;
 
         speed = 4f;
 
@@ -136,7 +136,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 8;
 
-        Hp = 40;
+        Hp = 30;
 
         speed = 4f;
 
@@ -148,7 +148,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 10;
 
-        Hp = 55;
+        Hp = 40;
 
         speed = 4f;
 
@@ -160,7 +160,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 15;
 
-        Hp = 75;
+        Hp = 60;
 
         speed = 5f;
 
@@ -172,7 +172,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 20;
 
-        Hp = 90;
+        Hp = 70;
 
         speed = 5f;
 
@@ -184,7 +184,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 25;
 
-        Hp = 105;
+        Hp = 80;
 
         speed = 5.5f;
 
@@ -196,7 +196,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 30;
 
-        Hp = 120;
+        Hp = 90;
 
         speed = 5.5f;
 
@@ -208,7 +208,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 40;
 
-        Hp = 150;
+        Hp = 100;
 
         speed = 6f;
 
@@ -220,7 +220,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     {
         power = 50;
 
-        Hp = 180;
+        Hp = 110;
 
         speed = 6f;
 
