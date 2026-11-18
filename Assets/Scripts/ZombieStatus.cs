@@ -26,9 +26,6 @@ public class ZombieStatus : MonoBehaviour
         exp = originally.exp;
         speed = originally.speed;
 
-        agent = GetComponent<NavMeshAgent>();
-        agent.speed = speed;
-
         //Debug.Log("power = " + power);
         //Debug.Log("Hp = " + Hp);
     }
