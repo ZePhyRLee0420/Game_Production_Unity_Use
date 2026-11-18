@@ -4,10 +4,10 @@ using UnityEngine.AI;
 //ゾンビのスポーン時に参照するステータスのスクリプト
 public class ZombieStatusOriginally : MonoBehaviour
 {
-    public int power = 5;
+    public int power = 2;
     public int Hp = 10;
     public float exp = 1f;
-    public float speed = 4f;
+    public float speed = 2.5f;
 
     GameObject timerObject;
 
@@ -32,6 +32,16 @@ public class ZombieStatusOriginally : MonoBehaviour
     float currentTime = 0;
 
     int endressStatusUpCount = 0;
+
+    float testTime = 0;
+
+    int test = 1;
+
+    int expupcount = 1;
+
+    int z = 1;
+
+    int ex = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,9 +58,24 @@ public class ZombieStatusOriginally : MonoBehaviour
         count = (int)timer.time / endressStatusUpinterval;
         count2 = (int)timer.time / intervalExp;
 
+        test = (int)timer.time / 15;
+
+        expupcount = (int)timer.time / 60;
+
         currentTime = timer.time;
        
+        if(test == z)
+        {
+            statusUpTest();
+            z++;
+        }
 
+        if(expupcount == ex)
+        {
+            expUpEndress();
+            ex++;
+        }
+        /*
         if(currentTime >= 30f &&  currentTime <= 60f)
         {
             SpownStatusUp1();
@@ -109,20 +134,15 @@ public class ZombieStatusOriginally : MonoBehaviour
             expUpEndress();
             c++;
         }
-
-        /*
-        Debug.Log("power = " + power);
-        Debug.Log("Hp = " + Hp);
-        Debug.Log("speed = " + speed);
-        Debug.Log("exp = " + exp);
         */
+
     }
 
 
     //30～60秒のステータス
     void SpownStatusUp1()
     {
-        power = 7;
+        power = 3;
 
         Hp = 20;
 
@@ -241,5 +261,12 @@ public class ZombieStatusOriginally : MonoBehaviour
     void expUpEndress()
     {
         exp += 1;
+    }
+
+    void statusUpTest()
+    {
+        Hp += 5;
+
+        power += 1;
     }
 }

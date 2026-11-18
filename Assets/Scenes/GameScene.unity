@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 15102986}
   - component: {fileID: 15102985}
   - component: {fileID: 15102984}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 81054157}
   - component: {fileID: 81054156}
   - component: {fileID: 81054155}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slope4
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -773,7 +773,7 @@ GameObject:
   - component: {fileID: 116127613}
   - component: {fileID: 116127612}
   - component: {fileID: 116127611}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bridge3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 118167079}
   - component: {fileID: 118167078}
   - component: {fileID: 118167077}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform4
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 9d25a1d8eae2b9b4a84b1634a76c5963, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e3be9b4360b869d499581947f1dcc9f4, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &131519591
 Transform:
@@ -1235,7 +1235,7 @@ GameObject:
   - component: {fileID: 214737607}
   - component: {fileID: 214737606}
   - component: {fileID: 214737605}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1732,7 +1732,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1759,7 +1759,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -0.20000002, z: -8}
+  m_LocalPosition: {x: -0.042800903, y: 0.005706787, z: 0.0073575974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1853,7 +1853,7 @@ GameObject:
   - component: {fileID: 341121659}
   - component: {fileID: 341121658}
   - component: {fileID: 341121657}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2222,7 +2222,7 @@ GameObject:
   - component: {fileID: 424408287}
   - component: {fileID: 424408286}
   - component: {fileID: 424408285}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Monument2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2331,7 +2331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489791007}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2367,7 +2367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491952415}
   - component: {fileID: 491952414}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Field
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2422,7 +2422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 506449821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2460,7 +2460,7 @@ GameObject:
   - component: {fileID: 585124074}
   - component: {fileID: 585124073}
   - component: {fileID: 585124072}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2572,7 +2572,7 @@ GameObject:
   - component: {fileID: 587637640}
   - component: {fileID: 587637639}
   - component: {fileID: 587637638}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Monument1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2684,7 +2684,7 @@ GameObject:
   - component: {fileID: 635246139}
   - component: {fileID: 635246138}
   - component: {fileID: 635246137}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bridge1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2940,7 +2940,7 @@ GameObject:
   - component: {fileID: 743139544}
   - component: {fileID: 743139543}
   - component: {fileID: 743139542}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3052,7 +3052,7 @@ GameObject:
   - component: {fileID: 768385457}
   - component: {fileID: 768385456}
   - component: {fileID: 768385455}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mainbuilding
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3164,7 +3164,7 @@ GameObject:
   - component: {fileID: 776245246}
   - component: {fileID: 776245245}
   - component: {fileID: 776245244}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Railway2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3479,7 +3479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 872775814}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3517,7 +3517,7 @@ GameObject:
   - component: {fileID: 879544176}
   - component: {fileID: 879544175}
   - component: {fileID: 879544174}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3798,7 +3798,7 @@ GameObject:
   - component: {fileID: 909281507}
   - component: {fileID: 909281506}
   - component: {fileID: 909281505}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bridge4
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3912,7 +3912,7 @@ GameObject:
   - component: {fileID: 913814636}
   - component: {fileID: 913814635}
   - component: {fileID: 913814634}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slope7
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -4811,7 +4811,7 @@ GameObject:
   - component: {fileID: 995842091}
   - component: {fileID: 995842090}
   - component: {fileID: 995842089}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slope8
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -5165,7 +5165,7 @@ GameObject:
   - component: {fileID: 1021071571}
   - component: {fileID: 1021071570}
   - component: {fileID: 1021071569}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -5282,7 +5282,7 @@ GameObject:
   - component: {fileID: 1057541809}
   - component: {fileID: 1057541808}
   - component: {fileID: 1057541807}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -5924,7 +5924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1141203188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Polygons
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -6182,7 +6182,7 @@ GameObject:
   - component: {fileID: 1179817897}
   - component: {fileID: 1179817896}
   - component: {fileID: 1179817895}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slope1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -6656,7 +6656,7 @@ GameObject:
   - component: {fileID: 1209458872}
   - component: {fileID: 1209458871}
   - component: {fileID: 1209458870}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slope6
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -7017,7 +7017,7 @@ GameObject:
   - component: {fileID: 1320422618}
   - component: {fileID: 1320422617}
   - component: {fileID: 1320422616}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -11305,7 +11305,7 @@ GameObject:
   - component: {fileID: 1414969282}
   - component: {fileID: 1414969281}
   - component: {fileID: 1414969280}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bridge2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -11846,7 +11846,7 @@ GameObject:
   - component: {fileID: 1440073021}
   - component: {fileID: 1440073020}
   - component: {fileID: 1440073019}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Station
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -12525,7 +12525,7 @@ GameObject:
   - component: {fileID: 1539787803}
   - component: {fileID: 1539787802}
   - component: {fileID: 1539787801}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slope2
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -12879,7 +12879,7 @@ GameObject:
   - component: {fileID: 1559182315}
   - component: {fileID: 1559182314}
   - component: {fileID: 1559182313}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -13070,7 +13070,7 @@ GameObject:
   - component: {fileID: 1585605000}
   - component: {fileID: 1585604999}
   - component: {fileID: 1585604998}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -13184,7 +13184,7 @@ GameObject:
   - component: {fileID: 1587524709}
   - component: {fileID: 1587524708}
   - component: {fileID: 1587524707}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slope5
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -13600,7 +13600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1615799258}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -13946,7 +13946,7 @@ GameObject:
   - component: {fileID: 1775569225}
   - component: {fileID: 1775569224}
   - component: {fileID: 1775569223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall4
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -14058,7 +14058,7 @@ GameObject:
   - component: {fileID: 1804582788}
   - component: {fileID: 1804582787}
   - component: {fileID: 1804582786}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall4
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -14205,7 +14205,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 90
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -14233,7 +14233,7 @@ Transform:
   m_GameObject: {fileID: 1820985772}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -0.20000002, z: -8}
+  m_LocalPosition: {x: -0.042800903, y: 0.005706787, z: 0.0073575974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14257,10 +14257,10 @@ MonoBehaviour:
   CameraSide: 1
   CameraDistance: 8
   AvoidObstacles:
-    Enabled: 0
+    Enabled: 1
     CollisionFilter:
       serializedVersion: 2
-      m_Bits: 1
+      m_Bits: 8
     IgnoreTag: 
     CameraRadius: 0.2
     DampingIntoCollision: 0
@@ -14540,7 +14540,7 @@ GameObject:
   - component: {fileID: 1883302105}
   - component: {fileID: 1883302104}
   - component: {fileID: 1883302103}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Railway
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -14758,7 +14758,7 @@ GameObject:
   - component: {fileID: 1923681241}
   - component: {fileID: 1923681240}
   - component: {fileID: 1923681239}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform1
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -14870,7 +14870,7 @@ GameObject:
   - component: {fileID: 1925650631}
   - component: {fileID: 1925650630}
   - component: {fileID: 1925650629}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -15041,7 +15041,7 @@ GameObject:
   - component: {fileID: 1983827984}
   - component: {fileID: 1983827983}
   - component: {fileID: 1983827982}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slope3
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -15941,7 +15941,7 @@ GameObject:
   - component: {fileID: 2127468490}
   - component: {fileID: 2127468489}
   - component: {fileID: 2127468488}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall4
   m_TagString: Floor
   m_Icon: {fileID: 0}
