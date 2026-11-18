@@ -6536,6 +6536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkillPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 90216678109928030, guid: b1abcdc3b2de6a34fa013d7cc24ad6b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3137700063123421183, guid: b1abcdc3b2de6a34fa013d7cc24ad6b7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6602,7 +6606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3137700063123421183, guid: b1abcdc3b2de6a34fa013d7cc24ad6b7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -360
       objectReference: {fileID: 0}
     - target: {fileID: 3137700063123421183, guid: b1abcdc3b2de6a34fa013d7cc24ad6b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11098,12 +11102,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1153421210}
+  - {fileID: 2073802248}
   - {fileID: 1438804917}
   - {fileID: 958095542}
   - {fileID: 1865210300}
   - {fileID: 1209274263}
   - {fileID: 4553199446926751623}
-  - {fileID: 2073802248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14463,7 +14467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3137700063123421183, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -360
       objectReference: {fileID: 0}
     - target: {fileID: 3137700063123421183, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14481,10 +14485,6 @@ PrefabInstance:
       propertyPath: upgradeController
       value: 
       objectReference: {fileID: 9033437641085708901}
-    - target: {fileID: 7277517069394991738, guid: ddb8ef9f1483d4f42a66c50ccd7d11ee, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
