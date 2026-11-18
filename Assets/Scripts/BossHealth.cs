@@ -67,7 +67,9 @@ public class BossHealth : MonoBehaviour
 
         //ダメージUIの処理
         Vector3 DamageUIpos = transform.position;
-        DamageUIpos.y += 8.5f; 
+        DamageUIpos.x += 3f;
+        DamageUIpos.y += 6f;
+        DamageUIpos.z -= 3f;
 
         GameObject obj = Instantiate(damageUI, DamageUIpos, Quaternion.identity);
         //obj.transform.SetParent(this.transform);

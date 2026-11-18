@@ -63,7 +63,7 @@ public class ZombieHeaith : MonoBehaviour
 
         //ダメージUIの処理
         Vector3 DamageUIpos = transform.position;
-        DamageUIpos += transform.forward * 2f;
+        DamageUIpos.x += 1f;
 
         GameObject obj = Instantiate(damageUI, DamageUIpos, Quaternion.identity );
         //obj.transform.SetParent(this.transform);
@@ -104,7 +104,7 @@ public class ZombieHeaith : MonoBehaviour
         SaveData.instance.zombieKillCount++;
 
         Vector3 force = new Vector3(0, 20, 0);
-        Vector3 random = new Vector3(Random.Range(10,10),0, Random.Range(10, 10));
+        Vector3 random = new Vector3(Random.Range(-20,20),0, Random.Range(-20, 20));
         force += random;
 
         controller.LaunchUpward(force);
