@@ -55,7 +55,7 @@ public class ZombieController : MonoBehaviour
 
         isLaunched = false;
 
-        float randomTime = Random.Range(0f, 1f);
+        float randomTime = Random.value;
         m_animator.Play("walk", 0, randomTime);
     }
 
