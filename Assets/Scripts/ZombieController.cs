@@ -54,6 +54,9 @@ public class ZombieController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         isLaunched = false;
+
+        float randomTime = Random.Range(0f, 1f);
+        m_animator.Play("walk", 0, randomTime);
     }
 
     // Update is called once per frame
@@ -112,7 +115,7 @@ public class ZombieController : MonoBehaviour
             if(agent.enabled)
             {
                 agent.isStopped = false;
-                agent.destination = player.transform.position;
+                agent.destination = player.transform.position;  
             }
         }
 

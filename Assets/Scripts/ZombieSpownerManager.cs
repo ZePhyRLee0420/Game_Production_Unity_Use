@@ -99,7 +99,7 @@ public class ZombieSpownerManager : MonoBehaviour
                 {
                     var spownpoint = sorted[i];
 
-                    Vector3 offset = new Vector3(UnityEngine.Random.Range(-6,6),0f, UnityEngine.Random.Range(-3, 3));
+                    Vector3 offset = new Vector3(UnityEngine.Random.Range(-6,6),0f, UnityEngine.Random.Range(-1, 1));
 
                     Instantiate(zombie, spownpoint.obj.transform.position + offset, spownpoint.obj.transform.rotation);
                 }
