@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class ZombieController : MonoBehaviour
 {
@@ -27,6 +28,11 @@ public class ZombieController : MonoBehaviour
     Animator m_animator;
 
     float attackAngle = 30f;
+
+    Rigidbody rb;
+
+    bool isLaunched;
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,13 +43,17 @@ public class ZombieController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindWithTag("Player");
 
-        agent.speed = originallyStatus.speed;
+        agent.speed = originallyStatus.speed * Random.Range(0.5f, 1.2f);
         
         attackArea = transform.Find("AttackArea").gameObject;
 
         attackArea.SetActive(false);
 
         m_animator = GetComponent<Animator>();
+
+        rb = GetComponent<Rigidbody>();
+
+        isLaunched = false;
     }
 
     // Update is called once per frame
@@ -86,7 +96,10 @@ public class ZombieController : MonoBehaviour
             {
                 attackArea.SetActive(false);
             }
-            agent.isStopped = true;
+            if (agent.enabled)
+            {
+                agent.isStopped = true;
+            }
         }
 
         else
@@ -96,8 +109,11 @@ public class ZombieController : MonoBehaviour
                 attackArea.SetActive(false);
             }
 
-            agent.isStopped = false;
-            agent.destination = player.transform.position;
+            if(agent.enabled)
+            {
+                agent.isStopped = false;
+                agent.destination = player.transform.position;
+            }
         }
 
     }
@@ -117,4 +133,51 @@ public class ZombieController : MonoBehaviour
 
         return false;
     }
+
+    // 外部（攻撃判定など）からこのメソッドを呼び出して飛ばす
+    public void LaunchUpward(Vector3 force)
+    {
+        if (isLaunched) return;
+        StartCoroutine(LaunchRoutine(force));
+    }
+
+    private IEnumerator LaunchRoutine(Vector3 force)
+    {
+        isLaunched = true;
+
+        // 1. NavMeshAgentを無効化し、物理演算を有効にする
+        agent.enabled = false;
+        rb.isKinematic = false;
+
+        // 2. 上方向（＋任意の方向）へ瞬間的な力を加える
+        rb.AddForce(force, ForceMode.Impulse);
+
+        // 3. 地面から離れるまで少し待つ
+        yield return new WaitForSeconds(0.2f);
+
+        // 4. 着地するまで待機（速度がほぼ0になるか、接地判定を取る）
+        while (!IsGrounded() || rb.linearVelocity.y > 0.1f)
+        {
+            yield return null;
+        }
+
+        // 5. 物理演算を戻し、NavMeshAgentを再有効化する
+        //rb.isKinematic = true;
+        agent.enabled = true;
+
+        // 着地点がNavMeshから少しずれていた場合に備えて補正する
+        if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 2.0f, NavMesh.AllAreas))
+        {
+            agent.Warp(hit.position);
+        }
+
+        isLaunched = false;
+    }
+
+    // 簡易的な接地判定（足元にRayを飛ばす）
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, 0.3f);
+    }
 }
+
