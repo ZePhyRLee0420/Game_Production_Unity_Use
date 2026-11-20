@@ -48,10 +48,10 @@ public class PlayerEXP : MonoBehaviour
 
         currentLevel++;
 
-        health.maxHP += 10;
-        health.currentHP += 10;
+        health.maxHP += 30;
+        health.currentHP += 30;
 
-        damage.bombDamage = 10 + ((currentLevel - 1 ) * 2 + (statusUpgradeController.statusAttackLevel) * 2);
+        damage.bombDamage = 10 + ((currentLevel * currentLevel ) * (1 + statusUpgradeController.statusAttackLevel));
 
         EXPtoNextLevel += 10;
 

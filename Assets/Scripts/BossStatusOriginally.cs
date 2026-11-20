@@ -3,7 +3,7 @@ using UnityEngine;
 public class BossStatusOriginally : MonoBehaviour
 {
     //初期ステータス
-    public int power = 20;
+    public int power = 15;
     public int Hp = 500;
     public float speed = 2.5f;
     //ここまで
@@ -70,50 +70,50 @@ public class BossStatusOriginally : MonoBehaviour
     //2体目のボスのステータス
     void StatusUp1()
     {
-        power = 50;
+        power = 25;
 
         Hp = 1000;
 
-        speed = 2.5f;
+        speed = 3f;
     }
 
     //3体目のボスのステータス
     void StatusUp2()
     {
-        power = 70;
+        power = 40;
 
-        Hp = 1500;
+        Hp = 1700;
 
-        speed = 2.5f;
+        speed = 3.5f;
     }
 
     //4体目のボスのステータス
     void StatusUp3()
     {
-        power = 90;
+        power = 50;
 
-        Hp = 2000;
+        Hp = 2400;
 
-        speed = 2.5f;
+        speed = 4.5f;
     }
 
     //5体目のボスのステータス
     void StatusUp4()
     {
-        power = 110;
+        power = 70;
 
-        Hp = 2500;
+        Hp = 3200;
 
-        speed = 2.5f;
+        speed = 5.5f;
     }
 
     //5体以降ボスのステータス
     void StatusUpEndress()
     {
-        power += 30;
+        power += 20;
 
-        Hp += 500;
+        Hp += 900;
 
-        speed = 2.5f;
+        speed += 0.5f;
     }
 }

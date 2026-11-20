@@ -148,7 +148,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 20;
 
-        speed = 4f;
+        speed = 2.5f;
 
         exp = 1f;
     }
@@ -156,11 +156,11 @@ public class ZombieStatusOriginally : MonoBehaviour
     //60～90秒のステータス
     void SpownStatusUp2()
     {
-        power = 8;
+        power = 5;
 
-        Hp = 30;
+        Hp = 25;
 
-        speed = 4f;
+        speed = 2.5f;
 
         exp = 2f;
     }
@@ -168,9 +168,9 @@ public class ZombieStatusOriginally : MonoBehaviour
     //90～120秒のステータス
     void SpownStatusUp3()
     {
-        power = 10;
+        power = 6;
 
-        Hp = 40;
+        Hp = 30;
 
         speed = 4f;
 
@@ -180,81 +180,81 @@ public class ZombieStatusOriginally : MonoBehaviour
     //120～150秒のステータス
     void SpownStatusUp4()
     {
-        power = 15;
+        power = 9;
 
-        Hp = 60;
+        Hp = 50;
 
-        speed = 5f;
+        speed = 2.5f;
 
-        exp = 4f;
+        exp = 3f;
     }
 
     //150～180秒のステータス
     void SpownStatusUp5()
     {
-        power = 20;
+        power = 10;
 
-        Hp = 70;
+        Hp = 60;
 
-        speed = 5f;
+        speed = 3f;
 
-        exp = 4f;
+        exp = 3f;
     }
 
     //180～210秒のステータス
     void SpownStatusUp6()
     {
-        power = 25;
+        power = 12;
 
         Hp = 80;
 
-        speed = 5.5f;
+        speed = 3f;
 
-        exp = 5f;
+        exp = 4f;
     }
 
     //210～240秒のステータス
     void SpownStatusUp7()
     {
-        power = 30;
+        power = 13;
 
         Hp = 90;
 
-        speed = 5.5f;
+        speed = 3f;
 
-        exp = 5f;
+        exp = 4f;
     }
 
     //240～270秒のステータス
     void SpownStatusUp8()
     {
-        power = 40;
+        power = 15;
 
-        Hp = 100;
+        Hp = 110;
 
-        speed = 6f;
+        speed = 3.5f;
 
-        exp = 6f;
+        exp = 5f;
     }
 
     //270～300秒のステータス
     void SpownStatusUp9()
     {
-        power = 50;
+        power = 16;
 
         Hp = 110;
 
-        speed = 6f;
+        speed = 3.5f;
 
-        exp = 6f;
+        exp = 5f;
     }
 
     //300秒～ 15秒置きにHpと攻撃力強化
     void SpownStatusUpEndress()
     {
-        power += 10 + endressStatusUpCount * 5;
-        Hp += 20 + endressStatusUpCount * 10;
-        speed += 0.25f;
+        power +=endressStatusUpCount * 2;
+        Hp +=endressStatusUpCount * 10;
+        speed += 0.01f;
 
         endressStatusUpCount++;
     }
