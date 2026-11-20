@@ -58,6 +58,7 @@ public class ZombieStatusOriginally : MonoBehaviour
         count = (int)timer.time / endressStatusUpinterval;
         count2 = (int)timer.time / intervalExp;
 
+        /*
         test = (int)timer.time / 15;
 
         expupcount = (int)timer.time / 60;
@@ -75,7 +76,8 @@ public class ZombieStatusOriginally : MonoBehaviour
             expUpEndress();
             ex++;
         }
-        /*
+        */
+
         if(currentTime >= 30f &&  currentTime <= 60f)
         {
             SpownStatusUp1();
@@ -134,7 +136,7 @@ public class ZombieStatusOriginally : MonoBehaviour
             expUpEndress();
             c++;
         }
-        */
+        
 
     }
 
@@ -263,10 +265,12 @@ public class ZombieStatusOriginally : MonoBehaviour
         exp += 1;
     }
 
+    /*
     void statusUpTest()
     {
         Hp += 5;
 
         power += 1;
     }
+    */
 }

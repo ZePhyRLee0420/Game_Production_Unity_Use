@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class BossStatusOriginally : MonoBehaviour
 {
+    //初期ステータス
     public int power = 20;
     public int Hp = 500;
     public float speed = 2.5f;
+    //ここまで
 
     int LoopCount = 1;
-
-    int powerUp = 30;
-
-    int HpUp = 500;
 
     BossFlag bossFlag;
 
@@ -18,7 +16,7 @@ public class BossStatusOriginally : MonoBehaviour
     
     public bool statusUpFlag = false;
 
-    int count = 1;
+    int count = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,33 +34,86 @@ public class BossStatusOriginally : MonoBehaviour
 
         if(statusUpFlag == true && waitTime >= 1f)
         {
-            StatusUp();
+            if(count == 0)
+            {
+                StatusUp1();
+            }
+
+            else if (count == 1)
+            {
+                StatusUp2();
+            }
+
+            else if (count == 2)
+            {
+                StatusUp3();
+            }
+
+            else if (count == 3)
+            {
+                StatusUp4();
+            }
+
+            else
+            {
+                StatusUpEndress();
+            }
+
+
+
             statusUpFlag = false;
             waitTime = 0;
+            count++;
         }
     }
 
-    void StatusUp()
+    //2体目のボスのステータス
+    void StatusUp1()
     {
-        /*
-        if(count <= 5)
-        {
-            power += 10;
-            Hp += 500;
-        }
-        */
+        power = 50;
 
-        /*
-        else
-        {
-            power = powerUp * count + 20 * (count - 4 );
-            Hp = 750 + HpUp * count + 500 * (count * 2 - 10);
-            speed += 0.5f;
-        }
-        */
+        Hp = 1000;
 
-        power += 10;
+        speed = 2.5f;
+    }
+
+    //3体目のボスのステータス
+    void StatusUp2()
+    {
+        power = 70;
+
+        Hp = 1500;
+
+        speed = 2.5f;
+    }
+
+    //4体目のボスのステータス
+    void StatusUp3()
+    {
+        power = 90;
+
+        Hp = 2000;
+
+        speed = 2.5f;
+    }
+
+    //5体目のボスのステータス
+    void StatusUp4()
+    {
+        power = 110;
+
+        Hp = 2500;
+
+        speed = 2.5f;
+    }
+
+    //5体以降ボスのステータス
+    void StatusUpEndress()
+    {
+        power += 30;
+
         Hp += 500;
-        count++;
+
+        speed = 2.5f;
     }
 }
