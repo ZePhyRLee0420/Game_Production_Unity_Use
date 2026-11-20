@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 4883724100525487264}
   - component: {fileID: 7277517069394991738}
   - component: {fileID: 603108234378686177}
+  - component: {fileID: 2224250994959299582}
   m_Layer: 5
   m_Name: Option 1
   m_TagString: Untagged
@@ -234,6 +235,20 @@ MonoBehaviour:
   damageSprite: {fileID: 21300000, guid: cff0386e1f5c50a4e9b4746f49fee910, type: 3}
   expBoostSprite: {fileID: 21300000, guid: 2655b57c81345ec499603c8539c5679d, type: 3}
   healSprite: {fileID: 21300000, guid: ac470c7e1aa41c44fad16d878a7db43f, type: 3}
+--- !u!114 &2224250994959299582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749227222208004565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd7e36ef0277f349875db72cefd6531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonScale
+  selectedScale: 1.15
+  scaleSpeed: 10
 --- !u!1 &1083330142044652803
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +399,7 @@ GameObject:
   - component: {fileID: 2741488353588065956}
   - component: {fileID: 2823128578696307364}
   - component: {fileID: 7190861272106680689}
+  - component: {fileID: 8894376264461778295}
   m_Layer: 5
   m_Name: Option 3
   m_TagString: Untagged
@@ -514,6 +530,20 @@ MonoBehaviour:
   damageSprite: {fileID: 21300000, guid: cff0386e1f5c50a4e9b4746f49fee910, type: 3}
   expBoostSprite: {fileID: 21300000, guid: 2655b57c81345ec499603c8539c5679d, type: 3}
   healSprite: {fileID: 21300000, guid: ac470c7e1aa41c44fad16d878a7db43f, type: 3}
+--- !u!114 &8894376264461778295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799577383590067048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd7e36ef0277f349875db72cefd6531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonScale
+  selectedScale: 1.15
+  scaleSpeed: 10
 --- !u!1 &2364220514662307831
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +831,7 @@ GameObject:
   - component: {fileID: 7998205222496587918}
   - component: {fileID: 3193794078773373164}
   - component: {fileID: 2002229564359932921}
+  - component: {fileID: 1438446661658561163}
   m_Layer: 5
   m_Name: Option 2
   m_TagString: Untagged
@@ -931,6 +962,20 @@ MonoBehaviour:
   damageSprite: {fileID: 21300000, guid: cff0386e1f5c50a4e9b4746f49fee910, type: 3}
   expBoostSprite: {fileID: 21300000, guid: 2655b57c81345ec499603c8539c5679d, type: 3}
   healSprite: {fileID: 21300000, guid: ac470c7e1aa41c44fad16d878a7db43f, type: 3}
+--- !u!114 &1438446661658561163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8178640965057306084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd7e36ef0277f349875db72cefd6531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonScale
+  selectedScale: 1.15
+  scaleSpeed: 10
 --- !u!1 &8382872816467678227
 GameObject:
   m_ObjectHideFlags: 0
