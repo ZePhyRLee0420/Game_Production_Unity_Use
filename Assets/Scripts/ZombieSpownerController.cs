@@ -53,6 +53,7 @@ public class ZombieSpownerController : MonoBehaviour
 
         if (a == b)
         {
+            /*
             if(bossFlagScript.bossFlag == false)
             {
                 if (zombieCount < zombieCountMax)
@@ -60,6 +61,13 @@ public class ZombieSpownerController : MonoBehaviour
                     Instantiate(zombie, transform.position, transform.rotation);
                 }
             }
+            */
+            
+            if (zombieCount < zombieCountMax)
+            {
+                Instantiate(zombie, transform.position, transform.rotation);
+            }
+            
             b++;
         }
     }

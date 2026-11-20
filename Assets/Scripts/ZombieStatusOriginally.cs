@@ -4,27 +4,44 @@ using UnityEngine.AI;
 //ゾンビのスポーン時に参照するステータスのスクリプト
 public class ZombieStatusOriginally : MonoBehaviour
 {
-    public int power = 5;
+    public int power = 2;
     public int Hp = 10;
     public float exp = 1f;
-    public float speed = 5f;
+    public float speed = 2.5f;
 
     GameObject timerObject;
 
     Timer timer;
-    int interval = 15;
+    int endressStatusUpinterval = 15;
 
     int count = 0;
 
-    int b = 1;
+    int b = 21;
 
     GameObject bossManager;
 
     BossFlag bossFlag;
 
-    int hpUp = 5;
 
-    int powerUp = 1;
+    int c = 6;
+
+    int intervalExp = 60;
+
+    int count2 = 0;
+
+    float currentTime = 0;
+
+    int endressStatusUpCount = 0;
+
+    float testTime = 0;
+
+    int test = 1;
+
+    int expupcount = 1;
+
+    int z = 1;
+
+    int ex = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,26 +55,218 @@ public class ZombieStatusOriginally : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count = (int)timer.time / interval;
+        count = (int)timer.time / endressStatusUpinterval;
+        count2 = (int)timer.time / intervalExp;
 
-        if (count == b)
+        test = (int)timer.time / 15;
+
+        expupcount = (int)timer.time / 60;
+
+        currentTime = timer.time;
+       
+        if(test == z)
         {
-            SpownStatusUp();
-           // Debug.Log("power = " + power);
-           // Debug.Log("Hp = " + Hp);
+            statusUpTest();
+            z++;
+        }
+
+        if(expupcount == ex)
+        {
+            expUpEndress();
+            ex++;
+        }
+        /*
+        if(currentTime >= 30f &&  currentTime <= 60f)
+        {
+            SpownStatusUp1();
+        }
+
+        else if (currentTime >= 60f && currentTime <= 90f)
+        {
+            SpownStatusUp2();
+        }
+
+        else if (currentTime >= 90f && currentTime <= 120f)
+        {
+            SpownStatusUp3();
+        }
+
+        else if (currentTime >= 120f && currentTime <= 150f)
+        {
+            SpownStatusUp4();
+        }
+
+        else if (currentTime >= 150f && currentTime <= 180f)
+        {
+            SpownStatusUp5();
+        }
+
+        else if (currentTime >= 180f && currentTime <= 210f)
+        {
+            SpownStatusUp6();
+        }
+
+        else if (currentTime >= 210f && currentTime <= 240f)
+        {
+            SpownStatusUp7();
+        }
+
+        else if (currentTime >= 240f && currentTime <= 270f)
+        {
+            SpownStatusUp8();
+        }
+
+        else if (currentTime >= 270f && currentTime <= 300f)
+        {
+            SpownStatusUp9();
+        }
+
+        if(count == b)
+        {
+
+            SpownStatusUpEndress();
+
             b++;
         }
 
-        exp = 1 + (bossFlag.loop * 0.5f);
+        if(count2 == c)
+        {
+            expUpEndress();
+            c++;
+        }
+        */
 
     }
 
 
-    //15秒ごとにスポーン時のステータスを上げる
-    void SpownStatusUp()
+    //30～60秒のステータス
+    void SpownStatusUp1()
     {
-        power += powerUp;
+        power = 3;
 
-        Hp += hpUp;
+        Hp = 20;
+
+        speed = 4f;
+
+        exp = 1f;
+    }
+
+    //60～90秒のステータス
+    void SpownStatusUp2()
+    {
+        power = 8;
+
+        Hp = 30;
+
+        speed = 4f;
+
+        exp = 2f;
+    }
+
+    //90～120秒のステータス
+    void SpownStatusUp3()
+    {
+        power = 10;
+
+        Hp = 40;
+
+        speed = 4f;
+
+        exp = 2f;
+    }
+
+    //120～150秒のステータス
+    void SpownStatusUp4()
+    {
+        power = 15;
+
+        Hp = 60;
+
+        speed = 5f;
+
+        exp = 4f;
+    }
+
+    //150～180秒のステータス
+    void SpownStatusUp5()
+    {
+        power = 20;
+
+        Hp = 70;
+
+        speed = 5f;
+
+        exp = 4f;
+    }
+
+    //180～210秒のステータス
+    void SpownStatusUp6()
+    {
+        power = 25;
+
+        Hp = 80;
+
+        speed = 5.5f;
+
+        exp = 5f;
+    }
+
+    //210～240秒のステータス
+    void SpownStatusUp7()
+    {
+        power = 30;
+
+        Hp = 90;
+
+        speed = 5.5f;
+
+        exp = 5f;
+    }
+
+    //240～270秒のステータス
+    void SpownStatusUp8()
+    {
+        power = 40;
+
+        Hp = 100;
+
+        speed = 6f;
+
+        exp = 6f;
+    }
+
+    //270～300秒のステータス
+    void SpownStatusUp9()
+    {
+        power = 50;
+
+        Hp = 110;
+
+        speed = 6f;
+
+        exp = 6f;
+    }
+
+    //300秒～ 15秒置きにHpと攻撃力強化
+    void SpownStatusUpEndress()
+    {
+        power += 10 + endressStatusUpCount * 5;
+        Hp += 20 + endressStatusUpCount * 10;
+        speed += 0.25f;
+
+        endressStatusUpCount++;
+    }
+
+    //300秒～　一分置きに経験値アップ
+    void expUpEndress()
+    {
+        exp += 1;
+    }
+
+    void statusUpTest()
+    {
+        Hp += 5;
+
+        power += 1;
     }
 }

@@ -11,7 +11,9 @@ public class PlayerInputHandler : MonoBehaviour
     InputAction jumpAction;
 
     //Skill actions
-    InputAction SkillAction;
+    InputAction useSkillAction;
+    InputAction nextSkillAction;
+    InputAction previousSkillAction;
 
     public delegate void MoveInputHandler(Vector2 moveValue);
     public event MoveInputHandler OnMove;
@@ -20,11 +22,12 @@ public class PlayerInputHandler : MonoBehaviour
     public event ButtonInputHandler OnThrow;
     public event ButtonInputHandler OnDash;
     public event ButtonInputHandler OnJump;
-    public event ButtonInputHandler OnSkill1;
+    public event ButtonInputHandler OnUseSkill;
     public event ButtonInputHandler OnNextSkill;
     public event ButtonInputHandler OnPreviousSkill;
+    public Vector2 moveValue;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         playerActionMap = InputSystem.actions.FindActionMap("Player");
 
@@ -33,7 +36,9 @@ public class PlayerInputHandler : MonoBehaviour
         dashAction = playerActionMap.FindAction("Dash");
         jumpAction = playerActionMap.FindAction("Jump");
 
-
+        useSkillAction = playerActionMap.FindAction("UseSkill");
+        nextSkillAction = playerActionMap.FindAction("NextSkill");
+        previousSkillAction = playerActionMap.FindAction("PreviousSkill");
 
         EnablePlayerInput();
     }
@@ -44,7 +49,7 @@ public class PlayerInputHandler : MonoBehaviour
         //if (!inputEnabled)
         //    return;
 
-        Vector2 moveValue = moveAction.ReadValue<Vector2>();
+        moveValue = moveAction.ReadValue<Vector2>();
 
         OnMove?.Invoke(moveValue);
 
@@ -61,6 +66,14 @@ public class PlayerInputHandler : MonoBehaviour
         {
             OnJump?.Invoke();
         }
+        if (useSkillAction.WasPressedThisFrame())
+            OnUseSkill?.Invoke();
+
+        if (nextSkillAction.WasPressedThisFrame())
+            OnNextSkill?.Invoke();
+
+        if (previousSkillAction.WasPressedThisFrame())
+            OnPreviousSkill?.Invoke();
     }
     public void EnablePlayerInput()
     {

@@ -1,15 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHP = 100;
-    public int currentHP;
+    public float maxHP = 100;
+    public float currentHP;
 
     private bool isInvincible = false;
 
     //float pushPower = 2f;
 
     PlayerDashController playerDash;
+    AudioSource audioSource;
+    [SerializeField] AudioClip damageSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +22,8 @@ public class PlayerHealth : MonoBehaviour
 
         playerDash.OnDashStart += StartInvincible;
         playerDash.OnDashEnd += EndInvincible;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,7 +35,8 @@ public class PlayerHealth : MonoBehaviour
     //死亡時の処理
     void Die()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        SceneManager.LoadScene("ResultScene");
     }
 
     //ダメージ処理
@@ -42,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         currentHP -= value;
+        audioSource.PlayOneShot(damageSound);
 
         if (currentHP <= 0)
         {

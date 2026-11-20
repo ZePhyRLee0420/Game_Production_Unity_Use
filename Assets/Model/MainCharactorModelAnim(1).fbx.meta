@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: 28fdb631392f7d04fa9aa74227e449ed
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Textur
+    second: {fileID: 2100000, guid: c3d3f5c907db134498ffe6f2803e4147, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Model_UV_02_3_openPBR_shader1_AlbedoTransparency
+    second: {fileID: 2800000, guid: 0037727c7d58453489f22ae37a505bf7, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'StayAnim' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'L_mune' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'WalkAnim' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'L_mune' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip 'RunAnim'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'L_mune'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'JumpAnim' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'L_mune'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'ThrowAnim' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'L_mune'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'L_kaiten'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'R_kaiten'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_kotsuban
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_kotsuban
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_hiza
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_hiza
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_kakato
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_kakato
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine3
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: kubi
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_kata
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_mune
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_hiji
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_kata
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_tekubi
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_hiji
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_yubisaki
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_tekubi
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: MainCharactorModelAnim(1)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: kami_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: go_guru_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: kao_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: gasumasuku_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: gasuseoi_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tebukuro_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: uwagi_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ho_su_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beruto_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: zubon_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: kutsu_02
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips
+      parentName: MainCharactorModelAnim(1)(Clone)
+      position: {x: -0.00071172795, y: 0.41593623, z: 0.0043235375}
+      rotation: {x: 0.06574462, y: 0.06574462, z: -0.70404375, w: 0.7040438}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1
+      parentName: Hips
+      position: {x: -0.0545309, y: 0.000000011702651, z: 0.00000014402293}
+      rotation: {x: -0.0000000037252903, y: -0.2611314, z: -0.0000000027939677, w: 0.9653033}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine2
+      parentName: Spine1
+      position: {x: -0.041412283, y: -0.0000000058408967, z: -0.0000000028801772}
+      rotation: {x: -0.0000000020162516, y: 0.09501545, z: 0.000000007893805, w: 0.9954759}
+      scale: {x: 1.0000027, y: 1.0000026, z: 0.9999999}
+    - name: Spine3
+      parentName: Spine2
+      position: {x: -0.10156465, y: 0.00000001430565, z: 4.2572643e-10}
+      rotation: {x: 0.0000000061565197, y: 0.14395487, z: -0.00000005542713, w: 0.9895843}
+      scale: {x: 1.0000013, y: 1.0000014, z: 1.0000018}
+    - name: kubi
+      parentName: Spine3
+      position: {x: -0.046242587, y: -0.000000007457181, z: 0.00000006659019}
+      rotation: {x: -0.0000000061915806, y: -0.031752095, z: -0.0000000144259475, w: 0.9994958}
+      scale: {x: 1.0000012, y: 1.0000014, z: 0.9999998}
+    - name: atama_top
+      parentName: kubi
+      position: {x: -0.3009432, y: -0.00000004486963, z: -0.00000009142801}
+      rotation: {x: 0.000000005793488, y: -0.000000014901158, z: -0.000000029593405, w: 1}
+      scale: {x: 1.0000037, y: 1.0000039, z: 1.0000001}
+    - name: L_mune
+      parentName: Spine2
+      position: {x: -0.10156465, y: 0.00000001430565, z: 4.2572643e-10}
+      rotation: {x: -2.3501665e-10, y: 0.000000029802319, z: -0.0000000013770731, w: 1}
+      scale: {x: 1.0000019, y: 1.0000004, z: 1}
+    - name: L_kata
+      parentName: L_mune
+      position: {x: -0.029035613, y: -0.10648248, z: 0.009731481}
+      rotation: {x: 0.06356124, y: 0.043697234, z: 0.7042443, w: 0.70575535}
+      scale: {x: 0.99999934, y: 1, z: 1}
+    - name: L_hiji
+      parentName: L_kata
+      position: {x: -0.122010894, y: -0.026868803, z: -0.0008539773}
+      rotation: {x: -0.0000000037252899, y: 0.043166943, z: -0.00000009313224, w: 0.9990679}
+      scale: {x: 1.0000005, y: 0.9999996, z: 1.0000001}
+    - name: L_kaiten
+      parentName: L_hiji
+      position: {x: -0.09324998, y: -0.00000000438015, z: 0.0010148803}
+      rotation: {x: 0.0000000057354437, y: -0.04378098, z: 0.00000013423073, w: 0.99904114}
+      scale: {x: 1.0000002, y: 0.9999997, z: 1.0000006}
+    - name: L_tekubi
+      parentName: L_kaiten
+      position: {x: -0.03892584, y: -0.00000000845638, z: 0.00060830684}
+      rotation: {x: -0.000000017293113, y: 0.03400916, z: -0.00000010160653, w: 0.99942154}
+      scale: {x: 0.9999997, y: 0.9999992, z: 0.9999998}
+    - name: L_yubisaki
+      parentName: L_tekubi
+      position: {x: -0.11185539, y: -7.105427e-17, z: -0.000029026372}
+      rotation: {x: -0, y: -0, z: 9.992005e-16, w: 1}
+      scale: {x: 1.0000001, y: 0.9999997, z: 1}
+    - name: R_mune
+      parentName: Spine2
+      position: {x: -0.10156487, y: 0.000000015924615, z: 0.00000008980841}
+      rotation: {x: 0.0000000011475607, y: 1, z: -1.9584709e-10, w: -0.000000029802319}
+      scale: {x: 1.000002, y: 1.0000004, z: 1.0000044}
+    - name: R_kata
+      parentName: R_mune
+      position: {x: 0.029035134, y: 0.10648231, z: -0.009731343}
+      rotation: {x: 0.049146313, y: 0.055804916, z: 0.6533542, w: 0.75339144}
+      scale: {x: 0.9999997, y: 1.0000066, z: 1.000003}
+    - name: R_hiji
+      parentName: R_kata
+      position: {x: 0.122011565, y: 0.026868995, z: 0.0008539459}
+      rotation: {x: 0.0010340733, y: 0.027244015, z: 0.034839623, w: 0.99902105}
+      scale: {x: 1.0000001, y: 0.9999986, z: 0.9999997}
+    - name: R_kaiten
+      parentName: R_hiji
+      position: {x: 0.09324985, y: 0.000000021161913, z: -0.0010148676}
+      rotation: {x: 0.00000003316125, y: -0.043780975, z: 0.00000010390812, w: 0.99904114}
+      scale: {x: 1.0000001, y: 1.0000042, z: 1.0000043}
+    - name: R_tekubi
+      parentName: R_kaiten
+      position: {x: 0.038925957, y: 0.000000028430268, z: -0.00060830306}
+      rotation: {x: 0.000000015220397, y: 0.034009118, z: -0.0000000122347785, w: 0.99942154}
+      scale: {x: 0.99999994, y: 1.0000055, z: 1.0000052}
+    - name: R_yubisaki
+      parentName: R_tekubi
+      position: {x: 0.11185531, y: -1.9464011e-10, z: 0.000029027799}
+      rotation: {x: 0.000000029847893, y: 0.000000007450579, z: -8.663569e-10, w: 1}
+      scale: {x: 1, y: 1.000005, z: 1.000006}
+    - name: L_kotsuban
+      parentName: Hips
+      position: {x: 0.0040706936, y: -0.051566884, z: 0.040307753}
+      rotation: {x: -0.15694423, y: -0.0018156209, z: 0.9859374, w: 0.05738192}
+      scale: {x: 1.0000011, y: 1.0000018, z: 1}
+    - name: L_hiza
+      parentName: L_kotsuban
+      position: {x: -0.15744881, y: -0.00041664852, z: -0.0016310902}
+      rotation: {x: -0.010710654, y: -0.2684023, z: 0.00423431, w: 0.9632381}
+      scale: {x: 1.0000035, y: 1.0000007, z: 1.0000001}
+    - name: L_kakato
+      parentName: L_hiza
+      position: {x: -0.22236262, y: -0.000000044602732, z: 0.000000077402134}
+      rotation: {x: 0.026527092, y: 0.7347896, z: 0.028784614, w: 0.6771647}
+      scale: {x: 1.0000002, y: 1.0000019, z: 0.9999997}
+    - name: L_ashiyubi
+      parentName: L_kakato
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.011557665, y: 0.23074532, z: -0.002740983, w: 0.97294176}
+      scale: {x: 1.0000021, y: 1.0000005, z: 0.99999946}
+    - name: L_tsumasaki
+      parentName: L_ashiyubi
+      position: {x: -0.053194188, y: -1.3249303e-17, z: -2.545012e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000025, y: 1.0000019, z: 1.0000014}
+    - name: R_kotsuban
+      parentName: Hips
+      position: {x: 0.004070488, y: 0.051566914, z: 0.040307753}
+      rotation: {x: 0.9859374, y: 0.057381816, z: 0.1569442, w: 0.0018156171}
+      scale: {x: 1, y: 0.9999987, z: 0.9999977}
+    - name: R_hiza
+      parentName: R_kotsuban
+      position: {x: 0.15744898, y: 0.00041657986, z: 0.0016311766}
+      rotation: {x: -0.010710705, y: -0.26840237, z: 0.0042344593, w: 0.96323806}
+      scale: {x: 1.0000021, y: 1.0000033, z: 1.0000067}
+    - name: R_kakato
+      parentName: R_hiza
+      position: {x: 0.22236164, y: -0.0000001905418, z: 0.00000009182581}
+      rotation: {x: 0.02652724, y: 0.7347897, z: 0.028784519, w: 0.67716455}
+      scale: {x: 1.000001, y: 1.0000002, z: 0.99999887}
+    - name: R_ashiyubi
+      parentName: R_kakato
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.011557542, y: 0.23074526, z: -0.0027410574, w: 0.97294176}
+      scale: {x: 1.0000101, y: 1.0000036, z: 0.9999979}
+    - name: R_tsumasaki
+      parentName: R_ashiyubi
+      position: {x: 0.05319441, y: 0.000000020582851, z: -0.000000005688876}
+      rotation: {x: -0, y: -0, z: -2.3283062e-10, w: 1}
+      scale: {x: 1.0000015, y: 1.000001, z: 1.0000005}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

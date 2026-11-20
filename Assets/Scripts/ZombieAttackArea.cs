@@ -6,6 +6,8 @@ public class ZombieAttackArea : MonoBehaviour
     ZombieStatusOriginally originallyStatus;
 
     int damage;
+
+    bool onceDamageFlag = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +23,10 @@ public class ZombieAttackArea : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        onceDamageFlag = true;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -29,7 +35,12 @@ public class ZombieAttackArea : MonoBehaviour
 
             if (playerHealth != null)
             {
-                playerHealth.takeDamage(damage);
+
+                if (onceDamageFlag)
+                {
+                    playerHealth.takeDamage(damage);
+                    onceDamageFlag = false;
+                }
             }
         }
     }

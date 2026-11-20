@@ -7,6 +7,8 @@ public class BossAttackArea : MonoBehaviour
     BossStatusOriginally originally;
 
     int damage;
+
+    bool onceDamageFlag = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,10 +18,15 @@ public class BossAttackArea : MonoBehaviour
         damage = originally.power;
     }
 
+    private void OnEnable()
+    {
+        onceDamageFlag = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +37,11 @@ public class BossAttackArea : MonoBehaviour
 
             if (playerHealth != null)
             {
-                playerHealth.takeDamage(damage);
+                if(onceDamageFlag)
+                {
+                    playerHealth.takeDamage(damage);
+                    onceDamageFlag = false;
+                }
             }
         }
     }

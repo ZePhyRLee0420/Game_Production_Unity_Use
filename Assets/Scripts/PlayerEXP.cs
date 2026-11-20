@@ -36,7 +36,7 @@ public class PlayerEXP : MonoBehaviour
     public void GainEXP(float exp)
     {
         currentEXP += exp * EXPMultiplier;
-        Debug.Log("Current EXP = " + currentEXP + " / " + EXPtoNextLevel);
+        //Debug.Log("Current EXP = " + currentEXP + " / " + EXPtoNextLevel);
         while (currentEXP >= EXPtoNextLevel)
         {
             LevelUp();
@@ -48,10 +48,10 @@ public class PlayerEXP : MonoBehaviour
 
         currentLevel++;
 
-        health.maxHP += 20;
-        health.currentHP += 20;
+        health.maxHP += 10;
+        health.currentHP += 10;
 
-        damage.bombDamage = 10 + ((currentLevel - 1 ) * 5 + (statusUpgradeController.statusAttackLevel) * (statusUpgradeController.statusAttackLevel));
+        damage.bombDamage = 10 + ((currentLevel - 1 ) * 2 + (statusUpgradeController.statusAttackLevel) * 2);
 
         EXPtoNextLevel += 10;
 

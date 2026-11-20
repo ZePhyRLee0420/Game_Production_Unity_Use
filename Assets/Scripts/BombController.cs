@@ -3,15 +3,20 @@ using UnityEngine;
 public class BombController : MonoBehaviour
 {
     public float explodeTime = 3f;
-    //public GameObject explosionEffect;
+    public GameObject explosionEffect;
     public float explodeRadius;
     public float explosionForce = 10f;
 
     public int damage;
+
+    protected bool hasExploded = false;
+
+    public GameObject bombSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected virtual void Start()
     {
-        Invoke("Explode", explodeTime);
+          Invoke(nameof(Explode), explodeTime);
     }
 
     // Update is called once per frame
@@ -19,12 +24,39 @@ public class BombController : MonoBehaviour
     {
         
     }
-
-    void Explode()
+    public virtual void Explode()
     {
-        //Instantiate(explosionEffect,transform.position,Quaternion.identity);
+        if (hasExploded)
+            return;
 
-        Collider[] hits = Physics.OverlapSphere(transform.position, explodeRadius);
+        hasExploded = true;
+
+        if (explosionEffect != null)
+        {
+            GameObject effectObj =Instantiate(
+                explosionEffect,
+                transform.position,
+                Quaternion.identity
+            );
+
+            Destroy( effectObj,3f);
+        }
+
+        if(bombSound != null)
+        {
+            GameObject soundObj = Instantiate(
+                bombSound,
+                transform.position,
+                Quaternion.identity
+            );
+
+            Destroy(soundObj, 5f);
+        }
+
+        Collider[] hits = Physics.OverlapSphere(
+            transform.position,
+            explodeRadius
+        );
 
         foreach (Collider hit in hits)
         {
@@ -48,26 +80,27 @@ public class BombController : MonoBehaviour
 
             BossHealth boss = hit.GetComponent<BossHealth>();
 
-            if(boss != null)
+            if (boss != null)
             {
                 boss.TakeDamage(damage);
             }
 
             BossMove bossMove = hit.GetComponent<BossMove>();
 
-            if(bossMove != null)
+            if (bossMove != null)
             {
                 bossMove.TakeDown();
             }
-
         }
-        Destroy(gameObject);
 
+        Destroy(gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    protected virtual void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag("Enemy") ||
+            collision.gameObject.CompareTag("Floor") ||
+            collision.gameObject.CompareTag("Boss"))
         {
             Explode();
         }
