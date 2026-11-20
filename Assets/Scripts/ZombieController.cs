@@ -55,8 +55,11 @@ public class ZombieController : MonoBehaviour
 
         isLaunched = false;
 
-        float randomTime = Random.value;
+        float randomTime = Random.Range(0f,1f);
+        
         m_animator.Play("walk", 0, randomTime);
+
+        m_animator.speed = Random.Range(0.9f, 1.1f);
     }
 
     // Update is called once per frame
