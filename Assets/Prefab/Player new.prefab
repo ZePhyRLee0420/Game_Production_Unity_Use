@@ -99,6 +99,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 28fdb631392f7d04fa9aa74227e449ed, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 553cd45b8fe04f14f94447ec5bf791bf, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 28fdb631392f7d04fa9aa74227e449ed, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -154,6 +162,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28fdb631392f7d04fa9aa74227e449ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4942167814630796246}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28fdb631392f7d04fa9aa74227e449ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2306219377257849343}
   m_SourcePrefab: {fileID: 100100000, guid: 28fdb631392f7d04fa9aa74227e449ed, type: 3}
 --- !u!4 &35870456698183546 stripped
 Transform:
@@ -277,6 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0193c73f4d98884cac7cdc5c62c38fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
+  moveValue: {x: 0, y: 0}
 --- !u!114 &2601443918289491288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +372,12 @@ MonoBehaviour:
   - {fileID: 0}
   skillPanel: {fileID: 0}
   statusAttackLevel: 0
+  upgradeIconManager: {fileID: 0}
+  maxHPIcon: {fileID: 21300000, guid: 9a6085a92f499ad42bf244607876e42e, type: 3}
+  damageIcon: {fileID: 21300000, guid: cff0386e1f5c50a4e9b4746f49fee910, type: 3}
+  moveSpeedIcon: {fileID: 21300000, guid: e09102e43b0435d41a84f4727e02da9b, type: 3}
+  bombRadiusIcon: {fileID: 21300000, guid: 7c553963e00b7444493d3e46a094c3a6, type: 3}
+  expBoostIcon: {fileID: 21300000, guid: 2655b57c81345ec499603c8539c5679d, type: 3}
 --- !u!114 &814350420974912958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,3 +547,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2306219377257849343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807480588354012608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a5934d2b1c3f14fb03b84fa83de338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationScript

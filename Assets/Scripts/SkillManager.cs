@@ -13,6 +13,8 @@ public class SkillManager : MonoBehaviour
     private List<SkillScript> skills = new();
     private int currentSkillIndex = 0;
 
+    [SerializeField] SkillHUD skillHUD;
+
     PlayerInputHandler inputHandler;
     AudioSource audioSource;
     [SerializeField] AudioClip skillNextSound;
@@ -84,6 +86,7 @@ public class SkillManager : MonoBehaviour
         {
             newSkill.LevelUpSkill();
             Debug.Log(newSkill.SkillName + " Level Up! Lv." + newSkill.GetSkillLevel());
+            ShowCurrentSkill();
             return;
         }
 
@@ -114,12 +117,10 @@ public class SkillManager : MonoBehaviour
     }
     void ShowCurrentSkill()
     {
-        if(skillNameText == null)
-            return;
-
-        if (skills.Count == 0)
-            skillNameText.text = "No Skills";
-        else
-            skillNameText.text = "Current Skill: " + skills[currentSkillIndex].SkillName;
+        skillHUD.RefreshUI(skills, currentSkillIndex);
+    }
+    public IReadOnlyList<SkillScript> GetOwnedSkills()
+    {
+        return skills;
     }
 }
