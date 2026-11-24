@@ -34,7 +34,7 @@ public class PauseStatusUI : MonoBehaviour
 
     void UpdateTime()
     {
-        timeText.text = timer.time.ToString("F0");
+        timeText.text = Mathf.FloorToInt(timer.time).ToString();
     }
     void UpdateSkillIcons()
     {
