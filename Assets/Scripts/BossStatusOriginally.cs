@@ -84,7 +84,7 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power = 40;
 
-        Hp = 1700;
+        Hp = 4000;
 
         speed = 3.5f;
     }
