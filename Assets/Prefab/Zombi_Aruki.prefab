@@ -292,7 +292,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891501014688843449}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -309,7 +309,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!195 &4561139730520236719
 NavMeshAgent:
@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieHeaith
   damageUI: {fileID: 2595096470092829979, guid: bda09688743b4a14f9266f0f39d05f91, type: 3}
+  DieFlag: 0
 --- !u!114 &6096069276990407859
 MonoBehaviour:
   m_ObjectHideFlags: 0
