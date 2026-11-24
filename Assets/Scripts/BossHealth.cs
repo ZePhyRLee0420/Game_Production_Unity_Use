@@ -20,6 +20,10 @@ public class BossHealth : MonoBehaviour
 
     SkillPanelActivate SkillPanelActivateScript;
 
+    public bool dieFlag = false;
+
+    float dieTime = 1.5f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,12 +61,27 @@ public class BossHealth : MonoBehaviour
 
         if (currentHp <= 0)
         {
+            dieFlag = true;
+        }
+
+        if(dieFlag == true)
+        {
+            dieTime -= Time.deltaTime;
+        }
+
+        if(dieTime <= 0)
+        {
             Die();
         }
     }
 
     public void TakeDamage(int value)
     {
+        if(dieFlag == true)
+        {
+            return;
+        }
+
         currentHp -= value;
 
         //ダメージUIの処理
@@ -89,7 +108,6 @@ public class BossHealth : MonoBehaviour
 
     void Die()
     {
-
         if (skillSelectionPanel != null)
         {
             //skillSelectionPanel.SetActive(true);
