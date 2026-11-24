@@ -40,6 +40,8 @@ public class BossMove : MonoBehaviour
 
     Animator m_animator;
 
+    BossHealth bossHealth;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,6 +60,7 @@ public class BossMove : MonoBehaviour
 
         m_animator = GetComponent<Animator>();
 
+        bossHealth = GetComponent<BossHealth>();
     }
 
     // Update is called once per frame
@@ -101,9 +104,22 @@ public class BossMove : MonoBehaviour
         }
 
         m_animator.SetBool("IsAttacking", attackFlag);
+        m_animator.SetBool("Die", bossHealth.dieFlag);
 
         //ボスが行動を行う
-        if(downFlag == true)
+
+        if (bossHealth.dieFlag == true)
+        {
+            agent.ResetPath();
+            agent.isStopped = true;
+
+            if (attackArea.activeSelf == true)
+            {
+                attackArea.SetActive(false);
+            }
+        }
+
+        else if(downFlag == true)
         {
             if (attackArea.activeSelf == true)
             {
