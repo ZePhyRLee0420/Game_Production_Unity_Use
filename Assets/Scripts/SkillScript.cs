@@ -59,4 +59,13 @@ public abstract class SkillScript : MonoBehaviour
     {
         return skillLevel;
     }
+    public float GetCooldownRatio()
+    {
+        if (skillCooldown <= 0f)
+        {
+            return 0f;
+        }
+
+        return Mathf.Clamp01(cooldownTimer / skillCooldown);
+    }
 }

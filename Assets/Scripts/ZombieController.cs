@@ -91,7 +91,15 @@ public class ZombieController : MonoBehaviour
 
         m_animator.SetBool("IsAttacking", attackFlag);
 
-        if ( attackFlag )
+        if(agent.enabled == false)
+        {
+            if(attackArea.activeSelf == true)
+            {
+                attackArea.SetActive(true);
+            }
+        }
+
+        else if ( attackFlag )
         {
             if (attackArea.activeSelf == false && attackTime >= attackStartUpTime  && attackTime <= attackAreaOnTimeEnd)
             {
@@ -170,6 +178,7 @@ public class ZombieController : MonoBehaviour
         // 5. 物理演算を戻し、NavMeshAgentを再有効化する
         //rb.isKinematic = true;
         agent.enabled = true;
+        rb.isKinematic = true;
 
         // 着地点がNavMeshから少しずれていた場合に備えて補正する
         if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 2.0f, NavMesh.AllAreas))

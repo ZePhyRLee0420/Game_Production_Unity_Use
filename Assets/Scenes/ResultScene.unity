@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 40573698}
   - component: {fileID: 40573697}
   - component: {fileID: 40573700}
+  - component: {fileID: 40573701}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -266,6 +267,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResultButtonScript
   button: {fileID: 40573697}
+--- !u!114 &40573701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40573695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd7e36ef0277f349875db72cefd6531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonScale
+  selectedScale: 1.15
+  scaleSpeed: 10
+  moveWhenSelected: 0
+  selectedOffset: {x: 0, y: 20}
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1251,7 @@ GameObject:
   - component: {fileID: 1771317533}
   - component: {fileID: 1771317532}
   - component: {fileID: 1771317535}
+  - component: {fileID: 1771317536}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -1368,6 +1386,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResultButtonScript
   button: {fileID: 1771317532}
+--- !u!114 &1771317536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771317530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd7e36ef0277f349875db72cefd6531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonScale
+  selectedScale: 1.15
+  scaleSpeed: 10
+  moveWhenSelected: 0
+  selectedOffset: {x: 0, y: 20}
 --- !u!1 &1809435423
 GameObject:
   m_ObjectHideFlags: 0
