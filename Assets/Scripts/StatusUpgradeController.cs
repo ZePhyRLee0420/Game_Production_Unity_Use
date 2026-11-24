@@ -35,6 +35,14 @@ public class StatusUpgradeController : MonoBehaviour
     };
 
     public int statusAttackLevel = 0;
+
+    [SerializeField] UpgradeIconManager upgradeIconManager;
+
+    [SerializeField] Sprite maxHPIcon;
+    [SerializeField] Sprite damageIcon;
+    [SerializeField] Sprite moveSpeedIcon;
+    [SerializeField] Sprite bombRadiusIcon;
+    [SerializeField] Sprite expBoostIcon;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -95,19 +103,27 @@ public class StatusUpgradeController : MonoBehaviour
             case StatusUpgradeType.MaxHP:
                 playerHealth.maxHP += 30;
                 playerHealth.currentHP += 30;
+
+                upgradeIconManager.AddUpgrade(upgrade.ToString(), maxHPIcon);
                 break;
 
             case StatusUpgradeType.Damage:
                 statusAttackLevel++;
                 playerCombat.bombDamage = 10 + ((playerEXP.currentLevel * playerEXP.currentLevel) * (1 + statusAttackLevel));
+
+                upgradeIconManager.AddUpgrade(upgrade.ToString(), damageIcon);
                 break;
 
             case StatusUpgradeType.MoveSpeed:
                 playerController.moveSpeed += 0.7f;
+
+                upgradeIconManager.AddUpgrade(upgrade.ToString(), moveSpeedIcon);
                 break;
 
             case StatusUpgradeType.BombRadius:
                 playerCombat.explosionRadius += 0.4f;
+
+                upgradeIconManager.AddUpgrade(upgrade.ToString(), bombRadiusIcon);
                 break;
 
             //case StatusUpgradeType.SkillCooldown:
@@ -116,6 +132,8 @@ public class StatusUpgradeController : MonoBehaviour
 
             case StatusUpgradeType.EXPBoost:
                 playerEXP.EXPMultiplier += 0.3f;
+
+                upgradeIconManager.AddUpgrade(upgrade.ToString(), expBoostIcon);
                 break;
 
             case StatusUpgradeType.Heal:
