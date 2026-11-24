@@ -18,6 +18,8 @@ public class BossStatusOriginally : MonoBehaviour
 
     int count = 0;
 
+    int EndressCount = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -92,7 +94,11 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power = 50;
 
+<<<<<<< Updated upstream
         Hp = 2400;
+=======
+        Hp = 9000;
+>>>>>>> Stashed changes
 
         speed = 4.5f;
     }
@@ -102,7 +108,11 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power = 70;
 
+<<<<<<< Updated upstream
         Hp = 3200;
+=======
+        Hp = 16000;
+>>>>>>> Stashed changes
 
         speed = 5.5f;
     }
@@ -110,9 +120,15 @@ public class BossStatusOriginally : MonoBehaviour
     //5体以降ボスのステータス
     void StatusUpEndress()
     {
+        EndressCount += 1;
+
         power += 20;
 
+<<<<<<< Updated upstream
         Hp += 900;
+=======
+        Hp = (EndressCount + 4) * (EndressCount + 4) * 10000;
+>>>>>>> Stashed changes
 
         speed += 0.5f;
     }
