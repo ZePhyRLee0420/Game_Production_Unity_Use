@@ -32,6 +32,8 @@ public class ZombieController : MonoBehaviour
     Rigidbody rb;
 
     bool isLaunched;
+
+    ZombieHeaith zombieHeaith;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -60,6 +62,8 @@ public class ZombieController : MonoBehaviour
         m_animator.Play("walk", 0, randomTime);
 
         m_animator.speed = Random.Range(0.9f, 1.1f);
+
+        zombieHeaith = GetComponent<ZombieHeaith>();
     }
 
     // Update is called once per frame
@@ -99,7 +103,7 @@ public class ZombieController : MonoBehaviour
             }
         }
 
-        else if ( attackFlag )
+        else if ( attackFlag && zombieHeaith.DieFlag == false)
         {
             if (attackArea.activeSelf == false && attackTime >= attackStartUpTime  && attackTime <= attackAreaOnTimeEnd)
             {
@@ -116,7 +120,7 @@ public class ZombieController : MonoBehaviour
             }
         }
 
-        else
+        else if(zombieHeaith.DieFlag == false)
         {
             if (attackArea.activeSelf == true)
             {
@@ -129,7 +133,6 @@ public class ZombieController : MonoBehaviour
                 agent.destination = player.transform.position;  
             }
         }
-
     }
 
     bool PlayerForward()
@@ -172,11 +175,11 @@ public class ZombieController : MonoBehaviour
         // 4. 着地するまで待機（速度がほぼ0になるか、接地判定を取る）
         while (!IsGrounded() || rb.linearVelocity.y > 0.1f)
         {
+            rb.AddForce(Vector3.up * -1f * 60f, ForceMode.Force);
             yield return null;
         }
 
         // 5. 物理演算を戻し、NavMeshAgentを再有効化する
-        //rb.isKinematic = true;
         agent.enabled = true;
         rb.isKinematic = true;
 

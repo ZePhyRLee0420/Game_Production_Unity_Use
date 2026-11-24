@@ -15,9 +15,9 @@ public class ZombieHeaith : MonoBehaviour
 
     ZombieController controller;
 
-    bool DieFlag = false;
+    public bool DieFlag = false;
 
-    float DieTime = 0;
+    float DieTime = 1.5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -45,9 +45,9 @@ public class ZombieHeaith : MonoBehaviour
 
         if(DieFlag == true)
         {
-            DieTime += Time.deltaTime;
+            DieTime -= Time.deltaTime;
 
-            if(DieTime >= 0.5f)
+            if(DieTime <= 0)
             {
                 Destroy(gameObject);
             }
@@ -85,7 +85,7 @@ public class ZombieHeaith : MonoBehaviour
             Vector3 random = new Vector3(Random.Range(-3, 3), 0, Random.Range(-3, 3));
             force += random;
 
-            controller.LaunchUpward(force);
+            //controller.LaunchUpward(force);
         }
 
     }
@@ -103,8 +103,8 @@ public class ZombieHeaith : MonoBehaviour
 
         SaveData.instance.zombieKillCount++;
 
-        Vector3 force = new Vector3(0, 20, 0);
-        Vector3 random = new Vector3(Random.Range(-20,20),0, Random.Range(-20, 20));
+        Vector3 force = new Vector3(0, 1600, 0);
+        Vector3 random = new Vector3(Random.Range(-1500,1500),0, Random.Range(-1500, 1500));
         force += random;
 
         controller.LaunchUpward(force);
