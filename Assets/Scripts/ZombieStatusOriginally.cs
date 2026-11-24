@@ -148,7 +148,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 20;
 
-        speed = 2.5f;
+        speed = 3f;
 
         exp = 1f;
     }
@@ -160,7 +160,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 25;
 
-        speed = 2.5f;
+        speed = 3f;
 
         exp = 2f;
     }
@@ -172,7 +172,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 30;
 
-        speed = 4f;
+        speed = 3.25f;
 
         exp = 2f;
     }
@@ -184,7 +184,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 50;
 
-        speed = 2.5f;
+        speed = 3.25f;
 
         exp = 3f;
     }
@@ -196,7 +196,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 60;
 
-        speed = 3f;
+        speed = 3.5f;
 
         exp = 3f;
     }
@@ -208,7 +208,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 80;
 
-        speed = 3f;
+        speed = 3.5f;
 
         exp = 4f;
     }
@@ -220,7 +220,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 90;
 
-        speed = 3f;
+        speed = 3.75f;
 
         exp = 4f;
     }
@@ -232,7 +232,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 110;
 
-        speed = 3.5f;
+        speed = 3.75f;
 
         exp = 5f;
     }
@@ -244,7 +244,7 @@ public class ZombieStatusOriginally : MonoBehaviour
 
         Hp = 110;
 
-        speed = 3.5f;
+        speed = 4f;
 
         exp = 5f;
     }
@@ -252,9 +252,9 @@ public class ZombieStatusOriginally : MonoBehaviour
     //300秒～ 15秒置きにHpと攻撃力強化
     void SpownStatusUpEndress()
     {
-        power +=endressStatusUpCount * 4;
-        Hp +=endressStatusUpCount * 20;
-        speed += 0.01f;
+        power +=endressStatusUpCount * 6;
+        Hp +=endressStatusUpCount * 30;
+        speed += 0.2f;
 
         endressStatusUpCount++;
     }
@@ -262,7 +262,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //300秒～　一分置きに経験値アップ
     void expUpEndress()
     {
-        exp += 2;
+        exp += 1;
     }
 
     /*

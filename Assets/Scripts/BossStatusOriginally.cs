@@ -82,7 +82,7 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power = 40;
 
-        Hp = 2000;
+        Hp = 4000;
 
         speed = 3.5f;
     }
@@ -92,7 +92,7 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power = 50;
 
-        Hp = 4000;
+        Hp = 16000;
 
         speed = 4.5f;
     }
@@ -102,7 +102,7 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power = 70;
 
-        Hp = 6000;
+        Hp = 25000;
 
         speed = 5.5f;
     }
@@ -112,7 +112,7 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power += 20;
 
-        Hp += 2000;
+        Hp += 20000;
 
         speed += 0.5f;
     }
