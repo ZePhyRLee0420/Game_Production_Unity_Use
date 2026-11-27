@@ -4,7 +4,7 @@ public class BossStatusOriginally : MonoBehaviour
 {
     //初期ステータス
     public int power = 15;
-    public int Hp = 1000;
+    public int Hp = 5000;
     public float speed = 2.5f;
     //ここまで
 
@@ -18,7 +18,7 @@ public class BossStatusOriginally : MonoBehaviour
 
     int count = 0;
 
-    int EndressCount = 0;
+    int EndressCount = 5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -74,7 +74,7 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power = 25;
 
-        Hp = 4000;
+        Hp = 10000;
 
         speed = 3f;
     }
@@ -84,7 +84,7 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power = 40;
 
-        Hp = 9000;
+        Hp = 40000;
 
         speed = 3.5f;
     }
@@ -95,7 +95,7 @@ public class BossStatusOriginally : MonoBehaviour
         power = 50;
 
 
-        Hp = 16000;
+        Hp = 90000;
 
         speed = 4.5f;
     }
@@ -105,7 +105,7 @@ public class BossStatusOriginally : MonoBehaviour
     {
         power = 70;
 
-        Hp = 25000;
+        Hp = 160000;
 
         speed = 5.5f;
     }
@@ -113,13 +113,17 @@ public class BossStatusOriginally : MonoBehaviour
     //5体以降ボスのステータス
     void StatusUpEndress()
     {
-        EndressCount += 1;
-
         power += 20;
 
+        Hp = EndressCount * EndressCount * 1000000;
 
-        Hp = (EndressCount + 4) * (EndressCount + 4) * 1000000;
+        for(int i = 5; i < EndressCount; i++)
+        {
+            Hp *= 10;
+        }   
 
         speed += 0.5f;
+
+        EndressCount++;
     }
 }
