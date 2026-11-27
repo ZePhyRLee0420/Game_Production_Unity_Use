@@ -101,8 +101,8 @@ public class StatusUpgradeController : MonoBehaviour
         switch (upgrade)
         {
             case StatusUpgradeType.MaxHP:
-                playerHealth.maxHP += 30;
-                playerHealth.currentHP += 30;
+                playerHealth.maxHP += 50;
+                playerHealth.currentHP += 50;
 
                 upgradeIconManager.AddUpgrade(upgrade.ToString(), maxHPIcon);
                 break;
@@ -115,13 +115,13 @@ public class StatusUpgradeController : MonoBehaviour
                 break;
 
             case StatusUpgradeType.MoveSpeed:
-                playerController.moveSpeed += 0.7f;
+                playerController.moveSpeed += 0.9f;
 
                 upgradeIconManager.AddUpgrade(upgrade.ToString(), moveSpeedIcon);
                 break;
 
             case StatusUpgradeType.BombRadius:
-                playerCombat.explosionRadius += 0.4f;
+                playerCombat.explosionRadius += 0.5f;
 
                 upgradeIconManager.AddUpgrade(upgrade.ToString(), bombRadiusIcon);
                 break;
@@ -131,7 +131,7 @@ public class StatusUpgradeController : MonoBehaviour
             //    break;
 
             case StatusUpgradeType.EXPBoost:
-                playerEXP.EXPMultiplier += 0.3f;
+                playerEXP.EXPMultiplier += 0.5f;
 
                 upgradeIconManager.AddUpgrade(upgrade.ToString(), expBoostIcon);
                 break;
