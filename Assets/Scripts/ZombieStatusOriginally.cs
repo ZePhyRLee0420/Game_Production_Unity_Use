@@ -252,7 +252,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //300秒～ 15秒置きにHpと攻撃力強化
     void SpownStatusUpEndress()
     {
-        power +=endressStatusUpCount * 8;
+        power +=endressStatusUpCount * 6;
         Hp +=endressStatusUpCount * 100;
         speed += 0.2f;
 
