@@ -253,7 +253,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     void SpownStatusUpEndress()
     {
         power +=endressStatusUpCount * 6;
-        Hp +=endressStatusUpCount * 30;
+        Hp +=endressStatusUpCount * 50;
         speed += 0.2f;
 
         endressStatusUpCount++;
@@ -262,7 +262,7 @@ public class ZombieStatusOriginally : MonoBehaviour
     //300秒～　一分置きに経験値アップ
     void expUpEndress()
     {
-        exp += 1;
+        exp += 0.5f;
     }
 
     /*
