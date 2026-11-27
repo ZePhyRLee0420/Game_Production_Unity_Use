@@ -109,7 +109,7 @@ public class StatusUpgradeController : MonoBehaviour
 
             case StatusUpgradeType.Damage:
                 statusAttackLevel++;
-                playerCombat.bombDamage = 10 + ((playerEXP.currentLevel * playerEXP.currentLevel) * (1 + statusAttackLevel));
+                playerCombat.bombDamage = 10 + ((playerEXP.currentLevel * playerEXP.currentLevel) * (statusAttackLevel * statusAttackLevel));
 
                 upgradeIconManager.AddUpgrade(upgrade.ToString(), damageIcon);
                 break;
